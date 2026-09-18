@@ -23,11 +23,7 @@
     "noImplicitOverride": true,
 
     "noUnusedLocals": true,
-    "noUnusedParameters": true,
-
-    "paths": {
-      "~/*": ["./src/*"]
-    }
+    "noUnusedParameters": true
   },
   "include": ["src", "vite.config.ts", ".storybook/*.ts", ".storybook/*.tsx"]
 }

@@ -1,0 +1,50 @@
+name: Build and quality checks
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+concurrency:
+  group: checks-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  packages: read
+
+jobs:
+  checks:
+    name: Build, lint, and format
+    runs-on: ubuntu-latest
+    env:
+      VITE_API_URL: http://127.0.0.1:3000
+      VITE_TURNSTILE_SITE_KEY: test-site-key
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - name: Set up Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.4.2
+
+      - name: Install dependencies
+        env:
+          NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: bun install --frozen-lockfile
+
+      - name: Build
+        run: bun run build
+
+      - name: Build Storybook
+        run: bun run storybook:build
+
+      - name: Lint
+        run: bun run lint
+
+      - name: Check formatting
+        run: bun run fmt:check

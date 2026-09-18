@@ -1,4 +1,5 @@
 node_modules
 dist
 storybook-static
+src/locales/*/messages.ts
 src/routeTree.gen.ts

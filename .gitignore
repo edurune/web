@@ -113,3 +113,5 @@ dist
 .tern-port
 
 *.log
+
+storybook-static
