@@ -37,6 +37,7 @@
     "mermaid": "^12.0.0",
     "react": "19.3.0",
     "react-dom": "19.3.0",
+    "react-error-boundary": "^6.1.5",
     "react-markdown": "^10.1.0",
     "rehype-katex": "^7.0.1",
     "rehype-mermaid": "^3.0.0",

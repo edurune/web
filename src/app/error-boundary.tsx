@@ -1,5 +1,6 @@
 import * as stylex from "@stylexjs/stylex";
-import { Component, type ErrorInfo, type ReactNode } from "react";
+import { type ErrorInfo, type ReactNode, useCallback, useEffect, useState } from "react";
+import { ErrorBoundary as ReactErrorBoundary, type FallbackProps } from "react-error-boundary";
 import { borderWidth } from "../ui/tokens/border.stylex.ts";
 import { color } from "../ui/tokens/color.stylex.ts";
 import { layout } from "../ui/tokens/layout.stylex.ts";
@@ -11,10 +12,6 @@ import { font, fontSize, fontWeight, lineHeight } from "../ui/tokens/text.stylex
 interface Props {
   children: ReactNode;
   onReload: () => void;
-}
-
-interface State {
-  failed: boolean;
 }
 
 const styles = stylex.create({
@@ -44,8 +41,14 @@ const styles = stylex.create({
     lineHeight: lineHeight.normal,
     marginBlock: space.sm,
   },
+  actions: {
+    display: "flex",
+    flexWrap: "wrap",
+    gap: space.sm,
+    justifyContent: "center",
+    marginTop: space.lg,
+  },
   action: {
-    backgroundColor: color.accentFill,
     borderColor: color.borderStrong,
     borderRadius: radius.md,
     borderStyle: "solid",
@@ -58,32 +61,85 @@ const styles = stylex.create({
     paddingBlock: space.sm,
     paddingInline: space.xl,
   },
+  primaryAction: {
+    backgroundColor: color.accentFill,
+  },
+  secondaryAction: {
+    backgroundColor: color.surfaceRaised,
+  },
 });
 
-export class ErrorBoundary extends Component<Props, State> {
-  override state: State = { failed: false };
+function RecoveryComplete({
+  children,
+  onComplete,
+}: {
+  children: ReactNode;
+  onComplete: () => void;
+}) {
+  useEffect(onComplete, [onComplete]);
+  return children;
+}
 
-  static getDerivedStateFromError(): State {
-    return { failed: true };
-  }
+function logError(error: unknown, info: ErrorInfo) {
+  console.error("Application failed", error, info.componentStack);
+}
 
-  override componentDidCatch(error: Error, info: ErrorInfo) {
-    console.error("Application failed", error, info.componentStack);
-  }
+export function ErrorBoundary({ children, onReload }: Props) {
+  const [reloadAvailable, setReloadAvailable] = useState(false);
+  const clearReload = useCallback(() => setReloadAvailable(false), []);
+  const renderFallback = useCallback(
+    (props: FallbackProps) => (
+      <ErrorFallback
+        {...props}
+        onReload={onReload}
+        reloadAvailable={reloadAvailable}
+        onRetry={() => {
+          setReloadAvailable(true);
+          props.resetErrorBoundary();
+        }}
+      />
+    ),
+    [onReload, reloadAvailable],
+  );
 
-  override render() {
-    if (!this.state.failed) return this.props.children;
+  return (
+    <ReactErrorBoundary onError={logError} fallbackRender={renderFallback}>
+      <RecoveryComplete onComplete={clearReload}>{children}</RecoveryComplete>
+    </ReactErrorBoundary>
+  );
+}
 
-    return (
-      <main {...stylex.props(styles.page)}>
-        <div {...stylex.props(styles.panel)}>
-          <h1 {...stylex.props(styles.title)}>Something went wrong</h1>
-          <p {...stylex.props(styles.message)}>Reload the app and try again.</p>
-          <button {...stylex.props(styles.action)} type="button" onClick={this.props.onReload}>
-            Reload app
+function ErrorFallback({
+  onReload,
+  onRetry,
+  reloadAvailable,
+}: FallbackProps & { onReload: () => void; onRetry: () => void; reloadAvailable: boolean }) {
+  return (
+    <main {...stylex.props(styles.page)}>
+      <div {...stylex.props(styles.panel)} role="alert">
+        <h1 {...stylex.props(styles.title)}>Something went wrong</h1>
+        <p {...stylex.props(styles.message)}>
+          Try again. If the problem continues, reload the app.
+        </p>
+        <div {...stylex.props(styles.actions)}>
+          <button
+            {...stylex.props(styles.action, styles.primaryAction)}
+            type="button"
+            onClick={onRetry}
+          >
+            Try again
           </button>
+          {reloadAvailable && (
+            <button
+              {...stylex.props(styles.action, styles.secondaryAction)}
+              type="button"
+              onClick={onReload}
+            >
+              Reload app
+            </button>
+          )}
         </div>
-      </main>
-    );
-  }
+      </div>
+    </main>
+  );
 }
