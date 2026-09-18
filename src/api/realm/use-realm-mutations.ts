@@ -10,39 +10,44 @@ import {
   getApiCoursesByCourseIdRealmInventoryOptions,
   getApiCoursesByCourseIdRealmShopOptions,
 } from "../generated/@tanstack/react-query.gen.ts";
+import type { RealmLoadout } from "../generated/types.gen.ts";
 
-function useRealmInvalidation(courseId: string) {
+/** Equipment commands answer with the settled loadout; the rest refreshes behind the screen. */
+function useRealmSettlement(courseId: string, shop = false) {
   const client = useApiClient();
   const queryClient = useQueryClient();
-  return () =>
-    invalidateQueries(queryClient, [
-      getApiCoursesByCourseIdRealmOptions({ client, path: { courseId } }),
-      getApiCoursesByCourseIdRealmLoadoutOptions({ client, path: { courseId } }),
-      getApiCoursesByCourseIdRealmInventoryOptions({ client, path: { courseId } }),
-      getApiCoursesByCourseIdRealmShopOptions({ client, path: { courseId } }),
-    ]);
+  const options = { client, path: { courseId } };
+  return {
+    onSuccess: (data: RealmLoadout) => {
+      queryClient.setQueryData(getApiCoursesByCourseIdRealmLoadoutOptions(options).queryKey, data);
+    },
+    onSettled: () => {
+      void invalidateQueries(queryClient, [
+        getApiCoursesByCourseIdRealmOptions(options),
+        getApiCoursesByCourseIdRealmInventoryOptions(options),
+        ...(shop ? [getApiCoursesByCourseIdRealmShopOptions(options)] : []),
+      ]);
+    },
+  };
 }
 
 export function useEquipEquipmentMutation(courseId: string) {
-  const client = useApiClient();
   return useMutation({
-    ...putApiCoursesByCourseIdRealmEquipmentsMutation({ client }),
-    onSettled: useRealmInvalidation(courseId),
+    ...putApiCoursesByCourseIdRealmEquipmentsMutation({ client: useApiClient() }),
+    ...useRealmSettlement(courseId),
   });
 }
 
 export function useUnequipEquipmentMutation(courseId: string) {
-  const client = useApiClient();
   return useMutation({
-    ...deleteApiCoursesByCourseIdRealmEquipmentsMutation({ client }),
-    onSettled: useRealmInvalidation(courseId),
+    ...deleteApiCoursesByCourseIdRealmEquipmentsMutation({ client: useApiClient() }),
+    ...useRealmSettlement(courseId),
   });
 }
 
 export function usePurchaseEquipmentMutation(courseId: string) {
-  const client = useApiClient();
   return useMutation({
-    ...postApiCoursesByCourseIdRealmPurchasesMutation({ client }),
-    onSettled: useRealmInvalidation(courseId),
+    ...postApiCoursesByCourseIdRealmPurchasesMutation({ client: useApiClient() }),
+    ...useRealmSettlement(courseId, true),
   });
 }

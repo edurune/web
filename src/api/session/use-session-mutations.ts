@@ -1,8 +1,8 @@
-import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { useMutation, useQueryClient, type QueryClient } from "@tanstack/react-query";
 import { useApiClient } from "../api-context.ts";
+import type { ApiClient } from "../client.ts";
 import { useCourseProgressInvalidation } from "../course/use-lesson-mutations.ts";
 import { invalidateUnitMaps } from "../course/use-navigation-queries.ts";
-import { invalidateQueries } from "../query.ts";
 import {
   getApiCoursesByCourseIdPracticesByItemIdSessionsLatestOptions,
   getApiCoursesByCourseIdPracticesByItemIdSessionsBySessionIdOptions,
@@ -12,6 +12,7 @@ import {
   postApiCoursesByCourseIdPracticesByItemIdSessionsBySessionIdAbandonMutation,
   postApiCoursesByCourseIdPracticesByItemIdSessionsBySessionIdRetryMutation,
 } from "../generated/@tanstack/react-query.gen.ts";
+import type { SessionResult } from "../generated/types.gen.ts";
 import type { SessionPath } from "./use-session-queries.ts";
 
 export function useStartSessionMutation() {
@@ -19,34 +20,48 @@ export function useStartSessionMutation() {
   const queryClient = useQueryClient();
   return useMutation({
     ...postApiCoursesByCourseIdPracticesByItemIdSessionsMutation({ client }),
-    onSettled: (_data, _error, variables) =>
-      Promise.all([
-        queryClient.invalidateQueries({
-          queryKey: getApiCoursesByCourseIdPracticesByItemIdSessionsLatestOptions({
-            client,
-            path: variables.path,
-          }).queryKey,
-        }),
-        invalidateUnitMaps(queryClient, client, variables.path.courseId),
-      ]),
+    onSuccess: (data, variables) => {
+      writeSession(queryClient, client, { ...variables.path, sessionId: data.id }, data);
+    },
+    onSettled: (_data, _error, variables) => {
+      void invalidateUnitMaps(queryClient, client, variables.path.courseId);
+    },
   });
 }
 
-function useSessionInvalidation(path: SessionPath, progress = false) {
+function writeSession(
+  queryClient: QueryClient,
+  client: ApiClient,
+  path: SessionPath,
+  result: SessionResult,
+) {
+  queryClient.setQueryData(
+    getApiCoursesByCourseIdPracticesByItemIdSessionsBySessionIdOptions({ client, path }).queryKey,
+    result,
+  );
+  queryClient.setQueryData(
+    getApiCoursesByCourseIdPracticesByItemIdSessionsLatestOptions({
+      client,
+      path: { courseId: path.courseId, itemId: path.itemId },
+    }).queryKey,
+    result,
+  );
+}
+
+function useSessionSettlement(path: SessionPath, progress = false) {
   const client = useApiClient();
   const queryClient = useQueryClient();
   const invalidateProgress = useCourseProgressInvalidation(path.courseId);
-  return () =>
-    Promise.all([
-      invalidateQueries(queryClient, [
-        getApiCoursesByCourseIdPracticesByItemIdSessionsBySessionIdOptions({ client, path }),
-        getApiCoursesByCourseIdPracticesByItemIdSessionsLatestOptions({
-          client,
-          path: { courseId: path.courseId, itemId: path.itemId },
-        }),
-      ]),
-      progress ? invalidateProgress() : invalidateUnitMaps(queryClient, client, path.courseId),
-    ]);
+  return {
+    onSuccess: (data: SessionResult) => {
+      writeSession(queryClient, client, { ...path, sessionId: data.id }, data);
+    },
+    onSettled: () => {
+      void (progress
+        ? invalidateProgress()
+        : invalidateUnitMaps(queryClient, client, path.courseId));
+    },
+  };
 }
 
 export function useSelectActionMutation(path: SessionPath) {
@@ -54,7 +69,7 @@ export function useSelectActionMutation(path: SessionPath) {
     ...postApiCoursesByCourseIdPracticesByItemIdSessionsBySessionIdActionsMutation({
       client: useApiClient(),
     }),
-    onSettled: useSessionInvalidation(path),
+    ...useSessionSettlement(path),
   });
 }
 
@@ -63,7 +78,7 @@ export function useSubmitAnswerMutation(path: SessionPath) {
     ...postApiCoursesByCourseIdPracticesByItemIdSessionsBySessionIdAnswersMutation({
       client: useApiClient(),
     }),
-    onSettled: useSessionInvalidation(path, true),
+    ...useSessionSettlement(path, true),
   });
 }
 
@@ -72,7 +87,7 @@ export function useAbandonSessionMutation(path: SessionPath) {
     ...postApiCoursesByCourseIdPracticesByItemIdSessionsBySessionIdAbandonMutation({
       client: useApiClient(),
     }),
-    onSettled: useSessionInvalidation(path),
+    ...useSessionSettlement(path),
   });
 }
 
@@ -81,6 +96,6 @@ export function useRetrySessionMutation(path: SessionPath) {
     ...postApiCoursesByCourseIdPracticesByItemIdSessionsBySessionIdRetryMutation({
       client: useApiClient(),
     }),
-    onSettled: useSessionInvalidation(path),
+    ...useSessionSettlement(path),
   });
 }

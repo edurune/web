@@ -18,18 +18,18 @@ export function useClaimMissionMutation() {
   const invalidateRewards = useRewardInvalidation();
   return useMutation({
     ...postApiMissionsByPeriodIdByMissionIdClaimMutation({ client }),
-    onSuccess: () =>
-      Promise.all([
-        invalidateQueries(queryClient, [
-          getApiMissionsCurrentOptions({ client }),
-          getApiMissionsOptions({ client }),
-        ]),
-        invalidateRewards(),
-      ]),
-    onError: () =>
-      queryClient.invalidateQueries({
+    onSuccess: (data) => {
+      void invalidateQueries(queryClient, [
+        getApiMissionsCurrentOptions({ client }),
+        getApiMissionsOptions({ client }),
+      ]);
+      void invalidateRewards(data.wallet);
+    },
+    onError: () => {
+      void queryClient.invalidateQueries({
         queryKey: getApiMissionsCurrentOptions({ client }).queryKey,
-      }),
+      });
+    },
   });
 }
 
@@ -39,14 +39,13 @@ export function useClaimMilestoneMutation() {
   const invalidateRewards = useRewardInvalidation();
   return useMutation({
     ...postApiMilestonesByMilestoneIdClaimMutation({ client }),
-    onSettled: () =>
-      Promise.all([
-        invalidateQueries(queryClient, [
-          getApiMilestonesProgressOptions({ client }),
-          getApiMilestonesOptions({ client }),
-          getApiMeSummaryOptions({ client }),
-        ]),
-        invalidateRewards(),
-      ]),
+    onSettled: (data) => {
+      void invalidateQueries(queryClient, [
+        getApiMilestonesProgressOptions({ client }),
+        getApiMilestonesOptions({ client }),
+        getApiMeSummaryOptions({ client }),
+      ]);
+      void invalidateRewards(data?.wallet);
+    },
   });
 }

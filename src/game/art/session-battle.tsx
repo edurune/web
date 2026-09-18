@@ -450,7 +450,6 @@ export function SessionBattle({
   return (
     <div {...stylex.props(styles.root, style)}>
       <BattleScene
-        key={activeCue?.key ?? sessionId}
         sceneId={session.encounter.sceneId}
         enemyIds={enemies.map((enemy) => enemy.enemyId)}
         cosmeticIds={character.cosmetics

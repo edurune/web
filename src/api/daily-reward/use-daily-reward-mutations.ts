@@ -12,13 +12,10 @@ export function useClaimDailyRewardMutation() {
   const invalidateRewards = useRewardInvalidation();
   return useMutation({
     ...postApiDailyRewardClaimMutation({ client }),
-    onSuccess: () =>
-      Promise.all([
-        queryClient.invalidateQueries({
-          queryKey: getApiDailyRewardOptions({ client }).queryKey,
-        }),
-        invalidateRewards(),
-      ]),
+    onSuccess: (data) => {
+      queryClient.setQueryData(getApiDailyRewardOptions({ client }).queryKey, data.dailyReward);
+      void invalidateRewards(data.wallet);
+    },
     onError: (error) => {
       if (error.code === "daily_reward_day_changed")
         void queryClient.invalidateQueries({

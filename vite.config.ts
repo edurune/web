@@ -18,7 +18,7 @@ export default defineConfig(({ mode }) => {
       svgr({ svgrOptions: { svgo: false } }),
       stylex.vite({ useCSSLayers: true }),
       tanstackRouter({ target: "react", autoCodeSplitting: true }),
-      react(),
+      react({ compiler: true }),
       babel({
         // Router-split ids carry a ?tsr-split= query, so this cannot anchor on $.
         include: /\.[jt]sx?(\?|$)/,

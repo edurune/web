@@ -63,6 +63,7 @@
     "@vite-pwa/assets-generator": "^2.0.0",
     "@vitejs/plugin-react": "6.1.1",
     "eslint-plugin-lingui": "0.15.0",
+    "oxc-transform-react": "^0.150.0",
     "oxfmt": "^0.68.0",
     "oxlint": "^1.83.0",
     "storybook": "10.6.0",

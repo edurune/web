@@ -12,10 +12,11 @@ export function useJoinCourseMutation() {
   const queryClient = useQueryClient();
   return useMutation({
     ...putApiCoursesByCourseIdEnrollmentMutation({ client }),
-    onSuccess: () =>
-      invalidateQueries(queryClient, [
+    onSuccess: () => {
+      void invalidateQueries(queryClient, [
         getApiCoursesOptions({ client }),
         getApiMeSummaryOptions({ client }),
-      ]),
+      ]);
+    },
   });
 }

@@ -14,50 +14,53 @@ import {
   putApiCharacterCosmeticsMutation,
   putApiCharacterAppearanceMutation,
 } from "../generated/@tanstack/react-query.gen.ts";
+import type { CharacterProfile, WalletView } from "../generated/types.gen.ts";
 
-function useCharacterInvalidation() {
+/** Wardrobe commands answer with the settled profile and wallet; the rest refreshes behind them. */
+function useCharacterSettlement() {
   const client = useApiClient();
   const queryClient = useQueryClient();
-  return () =>
-    invalidateQueries(queryClient, [
-      getApiCharacterOptions({ client }),
-      getApiCharacterProfileOptions({ client }),
-      getApiWalletOptions({ client }),
-      getApiCharacterWardrobeOptions({ client }),
-      getApiCharacterShopOptions({ client }),
-      getApiCharacterSummaryOptions({ client }),
-      getApiMeSummaryOptions({ client }),
-    ]);
+  return {
+    onSuccess: (data: { profile: CharacterProfile; wallet: WalletView }) => {
+      queryClient.setQueryData(getApiCharacterProfileOptions({ client }).queryKey, data.profile);
+      queryClient.setQueryData(getApiWalletOptions({ client }).queryKey, data.wallet);
+    },
+    onSettled: () => {
+      void invalidateQueries(queryClient, [
+        getApiCharacterOptions({ client }),
+        getApiCharacterWardrobeOptions({ client }),
+        getApiCharacterShopOptions({ client }),
+        getApiCharacterSummaryOptions({ client }),
+        getApiMeSummaryOptions({ client }),
+      ]);
+    },
+  };
 }
 
 export function useUpdateAppearanceMutation() {
-  const client = useApiClient();
   return useMutation({
-    ...putApiCharacterAppearanceMutation({ client }),
-    onSuccess: useCharacterInvalidation(),
+    ...putApiCharacterAppearanceMutation({ client: useApiClient() }),
+    ...useCharacterSettlement(),
   });
 }
 
 export function useEquipCosmeticMutation() {
-  const client = useApiClient();
   return useMutation({
-    ...putApiCharacterCosmeticsMutation({ client }),
-    onSettled: useCharacterInvalidation(),
+    ...putApiCharacterCosmeticsMutation({ client: useApiClient() }),
+    ...useCharacterSettlement(),
   });
 }
 
 export function useUnequipCosmeticMutation() {
-  const client = useApiClient();
   return useMutation({
-    ...deleteApiCharacterCosmeticsMutation({ client }),
-    onSettled: useCharacterInvalidation(),
+    ...deleteApiCharacterCosmeticsMutation({ client: useApiClient() }),
+    ...useCharacterSettlement(),
   });
 }
 
 export function usePurchaseCosmeticMutation() {
-  const client = useApiClient();
   return useMutation({
-    ...postApiCharacterPurchasesMutation({ client }),
-    onSettled: useCharacterInvalidation(),
+    ...postApiCharacterPurchasesMutation({ client: useApiClient() }),
+    ...useCharacterSettlement(),
   });
 }

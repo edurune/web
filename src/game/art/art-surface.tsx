@@ -13,10 +13,16 @@ const styles = stylex.create({
   scene: { width: artSize.scene },
   ratio: (ratio: string) => ({ aspectRatio: ratio }),
 });
-class ArtBoundary extends Component<{ children: ReactNode }, { failed: boolean }> {
-  override state = { failed: false };
+class ArtBoundary extends Component<
+  { children: ReactNode; resetKey: string },
+  { failed: boolean; seen: string }
+> {
+  override state = { failed: false, seen: this.props.resetKey };
   static getDerivedStateFromError() {
     return { failed: true };
+  }
+  static getDerivedStateFromProps(props: { resetKey: string }, state: { seen: string }) {
+    return props.resetKey === state.seen ? null : { failed: false, seen: props.resetKey };
   }
   override render() {
     return this.state.failed ? (
@@ -46,7 +52,7 @@ export function ArtSurface({
   style?: StyleXStyles;
 }) {
   return (
-    <ArtBoundary key={resetKey}>
+    <ArtBoundary resetKey={resetKey}>
       <div
         role="img"
         aria-label={label}
