@@ -7,6 +7,7 @@ import "@fontsource-variable/nunito/wght.css";
 import "./index.css";
 import { ApiProvider, API_URL, createApiClient, createQueryClient } from "./api/index.ts";
 import { i18n } from "./i18n/i18n.ts";
+import { registerServiceWorker } from "./pwa/service-worker.ts";
 import { routeTree } from "./routeTree.gen.ts";
 
 const apiClient = createApiClient(API_URL);
@@ -24,6 +25,8 @@ declare module "@tanstack/react-router" {
     router: typeof router;
   }
 }
+
+registerServiceWorker();
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>

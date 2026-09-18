@@ -10,6 +10,7 @@ import { isUnauthenticated } from "../api/error-messages.ts";
 import { userSessionOptions } from "../api/user/user-session-options.ts";
 import { getApiCharacterProfileOptions } from "../api/generated/@tanstack/react-query.gen.ts";
 import { useMeQuery } from "../api/user/use-user-queries.ts";
+import { PwaNotices } from "../pwa/pwa-notices.tsx";
 import { AppShell } from "../ui/app-shell.tsx";
 import { AppNavigation } from "../ui/app-navigation.tsx";
 import { useMusic } from "../ui/sound/use-music.ts";
@@ -54,6 +55,7 @@ function ProtectedApp() {
     pathname === "/appearance";
   return (
     <AppShell
+      notices={<PwaNotices />}
       anonymous={user.data?.anonymous === true}
       onLogin={() => {
         void navigate({ to: "/login" });

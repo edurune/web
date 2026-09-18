@@ -13,7 +13,7 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/realm/skill-info-dialog.tsx:89
+#: src/realm/skill-info-dialog.tsx:86
 msgid "{amount} shield"
 msgstr "{amount} shield"
 
@@ -21,7 +21,7 @@ msgstr "{amount} shield"
 msgid "{completed} of {total} complete"
 msgstr "{completed} of {total} complete"
 
-#: src/realm/skill-info-dialog.tsx:53
+#: src/realm/skill-info-dialog.tsx:50
 msgid "{cost} mana"
 msgstr "{cost} mana"
 
@@ -41,7 +41,7 @@ msgstr "{minimumAge}–{maximumAge} yrs"
 msgid "{minutes}m"
 msgstr "{minutes}m"
 
-#: src/realm/skill-info-dialog.tsx:85
+#: src/realm/skill-info-dialog.tsx:82
 msgid "{multiplier}× attack"
 msgstr "{multiplier}× attack"
 
@@ -110,13 +110,13 @@ msgstr "{name}. Not enough mana"
 msgid "{name}. View enemy info"
 msgstr "{name}. View enemy info"
 
-#: src/practice/practice-result.tsx:159
+#: src/practice/practice-result.tsx:158
 #: src/realm/equipment-card.tsx:72
 msgid "{name}. View equipment info"
 msgstr "{name}. View equipment info"
 
 #: src/practice/move-picker.tsx:137
-#: src/realm/skill-chip.tsx:48
+#: src/realm/skill-chip.tsx:49
 msgid "{name}. View skill"
 msgstr "{name}. View skill"
 
@@ -189,7 +189,7 @@ msgstr "{title}, completed"
 msgid "{title}, locked"
 msgstr "{title}, locked"
 
-#: src/realm/skill-info-dialog.tsx:99
+#: src/realm/skill-info-dialog.tsx:96
 msgid "{turns, plural, one {# target turn} other {# target turns}}"
 msgstr "{turns, plural, one {# target turn} other {# target turns}}"
 
@@ -197,7 +197,7 @@ msgstr "{turns, plural, one {# target turn} other {# target turns}}"
 msgid "{value} of {max}"
 msgstr "{value} of {max}"
 
-#: src/practice/practice-result.tsx:133
+#: src/practice/practice-result.tsx:132
 msgid "+{xp} XP"
 msgstr "+{xp} XP"
 
@@ -205,7 +205,11 @@ msgstr "+{xp} XP"
 msgid "A new day has started. Refresh to claim today’s reward."
 msgstr "A new day has started. Refresh to claim today’s reward."
 
-#: src/character/cosmetics.ts:30
+#: src/pwa/update-banner.tsx:50
+msgid "A new version is ready"
+msgstr "A new version is ready"
+
+#: src/character/cosmetics.ts:32
 msgid "Accessories"
 msgstr "Accessories"
 
@@ -230,17 +234,17 @@ msgstr "All"
 msgid "All ages"
 msgstr "All ages"
 
-#: src/practice/session.ts:17
-#: src/realm/skill-info-dialog.tsx:25
+#: src/practice/session.ts:15
+#: src/realm/skill-info-dialog.tsx:22
 msgid "All allies"
 msgstr "All allies"
 
-#: src/ui/catalog-controls.tsx:99
+#: src/ui/catalog-controls.tsx:92
 msgid "All currencies"
 msgstr "All currencies"
 
-#: src/practice/session.ts:16
-#: src/realm/skill-info-dialog.tsx:24
+#: src/practice/session.ts:14
+#: src/realm/skill-info-dialog.tsx:21
 msgid "All enemies"
 msgstr "All enemies"
 
@@ -248,7 +252,7 @@ msgstr "All enemies"
 msgid "All languages"
 msgstr "All languages"
 
-#: src/ui/catalog-controls.tsx:79
+#: src/ui/catalog-controls.tsx:69
 msgid "All rarities"
 msgstr "All rarities"
 
@@ -274,7 +278,7 @@ msgstr "Answer at least 5 different questions in each battle. Accuracy uses your
 msgid "Appearance"
 msgstr "Appearance"
 
-#: src/realm/equipment.ts:22
+#: src/realm/equipment.ts:19
 msgid "Armor"
 msgstr "Armor"
 
@@ -287,8 +291,8 @@ msgid "Artwork unavailable"
 msgstr "Artwork unavailable"
 
 #: src/game/art/combat-status.tsx:15
-#: src/practice/session.ts:12
-#: src/realm/equipment.ts:25
+#: src/practice/session.ts:10
+#: src/realm/equipment.ts:22
 msgid "Attack"
 msgstr "Attack"
 
@@ -300,7 +304,7 @@ msgstr "Auburn"
 msgid "Back"
 msgstr "Back"
 
-#: src/practice/combatant-info-sheet.tsx:98
+#: src/practice/combatant-info-sheet.tsx:97
 #: src/practice/practice-info-sheet.tsx:46
 msgid "Back to battle"
 msgstr "Back to battle"
@@ -326,7 +330,7 @@ msgstr "Back to map"
 msgid "Back to Me"
 msgstr "Back to Me"
 
-#: src/character/cosmetics.ts:33
+#: src/character/cosmetics.ts:35
 msgid "Backgrounds"
 msgstr "Backgrounds"
 
@@ -338,7 +342,7 @@ msgstr "Backspace"
 msgid "Battlefield"
 msgstr "Battlefield"
 
-#: src/practice/practice-result.tsx:175
+#: src/practice/practice-result.tsx:174
 msgid "Before you try again"
 msgstr "Before you try again"
 
@@ -360,12 +364,12 @@ msgid "Blue"
 msgstr "Blue"
 
 #: src/game/art/wave-transition.tsx:58
-#: src/practice/combatant-info-sheet.tsx:124
+#: src/practice/combatant-info-sheet.tsx:123
 #: src/realm/practice-sheet.tsx:100
 msgid "Boss"
 msgstr "Boss"
 
-#: src/character/cosmetics.ts:27
+#: src/character/cosmetics.ts:29
 msgid "Bottoms"
 msgstr "Bottoms"
 
@@ -386,7 +390,7 @@ msgstr "Business"
 msgid "Buy"
 msgstr "Buy"
 
-#: src/practice/practice-result.tsx:50
+#: src/practice/practice-result.tsx:49
 msgid "Buy and equip gear to get stronger."
 msgstr "Buy and equip gear to get stronger."
 
@@ -419,7 +423,7 @@ msgstr "Change sign"
 msgid "Charcoal"
 msgstr "Charcoal"
 
-#: src/realm/equipment.ts:22
+#: src/realm/equipment.ts:19
 msgid "Charm"
 msgstr "Charm"
 
@@ -517,7 +521,7 @@ msgid "coins"
 msgstr "coins"
 
 #: src/course/lesson-screen.tsx:174
-#: src/ui/catalog-controls.tsx:100
+#: src/ui/catalog-controls.tsx:93
 msgid "Coins"
 msgstr "Coins"
 
@@ -525,7 +529,7 @@ msgstr "Coins"
 msgid "Coming soon"
 msgstr "Coming soon"
 
-#: src/ui/catalog-controls.tsx:48
+#: src/ui/catalog-controls.tsx:38
 msgid "Common first"
 msgstr "Common first"
 
@@ -655,7 +659,7 @@ msgstr "Create an account to author content."
 msgid "Create an account to keep your guest progress."
 msgstr "Create an account to keep your guest progress."
 
-#: src/ui/catalog-controls.tsx:94
+#: src/ui/catalog-controls.tsx:87
 msgid "Currency"
 msgstr "Currency"
 
@@ -663,7 +667,7 @@ msgstr "Currency"
 msgid "Current color"
 msgstr "Current color"
 
-#: src/practice/combatant-info-sheet.tsx:133
+#: src/practice/combatant-info-sheet.tsx:132
 msgid "Current stats"
 msgstr "Current stats"
 
@@ -705,18 +709,22 @@ msgstr "Deep brown"
 msgid "Defeated"
 msgstr "Defeated"
 
-#: src/practice/session.ts:12
+#: src/practice/session.ts:10
 msgid "Defend"
 msgstr "Defend"
 
 #: src/game/art/combat-status.tsx:16
-#: src/realm/equipment.ts:26
+#: src/realm/equipment.ts:23
 msgid "Defense"
 msgstr "Defense"
 
 #: src/practice/practice-info-sheet.tsx:72
 msgid "Difficulty"
 msgstr "Difficulty"
+
+#: src/pwa/update-banner.tsx:40
+msgid "Dismiss"
+msgstr "Dismiss"
 
 #: src/course/course-search.ts:16
 msgid "Economics and finance"
@@ -735,7 +743,7 @@ msgid "End run"
 msgstr "End run"
 
 #: src/practice/battle-narration.tsx:29
-#: src/practice/combatant-info-sheet.tsx:91
+#: src/practice/combatant-info-sheet.tsx:90
 #: src/practice/practice-arena.tsx:253
 msgid "Enemy"
 msgstr "Enemy"
@@ -777,8 +785,8 @@ msgstr "Enter your name."
 msgid "Equip"
 msgstr "Equip"
 
-#: src/practice/combatant-info-sheet.tsx:152
-#: src/practice/practice-result.tsx:151
+#: src/practice/combatant-info-sheet.tsx:151
+#: src/practice/practice-result.tsx:150
 msgid "Equipment"
 msgstr "Equipment"
 
@@ -815,12 +823,12 @@ msgstr "Fair"
 msgid "Fight your way through an endless dungeon and see how deep your knowledge goes."
 msgstr "Fight your way through an endless dungeon and see how deep your knowledge goes."
 
-#: src/ui/catalog-controls.tsx:60
-#: src/ui/catalog-controls.tsx:65
+#: src/ui/catalog-controls.tsx:50
+#: src/ui/catalog-controls.tsx:55
 msgid "Filter"
 msgstr "Filter"
 
-#: src/ui/catalog-controls.tsx:65
+#: src/ui/catalog-controls.tsx:55
 msgid "Filter ({filterCount})"
 msgstr "Filter ({filterCount})"
 
@@ -836,7 +844,7 @@ msgstr "Game modes"
 msgid "gems"
 msgstr "gems"
 
-#: src/ui/catalog-controls.tsx:101
+#: src/ui/catalog-controls.tsx:94
 msgid "Gems"
 msgstr "Gems"
 
@@ -880,7 +888,7 @@ msgstr "Hair color"
 msgid "Hair style"
 msgstr "Hair style"
 
-#: src/character/cosmetics.ts:29
+#: src/character/cosmetics.ts:31
 msgid "Hats"
 msgstr "Hats"
 
@@ -888,7 +896,7 @@ msgstr "Hats"
 msgid "Hazel"
 msgstr "Hazel"
 
-#: src/realm/equipment.ts:24
+#: src/realm/equipment.ts:21
 msgid "Health"
 msgstr "Health"
 
@@ -896,7 +904,7 @@ msgstr "Health"
 msgid "Health and medicine"
 msgstr "Health and medicine"
 
-#: src/ui/catalog-controls.tsx:53
+#: src/ui/catalog-controls.tsx:43
 msgid "Highest cost"
 msgstr "Highest cost"
 
@@ -969,7 +977,7 @@ msgstr "Learning language"
 msgid "Leave practice?"
 msgstr "Leave practice?"
 
-#: src/ui/catalog-controls.tsx:49
+#: src/ui/catalog-controls.tsx:39
 msgid "Legendary first"
 msgstr "Legendary first"
 
@@ -1070,7 +1078,7 @@ msgstr "Log out of this guest account?"
 msgid "Logging in switches to that account’s progress."
 msgstr "Logging in switches to that account’s progress."
 
-#: src/ui/catalog-controls.tsx:52
+#: src/ui/catalog-controls.tsx:42
 msgid "Lowest cost"
 msgstr "Lowest cost"
 
@@ -1150,7 +1158,7 @@ msgstr "Missions"
 msgid "Missions, {readyMissions} rewards ready"
 msgstr "Missions, {readyMissions} rewards ready"
 
-#: src/practice/combatant-info-sheet.tsx:120
+#: src/practice/combatant-info-sheet.tsx:119
 msgid "Monster"
 msgstr "Monster"
 
@@ -1249,8 +1257,8 @@ msgstr "Number pad"
 msgid "Olive"
 msgstr "Olive"
 
-#: src/practice/session.ts:15
-#: src/realm/skill-info-dialog.tsx:23
+#: src/practice/session.ts:13
+#: src/realm/skill-info-dialog.tsx:20
 msgid "One enemy"
 msgstr "One enemy"
 
@@ -1276,7 +1284,7 @@ msgstr "Open shop"
 msgid "Other"
 msgstr "Other"
 
-#: src/character/cosmetics.ts:31
+#: src/character/cosmetics.ts:33
 msgid "Outfits"
 msgstr "Outfits"
 
@@ -1292,7 +1300,7 @@ msgstr "Password"
 msgid "Peach"
 msgstr "Peach"
 
-#: src/character/cosmetics.ts:32
+#: src/character/cosmetics.ts:34
 msgid "Pets"
 msgstr "Pets"
 
@@ -1300,7 +1308,7 @@ msgstr "Pets"
 msgid "Platinum blond"
 msgstr "Platinum blond"
 
-#: src/practice/combatant-info-sheet.tsx:120
+#: src/practice/combatant-info-sheet.tsx:119
 msgid "Player"
 msgstr "Player"
 
@@ -1343,11 +1351,11 @@ msgstr "Progress"
 msgid "Question"
 msgstr "Question"
 
-#: src/ui/catalog-controls.tsx:74
+#: src/ui/catalog-controls.tsx:64
 msgid "Rarity"
 msgstr "Rarity"
 
-#: src/practice/practice-result.tsx:55
+#: src/practice/practice-result.tsx:54
 msgid "Read new lessons to gain XP and level up."
 msgstr "Read new lessons to gain XP and level up."
 
@@ -1369,7 +1377,7 @@ msgstr "Remove {value}"
 msgid "Remove outfit"
 msgstr "Remove outfit"
 
-#: src/practice/practice-result.tsx:45
+#: src/practice/practice-result.tsx:44
 msgid "Replay practices to earn medals and gear."
 msgstr "Replay practices to earn medals and gear."
 
@@ -1377,7 +1385,7 @@ msgstr "Replay practices to earn medals and gear."
 msgid "Reset preview"
 msgstr "Reset preview"
 
-#: src/realm/skill-info-dialog.tsx:87
+#: src/realm/skill-info-dialog.tsx:84
 msgid "Restore {amount} health"
 msgstr "Restore {amount} health"
 
@@ -1429,8 +1437,8 @@ msgstr "Search"
 msgid "Search courses"
 msgstr "Search courses"
 
-#: src/practice/session.ts:14
-#: src/realm/skill-info-dialog.tsx:22
+#: src/practice/session.ts:12
+#: src/realm/skill-info-dialog.tsx:19
 msgid "Self"
 msgstr "Self"
 
@@ -1445,7 +1453,7 @@ msgstr "Settings"
 msgid "Shield: {shield}"
 msgstr "Shield: {shield}"
 
-#: src/character/cosmetics.ts:28
+#: src/character/cosmetics.ts:30
 msgid "Shoes"
 msgstr "Shoes"
 
@@ -1472,9 +1480,9 @@ msgstr "Silver"
 
 #: src/practice/battle-narration.tsx:38
 #: src/practice/move-picker.tsx:100
-#: src/practice/session.ts:12
-#: src/realm/skill-chip.tsx:32
-#: src/realm/skill-info-dialog.tsx:44
+#: src/practice/session.ts:10
+#: src/realm/skill-chip.tsx:33
+#: src/realm/skill-info-dialog.tsx:41
 msgid "Skill"
 msgstr "Skill"
 
@@ -1482,7 +1490,7 @@ msgstr "Skill"
 msgid "Skill already equipped"
 msgstr "Skill already equipped"
 
-#: src/practice/combatant-info-sheet.tsx:177
+#: src/practice/combatant-info-sheet.tsx:176
 #: src/realm/equipment-card.tsx:111
 #: src/realm/equipment-info-sheet.tsx:113
 #: src/realm/loadout-screen.tsx:148
@@ -1503,8 +1511,8 @@ msgid "Something went wrong. Please try again."
 msgstr "Something went wrong. Please try again."
 
 #: src/course/course-search-screen.tsx:265
-#: src/ui/catalog-controls.tsx:115
-#: src/ui/catalog-controls.tsx:120
+#: src/ui/catalog-controls.tsx:108
+#: src/ui/catalog-controls.tsx:113
 msgid "Sort"
 msgstr "Sort"
 
@@ -1513,7 +1521,7 @@ msgid "Sound effects"
 msgstr "Sound effects"
 
 #: src/game/art/combat-status.tsx:17
-#: src/realm/equipment.ts:27
+#: src/realm/equipment.ts:24
 msgid "Speed"
 msgstr "Speed"
 
@@ -1663,7 +1671,7 @@ msgstr "Today’s missions"
 msgid "Too many attempts. Please wait and try again."
 msgstr "Too many attempts. Please wait and try again."
 
-#: src/character/cosmetics.ts:26
+#: src/character/cosmetics.ts:28
 msgid "Tops"
 msgstr "Tops"
 
@@ -1730,6 +1738,10 @@ msgstr "Units"
 #: src/reward/daily-reward-card.tsx:185
 msgid "Upcoming"
 msgstr "Upcoming"
+
+#: src/pwa/update-banner.tsx:36
+msgid "Update"
+msgstr "Update"
 
 #: src/api/error-messages.ts:70
 msgid "Use at least 8 characters for your password."
@@ -1798,7 +1810,7 @@ msgstr "Wave {wave}/{total}"
 msgid "Wave {wave}/{total} · Turn {turn}"
 msgstr "Wave {wave}/{total} · Turn {turn}"
 
-#: src/realm/equipment.ts:22
+#: src/realm/equipment.ts:19
 msgid "Weapon"
 msgstr "Weapon"
 
@@ -1824,7 +1836,7 @@ msgid "XP"
 msgstr "XP"
 
 #: src/practice/battle-narration.tsx:24
-#: src/practice/combatant-info-sheet.tsx:90
+#: src/practice/combatant-info-sheet.tsx:89
 msgid "You"
 msgstr "You"
 
@@ -1832,6 +1844,10 @@ msgstr "You"
 #: src/api/error-messages.ts:46
 msgid "You already own this item."
 msgstr "You already own this item."
+
+#: src/pwa/offline-banner.tsx:9
+msgid "You are offline. Some things will not load."
+msgstr "You are offline. Some things will not load."
 
 #: src/api/error-messages.ts:49
 msgid "You don’t have enough currency for this purchase."

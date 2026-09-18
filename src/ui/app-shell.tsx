@@ -34,18 +34,21 @@ const styles = stylex.create({
 export function AppShell({
   children,
   navigation,
+  notices,
   anonymous,
   onLogin,
   style,
 }: {
   children: ReactNode;
   navigation?: ReactNode;
+  notices?: ReactNode;
   anonymous: boolean;
   onLogin: () => void;
   style?: StyleXStyles;
 }) {
   return (
     <div {...stylex.props(styles.shell, style)}>
+      {notices}
       {anonymous && <GuestBanner onLogin={onLogin} />}
       <div {...stylex.props(styles.body)}>{children}</div>
       {navigation}

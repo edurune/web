@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="320" viewBox="0 0 320 320" data-rig="brand-mark-v1">
+  <g data-plane="brand" data-anchor="root" stroke="#303047" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <path fill="#758d80" d="M66 274V103L104 53L160 27L216 53L254 103V274L232 289H88Z"/>
+    <path fill="#9bb9a2" d="M66 260V103L104 53L160 27L216 53L254 103V260H211V123L188 96H132L109 123V260Z"/>
+    <path fill="#303047" d="M109 260V123L132 96H188L211 123V260Z"/>
+    <path fill="#747da7" stroke="none" d="M121 251V128L138 108H182L199 128V251Z"/>
+    <path fill="#9b9fbc" stroke="none" d="M121 128L138 108H154L137 132V251H121Z"/>
+    <path fill="#f2d99b" d="M160 27L183 57L160 89L137 57Z"/>
+    <path fill="#bd8b69" stroke="none" d="M160 73L174 57L183 57L160 89L137 57H146Z"/>
+    <path fill="#f2d99b" d="M160 140L179 175L160 210L141 175Z"/>
+    <path fill="none" d="M77 111L108 120M80 186H109M211 154H244M216 53L196 87M104 53L124 87M232 224L222 235L227 249"/>
+    <path fill="#e1bc8b" d="M49 256L103 245L160 261L217 245L271 256V278L217 269L160 289L103 269L49 278Z"/>
+    <path fill="#f4eddc" d="M49 248L103 237L160 253L217 237L271 248V268L217 259L160 279L103 259L49 268Z"/>
+    <path fill="none" d="M160 253V279M66 255L102 248L139 259M181 259L218 248L253 255"/>
+  </g>
+</svg>

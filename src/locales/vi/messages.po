@@ -13,7 +13,7 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/realm/skill-info-dialog.tsx:89
+#: src/realm/skill-info-dialog.tsx:86
 msgid "{amount} shield"
 msgstr "{amount} lá chắn"
 
@@ -21,7 +21,7 @@ msgstr "{amount} lá chắn"
 msgid "{completed} of {total} complete"
 msgstr "Đã hoàn thành {completed}/{total}"
 
-#: src/realm/skill-info-dialog.tsx:53
+#: src/realm/skill-info-dialog.tsx:50
 msgid "{cost} mana"
 msgstr "{cost} năng lượng"
 
@@ -41,7 +41,7 @@ msgstr "{minimumAge}–{maximumAge} tuổi"
 msgid "{minutes}m"
 msgstr "{minutes}p"
 
-#: src/realm/skill-info-dialog.tsx:85
+#: src/realm/skill-info-dialog.tsx:82
 msgid "{multiplier}× attack"
 msgstr "{multiplier}× sức tấn công"
 
@@ -110,13 +110,13 @@ msgstr "{name}. Không đủ năng lượng"
 msgid "{name}. View enemy info"
 msgstr "{name}. Xem thông tin kẻ địch"
 
-#: src/practice/practice-result.tsx:159
+#: src/practice/practice-result.tsx:158
 #: src/realm/equipment-card.tsx:72
 msgid "{name}. View equipment info"
 msgstr "{name}. Xem thông tin trang bị"
 
 #: src/practice/move-picker.tsx:137
-#: src/realm/skill-chip.tsx:48
+#: src/realm/skill-chip.tsx:49
 msgid "{name}. View skill"
 msgstr "{name}. Xem kỹ năng"
 
@@ -189,7 +189,7 @@ msgstr "{title}, đã hoàn thành"
 msgid "{title}, locked"
 msgstr "{title}, chưa mở"
 
-#: src/realm/skill-info-dialog.tsx:99
+#: src/realm/skill-info-dialog.tsx:96
 msgid "{turns, plural, one {# target turn} other {# target turns}}"
 msgstr "{turns, plural, other {Duy trì # lượt}}"
 
@@ -197,7 +197,7 @@ msgstr "{turns, plural, other {Duy trì # lượt}}"
 msgid "{value} of {max}"
 msgstr "{value} trên {max}"
 
-#: src/practice/practice-result.tsx:133
+#: src/practice/practice-result.tsx:132
 msgid "+{xp} XP"
 msgstr "+{xp} XP"
 
@@ -205,7 +205,11 @@ msgstr "+{xp} XP"
 msgid "A new day has started. Refresh to claim today’s reward."
 msgstr "Đã sang ngày mới. Tải lại để nhận thưởng hôm nay."
 
-#: src/character/cosmetics.ts:30
+#: src/pwa/update-banner.tsx:50
+msgid "A new version is ready"
+msgstr "Đã có phiên bản mới"
+
+#: src/character/cosmetics.ts:32
 msgid "Accessories"
 msgstr "Phụ kiện"
 
@@ -230,17 +234,17 @@ msgstr "Tất cả"
 msgid "All ages"
 msgstr "Mọi độ tuổi"
 
-#: src/practice/session.ts:17
-#: src/realm/skill-info-dialog.tsx:25
+#: src/practice/session.ts:15
+#: src/realm/skill-info-dialog.tsx:22
 msgid "All allies"
 msgstr "Tất cả đồng đội"
 
-#: src/ui/catalog-controls.tsx:99
+#: src/ui/catalog-controls.tsx:92
 msgid "All currencies"
 msgstr "Tất cả loại tiền"
 
-#: src/practice/session.ts:16
-#: src/realm/skill-info-dialog.tsx:24
+#: src/practice/session.ts:14
+#: src/realm/skill-info-dialog.tsx:21
 msgid "All enemies"
 msgstr "Tất cả kẻ địch"
 
@@ -248,7 +252,7 @@ msgstr "Tất cả kẻ địch"
 msgid "All languages"
 msgstr "Tất cả ngôn ngữ"
 
-#: src/ui/catalog-controls.tsx:79
+#: src/ui/catalog-controls.tsx:69
 msgid "All rarities"
 msgstr "Tất cả độ hiếm"
 
@@ -274,7 +278,7 @@ msgstr "Trả lời ít nhất 5 câu hỏi khác nhau trong mỗi trận. Độ
 msgid "Appearance"
 msgstr "Diện mạo"
 
-#: src/realm/equipment.ts:22
+#: src/realm/equipment.ts:19
 msgid "Armor"
 msgstr "Giáp"
 
@@ -287,8 +291,8 @@ msgid "Artwork unavailable"
 msgstr "Không tải được hình ảnh"
 
 #: src/game/art/combat-status.tsx:15
-#: src/practice/session.ts:12
-#: src/realm/equipment.ts:25
+#: src/practice/session.ts:10
+#: src/realm/equipment.ts:22
 msgid "Attack"
 msgstr "Tấn công"
 
@@ -300,7 +304,7 @@ msgstr "Nâu đỏ"
 msgid "Back"
 msgstr "Quay lại"
 
-#: src/practice/combatant-info-sheet.tsx:98
+#: src/practice/combatant-info-sheet.tsx:97
 #: src/practice/practice-info-sheet.tsx:46
 msgid "Back to battle"
 msgstr "Trở lại trận đấu"
@@ -326,7 +330,7 @@ msgstr "Về bản đồ"
 msgid "Back to Me"
 msgstr "Về trang cá nhân"
 
-#: src/character/cosmetics.ts:33
+#: src/character/cosmetics.ts:35
 msgid "Backgrounds"
 msgstr "Hình nền"
 
@@ -338,7 +342,7 @@ msgstr "Xóa chữ số trước"
 msgid "Battlefield"
 msgstr "Chiến trường"
 
-#: src/practice/practice-result.tsx:175
+#: src/practice/practice-result.tsx:174
 msgid "Before you try again"
 msgstr "Trước khi thử lại"
 
@@ -360,12 +364,12 @@ msgid "Blue"
 msgstr "Xanh dương"
 
 #: src/game/art/wave-transition.tsx:58
-#: src/practice/combatant-info-sheet.tsx:124
+#: src/practice/combatant-info-sheet.tsx:123
 #: src/realm/practice-sheet.tsx:100
 msgid "Boss"
 msgstr "Trùm"
 
-#: src/character/cosmetics.ts:27
+#: src/character/cosmetics.ts:29
 msgid "Bottoms"
 msgstr "Quần"
 
@@ -386,7 +390,7 @@ msgstr "Kinh doanh"
 msgid "Buy"
 msgstr "Mua"
 
-#: src/practice/practice-result.tsx:50
+#: src/practice/practice-result.tsx:49
 msgid "Buy and equip gear to get stronger."
 msgstr "Mua và trang bị vật phẩm để mạnh hơn."
 
@@ -419,7 +423,7 @@ msgstr "Đổi dấu"
 msgid "Charcoal"
 msgstr "Xám than"
 
-#: src/realm/equipment.ts:22
+#: src/realm/equipment.ts:19
 msgid "Charm"
 msgstr "Bùa"
 
@@ -517,7 +521,7 @@ msgid "coins"
 msgstr "xu"
 
 #: src/course/lesson-screen.tsx:174
-#: src/ui/catalog-controls.tsx:100
+#: src/ui/catalog-controls.tsx:93
 msgid "Coins"
 msgstr "Xu"
 
@@ -525,7 +529,7 @@ msgstr "Xu"
 msgid "Coming soon"
 msgstr "Sắp ra mắt"
 
-#: src/ui/catalog-controls.tsx:48
+#: src/ui/catalog-controls.tsx:38
 msgid "Common first"
 msgstr "Thường trước"
 
@@ -655,7 +659,7 @@ msgstr "Tạo tài khoản để biên soạn nội dung."
 msgid "Create an account to keep your guest progress."
 msgstr "Tạo tài khoản để giữ lại tiến trình học của khách."
 
-#: src/ui/catalog-controls.tsx:94
+#: src/ui/catalog-controls.tsx:87
 msgid "Currency"
 msgstr "Loại tiền"
 
@@ -663,7 +667,7 @@ msgstr "Loại tiền"
 msgid "Current color"
 msgstr "Màu hiện tại"
 
-#: src/practice/combatant-info-sheet.tsx:133
+#: src/practice/combatant-info-sheet.tsx:132
 msgid "Current stats"
 msgstr "Chỉ số hiện tại"
 
@@ -705,18 +709,22 @@ msgstr "Nâu đậm"
 msgid "Defeated"
 msgstr "Bại trận"
 
-#: src/practice/session.ts:12
+#: src/practice/session.ts:10
 msgid "Defend"
 msgstr "Phòng thủ"
 
 #: src/game/art/combat-status.tsx:16
-#: src/realm/equipment.ts:26
+#: src/realm/equipment.ts:23
 msgid "Defense"
 msgstr "Phòng thủ"
 
 #: src/practice/practice-info-sheet.tsx:72
 msgid "Difficulty"
 msgstr "Độ khó"
+
+#: src/pwa/update-banner.tsx:40
+msgid "Dismiss"
+msgstr "Bỏ qua"
 
 #: src/course/course-search.ts:16
 msgid "Economics and finance"
@@ -735,7 +743,7 @@ msgid "End run"
 msgstr "Kết thúc lượt chơi"
 
 #: src/practice/battle-narration.tsx:29
-#: src/practice/combatant-info-sheet.tsx:91
+#: src/practice/combatant-info-sheet.tsx:90
 #: src/practice/practice-arena.tsx:253
 msgid "Enemy"
 msgstr "Kẻ địch"
@@ -777,8 +785,8 @@ msgstr "Nhập tên của bạn."
 msgid "Equip"
 msgstr "Trang bị"
 
-#: src/practice/combatant-info-sheet.tsx:152
-#: src/practice/practice-result.tsx:151
+#: src/practice/combatant-info-sheet.tsx:151
+#: src/practice/practice-result.tsx:150
 msgid "Equipment"
 msgstr "Trang bị"
 
@@ -815,12 +823,12 @@ msgstr "Trắng sáng"
 msgid "Fight your way through an endless dungeon and see how deep your knowledge goes."
 msgstr "Chiến đấu qua hầm ngục vô tận để xem kiến thức có thể đưa bạn đi xa đến đâu."
 
-#: src/ui/catalog-controls.tsx:60
-#: src/ui/catalog-controls.tsx:65
+#: src/ui/catalog-controls.tsx:50
+#: src/ui/catalog-controls.tsx:55
 msgid "Filter"
 msgstr "Bộ lọc"
 
-#: src/ui/catalog-controls.tsx:65
+#: src/ui/catalog-controls.tsx:55
 msgid "Filter ({filterCount})"
 msgstr "Bộ lọc ({filterCount})"
 
@@ -836,7 +844,7 @@ msgstr "Chế độ chơi"
 msgid "gems"
 msgstr "ngọc"
 
-#: src/ui/catalog-controls.tsx:101
+#: src/ui/catalog-controls.tsx:94
 msgid "Gems"
 msgstr "Ngọc"
 
@@ -880,7 +888,7 @@ msgstr "Màu tóc"
 msgid "Hair style"
 msgstr "Kiểu tóc"
 
-#: src/character/cosmetics.ts:29
+#: src/character/cosmetics.ts:31
 msgid "Hats"
 msgstr "Mũ"
 
@@ -888,7 +896,7 @@ msgstr "Mũ"
 msgid "Hazel"
 msgstr "Nâu ánh lục"
 
-#: src/realm/equipment.ts:24
+#: src/realm/equipment.ts:21
 msgid "Health"
 msgstr "Sinh lực"
 
@@ -896,7 +904,7 @@ msgstr "Sinh lực"
 msgid "Health and medicine"
 msgstr "Sức khỏe và y học"
 
-#: src/ui/catalog-controls.tsx:53
+#: src/ui/catalog-controls.tsx:43
 msgid "Highest cost"
 msgstr "Giá cao nhất"
 
@@ -969,7 +977,7 @@ msgstr "Ngôn ngữ học tập"
 msgid "Leave practice?"
 msgstr "Rời bài luyện tập?"
 
-#: src/ui/catalog-controls.tsx:49
+#: src/ui/catalog-controls.tsx:39
 msgid "Legendary first"
 msgstr "Huyền thoại trước"
 
@@ -1070,7 +1078,7 @@ msgstr "Đăng xuất khỏi tài khoản khách?"
 msgid "Logging in switches to that account’s progress."
 msgstr "Khi đăng nhập, bạn sẽ chuyển sang tiến trình của tài khoản đó."
 
-#: src/ui/catalog-controls.tsx:52
+#: src/ui/catalog-controls.tsx:42
 msgid "Lowest cost"
 msgstr "Giá thấp nhất"
 
@@ -1150,7 +1158,7 @@ msgstr "Nhiệm vụ"
 msgid "Missions, {readyMissions} rewards ready"
 msgstr "Nhiệm vụ, {readyMissions} phần thưởng có thể nhận"
 
-#: src/practice/combatant-info-sheet.tsx:120
+#: src/practice/combatant-info-sheet.tsx:119
 msgid "Monster"
 msgstr "Quái vật"
 
@@ -1249,8 +1257,8 @@ msgstr "Bàn phím số"
 msgid "Olive"
 msgstr "Ô liu"
 
-#: src/practice/session.ts:15
-#: src/realm/skill-info-dialog.tsx:23
+#: src/practice/session.ts:13
+#: src/realm/skill-info-dialog.tsx:20
 msgid "One enemy"
 msgstr "Một kẻ địch"
 
@@ -1276,7 +1284,7 @@ msgstr "Mở cửa hàng"
 msgid "Other"
 msgstr "Khác"
 
-#: src/character/cosmetics.ts:31
+#: src/character/cosmetics.ts:33
 msgid "Outfits"
 msgstr "Trang phục"
 
@@ -1292,7 +1300,7 @@ msgstr "Mật khẩu"
 msgid "Peach"
 msgstr "Hồng đào"
 
-#: src/character/cosmetics.ts:32
+#: src/character/cosmetics.ts:34
 msgid "Pets"
 msgstr "Thú cưng"
 
@@ -1300,7 +1308,7 @@ msgstr "Thú cưng"
 msgid "Platinum blond"
 msgstr "Vàng bạch kim"
 
-#: src/practice/combatant-info-sheet.tsx:120
+#: src/practice/combatant-info-sheet.tsx:119
 msgid "Player"
 msgstr "Người chơi"
 
@@ -1343,11 +1351,11 @@ msgstr "Tiến trình"
 msgid "Question"
 msgstr "Câu hỏi"
 
-#: src/ui/catalog-controls.tsx:74
+#: src/ui/catalog-controls.tsx:64
 msgid "Rarity"
 msgstr "Độ hiếm"
 
-#: src/practice/practice-result.tsx:55
+#: src/practice/practice-result.tsx:54
 msgid "Read new lessons to gain XP and level up."
 msgstr "Đọc bài học mới để nhận XP và lên cấp."
 
@@ -1369,7 +1377,7 @@ msgstr "Bỏ {value}"
 msgid "Remove outfit"
 msgstr "Tháo trang phục"
 
-#: src/practice/practice-result.tsx:45
+#: src/practice/practice-result.tsx:44
 msgid "Replay practices to earn medals and gear."
 msgstr "Chơi lại bài luyện tập để nhận huy chương và trang bị."
 
@@ -1377,7 +1385,7 @@ msgstr "Chơi lại bài luyện tập để nhận huy chương và trang bị.
 msgid "Reset preview"
 msgstr "Bỏ thử đồ"
 
-#: src/realm/skill-info-dialog.tsx:87
+#: src/realm/skill-info-dialog.tsx:84
 msgid "Restore {amount} health"
 msgstr "Hồi {amount} máu"
 
@@ -1429,8 +1437,8 @@ msgstr "Tìm kiếm"
 msgid "Search courses"
 msgstr "Tìm khóa học"
 
-#: src/practice/session.ts:14
-#: src/realm/skill-info-dialog.tsx:22
+#: src/practice/session.ts:12
+#: src/realm/skill-info-dialog.tsx:19
 msgid "Self"
 msgstr "Bản thân"
 
@@ -1445,7 +1453,7 @@ msgstr "Cài đặt"
 msgid "Shield: {shield}"
 msgstr "Lá chắn: {shield}"
 
-#: src/character/cosmetics.ts:28
+#: src/character/cosmetics.ts:30
 msgid "Shoes"
 msgstr "Giày"
 
@@ -1472,9 +1480,9 @@ msgstr "Bạc"
 
 #: src/practice/battle-narration.tsx:38
 #: src/practice/move-picker.tsx:100
-#: src/practice/session.ts:12
-#: src/realm/skill-chip.tsx:32
-#: src/realm/skill-info-dialog.tsx:44
+#: src/practice/session.ts:10
+#: src/realm/skill-chip.tsx:33
+#: src/realm/skill-info-dialog.tsx:41
 msgid "Skill"
 msgstr "Kỹ năng"
 
@@ -1482,7 +1490,7 @@ msgstr "Kỹ năng"
 msgid "Skill already equipped"
 msgstr "Kỹ năng đã được trang bị"
 
-#: src/practice/combatant-info-sheet.tsx:177
+#: src/practice/combatant-info-sheet.tsx:176
 #: src/realm/equipment-card.tsx:111
 #: src/realm/equipment-info-sheet.tsx:113
 #: src/realm/loadout-screen.tsx:148
@@ -1503,8 +1511,8 @@ msgid "Something went wrong. Please try again."
 msgstr "Đã xảy ra lỗi. Vui lòng thử lại."
 
 #: src/course/course-search-screen.tsx:265
-#: src/ui/catalog-controls.tsx:115
-#: src/ui/catalog-controls.tsx:120
+#: src/ui/catalog-controls.tsx:108
+#: src/ui/catalog-controls.tsx:113
 msgid "Sort"
 msgstr "Sắp xếp"
 
@@ -1513,7 +1521,7 @@ msgid "Sound effects"
 msgstr "Âm thanh"
 
 #: src/game/art/combat-status.tsx:17
-#: src/realm/equipment.ts:27
+#: src/realm/equipment.ts:24
 msgid "Speed"
 msgstr "Tốc độ"
 
@@ -1663,7 +1671,7 @@ msgstr "Nhiệm vụ hôm nay"
 msgid "Too many attempts. Please wait and try again."
 msgstr "Bạn đã thử quá nhiều lần. Vui lòng chờ rồi thử lại."
 
-#: src/character/cosmetics.ts:26
+#: src/character/cosmetics.ts:28
 msgid "Tops"
 msgstr "Áo"
 
@@ -1730,6 +1738,10 @@ msgstr "Chương"
 #: src/reward/daily-reward-card.tsx:185
 msgid "Upcoming"
 msgstr "Sắp tới"
+
+#: src/pwa/update-banner.tsx:36
+msgid "Update"
+msgstr "Cập nhật"
 
 #: src/api/error-messages.ts:70
 msgid "Use at least 8 characters for your password."
@@ -1798,7 +1810,7 @@ msgstr "Đợt {wave}/{total}"
 msgid "Wave {wave}/{total} · Turn {turn}"
 msgstr "Đợt {wave}/{total} · Lượt {turn}"
 
-#: src/realm/equipment.ts:22
+#: src/realm/equipment.ts:19
 msgid "Weapon"
 msgstr "Vũ khí"
 
@@ -1824,7 +1836,7 @@ msgid "XP"
 msgstr "KN"
 
 #: src/practice/battle-narration.tsx:24
-#: src/practice/combatant-info-sheet.tsx:90
+#: src/practice/combatant-info-sheet.tsx:89
 msgid "You"
 msgstr "Bạn"
 
@@ -1832,6 +1844,10 @@ msgstr "Bạn"
 #: src/api/error-messages.ts:46
 msgid "You already own this item."
 msgstr "Bạn đã sở hữu vật phẩm này."
+
+#: src/pwa/offline-banner.tsx:9
+msgid "You are offline. Some things will not load."
+msgstr "Bạn đang ngoại tuyến. Một số nội dung sẽ không tải được."
 
 #: src/api/error-messages.ts:49
 msgid "You don’t have enough currency for this purchase."

@@ -6,6 +6,7 @@ import {
 import { isUnauthenticated } from "../api/error-messages.ts";
 import { userSessionOptions } from "../api/user/user-session-options.ts";
 import { OnboardingScreen } from "../user/onboarding-screen.tsx";
+import { PwaNotices } from "../pwa/pwa-notices.tsx";
 import { AppShell } from "../ui/app-shell.tsx";
 
 export const Route = createFileRoute("/onboarding")({
@@ -33,6 +34,7 @@ function Onboarding() {
   const navigate = Route.useNavigate();
   return (
     <AppShell
+      notices={<PwaNotices />}
       anonymous={false}
       onLogin={() => {
         void navigate({ to: "/login" });
