@@ -6,8 +6,9 @@ import { createRoot } from "react-dom/client";
 import "@fontsource-variable/nunito/wght.css";
 import "./index.css";
 import { ApiProvider, API_URL, createApiClient, createQueryClient } from "./api/index.ts";
+import { ErrorBoundary } from "./app/error-boundary.tsx";
 import { i18n } from "./i18n/i18n.ts";
-import { registerServiceWorker } from "./pwa/service-worker.ts";
+import { recoverApp, registerServiceWorker } from "./pwa/service-worker.ts";
 import { routeTree } from "./routeTree.gen.ts";
 
 const apiClient = createApiClient(API_URL);
@@ -30,12 +31,14 @@ registerServiceWorker();
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <I18nProvider i18n={i18n}>
-      <IconContext.Provider value={iconDefaults}>
-        <ApiProvider client={apiClient} queryClient={queryClient}>
-          <RouterProvider router={router} />
-        </ApiProvider>
-      </IconContext.Provider>
-    </I18nProvider>
+    <ErrorBoundary onReload={recoverApp}>
+      <I18nProvider i18n={i18n}>
+        <IconContext.Provider value={iconDefaults}>
+          <ApiProvider client={apiClient} queryClient={queryClient}>
+            <RouterProvider router={router} />
+          </ApiProvider>
+        </IconContext.Provider>
+      </I18nProvider>
+    </ErrorBoundary>
   </StrictMode>,
 );

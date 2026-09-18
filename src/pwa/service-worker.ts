@@ -57,6 +57,15 @@ export function applyUpdate() {
   void update(true);
 }
 
+export function recoverApp() {
+  if (ready) {
+    applyUpdate();
+    return;
+  }
+
+  window.location.reload();
+}
+
 export function dismissUpdate() {
   ready = false;
   emit();
