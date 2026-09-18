@@ -18,7 +18,6 @@ export default defineConfig(({ mode }) => {
       svgr({ svgrOptions: { svgo: false } }),
       stylex.vite({ useCSSLayers: true }),
       tanstackRouter({ target: "react", autoCodeSplitting: true }),
-      react({ compiler: true }),
       babel({
         // Router-split ids carry a ?tsr-split= query, so this cannot anchor on $.
         include: /\.[jt]sx?(\?|$)/,
@@ -30,6 +29,7 @@ export default defineConfig(({ mode }) => {
           plugins: ["@lingui/babel-plugin-lingui-macro"],
         },
       }),
+      react({ compiler: true }),
       lingui(),
       process.env.STORYBOOK !== "true" &&
         VitePWA({
