@@ -1,0 +1,1930 @@
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2026-09-16 11:26+0700\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: @lingui/cli\n"
+"Language: vi\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Plural-Forms: \n"
+
+#: src/realm/skill-info-dialog.tsx:89
+msgid "{amount} shield"
+msgstr "{amount} lá chắn"
+
+#: src/home/home-screen.tsx:113
+msgid "{completed} of {total} complete"
+msgstr "Đã hoàn thành {completed}/{total}"
+
+#: src/realm/skill-info-dialog.tsx:53
+msgid "{cost} mana"
+msgstr "{cost} năng lượng"
+
+#: src/user/profile-screen.tsx:109
+msgid "{courses, plural, one {# course} other {# courses}}"
+msgstr "{courses, plural, other {# khóa học}}"
+
+#: src/game/realm-progress.tsx:79
+msgid "{earned} / {required} XP"
+msgstr "{earned} / {required} XP"
+
+#: src/course/course-metadata.tsx:20
+msgid "{minimumAge}–{maximumAge} yrs"
+msgstr "{minimumAge}–{maximumAge} tuổi"
+
+#: src/course/lesson-screen.tsx:110
+msgid "{minutes}m"
+msgstr "{minutes}p"
+
+#: src/realm/skill-info-dialog.tsx:85
+msgid "{multiplier}× attack"
+msgstr "{multiplier}× sức tấn công"
+
+#: src/practice/battle-narration.tsx:44
+msgid "{name} attacked!"
+msgstr "{name} tấn công!"
+
+#: src/practice/battle-narration.tsx:49
+msgid "{name} blocked {absorbed} damage."
+msgstr "{name} chặn được {absorbed} sát thương."
+
+#: src/practice/battle-narration.tsx:59
+msgid "{name} gained a shield."
+msgstr "{name} nhận được lá chắn."
+
+#: src/practice/battle-narration.tsx:49
+msgid "{name} lost {amount} HP."
+msgstr "{name} mất {amount} máu."
+
+#: src/practice/battle-narration.tsx:35
+msgid "{name} missed!"
+msgstr "{name} đánh trượt!"
+
+#: src/practice/battle-narration.tsx:54
+msgid "{name} recovered {amount} HP."
+msgstr "{name} hồi {amount} máu."
+
+#: src/practice/battle-narration.tsx:42
+msgid "{name} took a defensive stance."
+msgstr "{name} vào thế phòng thủ."
+
+#: src/practice/battle-narration.tsx:39
+msgid "{name} used {move}."
+msgstr "{name} dùng {move}."
+
+#: src/practice/battle-narration.tsx:75
+msgid "{name} was defeated."
+msgstr "{name} đã bị hạ."
+
+#: src/practice/practice-arena.tsx:269
+msgid "{name}: {health}/{max} health"
+msgstr "{name}: {health}/{max} máu"
+
+#: src/practice/battle-narration.tsx:63
+msgid "{name}: {stat} fell!"
+msgstr "{name}: {stat} giảm!"
+
+#: src/practice/battle-narration.tsx:63
+msgid "{name}: {stat} rose!"
+msgstr "{name}: {stat} tăng!"
+
+#: src/game/art/combat-status.tsx:89
+#: src/game/art/combat-status.tsx:94
+msgid "{name}: {value}"
+msgstr "{name}: {value}"
+
+#: src/practice/battle-narration.tsx:68
+msgid "{name}: an effect wore off."
+msgstr "{name}: một hiệu ứng đã hết."
+
+#: src/practice/move-picker.tsx:108
+msgid "{name}. Not enough mana"
+msgstr "{name}. Không đủ năng lượng"
+
+#: src/practice/practice-arena.tsx:287
+msgid "{name}. View enemy info"
+msgstr "{name}. Xem thông tin kẻ địch"
+
+#: src/practice/practice-result.tsx:159
+#: src/realm/equipment-card.tsx:72
+msgid "{name}. View equipment info"
+msgstr "{name}. Xem thông tin trang bị"
+
+#: src/practice/move-picker.tsx:137
+#: src/realm/skill-chip.tsx:48
+msgid "{name}. View skill"
+msgstr "{name}. Xem kỹ năng"
+
+#: src/practice/player-resources.tsx:87
+msgid "{playerName}. View player info"
+msgstr "{playerName}. Xem thông tin người chơi"
+
+#: src/objective/mission-card.tsx:125
+msgid "{progress} of {target} complete"
+msgstr "Đã hoàn thành {progress}/{target}"
+
+#: src/reward/daily-reward-card.tsx:122
+msgid "{streak, plural, one {# day streak} other {# day streak}}"
+msgstr "{streak, plural, other {Chuỗi # ngày}}"
+
+#: src/objective/mission-card.tsx:31
+msgid "{target, plural, one {Answer # question correctly in won battles} other {Answer # questions correctly in won battles}}"
+msgstr "{target, plural, other {Trả lời đúng # câu hỏi trong các trận thắng}}"
+
+#: src/objective/mission-card.tsx:20
+msgid "{target, plural, one {Clear # practice} other {Clear # practices}}"
+msgstr "{target, plural, other {Hoàn thành # bài luyện tập}}"
+
+#: src/objective/mission-card.tsx:24
+msgid "{target, plural, one {Clear # unit} other {Clear # units}}"
+msgstr "{target, plural, other {Hoàn thành # chương}}"
+
+#: src/objective/mission-card.tsx:26
+msgid "{target, plural, one {Complete # course} other {Complete # courses}}"
+msgstr "{target, plural, other {Hoàn thành # khóa học}}"
+
+#: src/objective/mission-card.tsx:18
+msgid "{target, plural, one {Finish # lesson} other {Finish # lessons}}"
+msgstr "{target, plural, other {Hoàn thành # bài học}}"
+
+#: src/objective/mission-card.tsx:28
+msgid "{target, plural, one {Learn on # day} other {Learn on # days}}"
+msgstr "{target, plural, other {Học trong # ngày}}"
+
+#: src/objective/mission-card.tsx:43
+msgid "{target, plural, one {Win # battle with at least 80% accuracy} other {Win # battles with at least 80% accuracy}}"
+msgstr "{target, plural, other {Thắng # trận với độ chính xác ít nhất 80%}}"
+
+#: src/objective/mission-card.tsx:51
+msgid "{target, plural, one {Win # battle with perfect accuracy} other {Win # battles with perfect accuracy}}"
+msgstr "{target, plural, other {Thắng # trận với độ chính xác 100%}}"
+
+#: src/objective/mission-card.tsx:22
+msgid "{target, plural, one {Win # battle} other {Win # battles}}"
+msgstr "{target, plural, other {Thắng # trận đấu}}"
+
+#: src/objective/mission-card.tsx:40
+msgid "{target, plural, one {Win # practice replay} other {Win # practice replays}}"
+msgstr "{target, plural, other {Thắng # lần chơi lại bài luyện tập}}"
+
+#: src/objective/mission-card.tsx:38
+msgid "{target, plural, one {Win # unit review} other {Win # unit reviews}}"
+msgstr "{target, plural, other {Thắng # bài ôn tập chương}}"
+
+#: src/realm/course-path.tsx:143
+#: src/realm/unit-map-section.tsx:132
+msgid "{title}, battle in progress"
+msgstr "{title}, trận đấu đang diễn ra"
+
+#: src/realm/course-path.tsx:145
+msgid "{title}, completed"
+msgstr "{title}, đã hoàn thành"
+
+#: src/realm/course-path.tsx:141
+msgid "{title}, locked"
+msgstr "{title}, chưa mở"
+
+#: src/realm/skill-info-dialog.tsx:99
+msgid "{turns, plural, one {# target turn} other {# target turns}}"
+msgstr "{turns, plural, other {Duy trì # lượt}}"
+
+#: src/ui/primitives/resource-bar.tsx:125
+msgid "{value} of {max}"
+msgstr "{value} trên {max}"
+
+#: src/practice/practice-result.tsx:133
+msgid "+{xp} XP"
+msgstr "+{xp} XP"
+
+#: src/api/error-messages.ts:53
+msgid "A new day has started. Refresh to claim today’s reward."
+msgstr "Đã sang ngày mới. Tải lại để nhận thưởng hôm nay."
+
+#: src/character/cosmetics.ts:30
+msgid "Accessories"
+msgstr "Phụ kiện"
+
+#: src/course/course-search-screen.tsx:243
+msgid "Age"
+msgstr "Độ tuổi"
+
+#: src/course/course-search-screen.tsx:169
+msgid "Ages {minimumAge}–{maximumAge}"
+msgstr "{minimumAge}–{maximumAge} tuổi"
+
+#: src/course/course-search-screen.tsx:169
+msgid "Ages {minimumAge}+"
+msgstr "Từ {minimumAge} tuổi"
+
+#: src/course/course-search-screen.tsx:199
+#: src/realm/equipment-shop-screen.tsx:91
+msgid "All"
+msgstr "Tất cả"
+
+#: src/course/course-search-screen.tsx:247
+msgid "All ages"
+msgstr "Mọi độ tuổi"
+
+#: src/practice/session.ts:17
+#: src/realm/skill-info-dialog.tsx:25
+msgid "All allies"
+msgstr "Tất cả đồng đội"
+
+#: src/ui/catalog-controls.tsx:99
+msgid "All currencies"
+msgstr "Tất cả loại tiền"
+
+#: src/practice/session.ts:16
+#: src/realm/skill-info-dialog.tsx:24
+msgid "All enemies"
+msgstr "Tất cả kẻ địch"
+
+#: src/course/course-search-screen.tsx:225
+msgid "All languages"
+msgstr "Tất cả ngôn ngữ"
+
+#: src/ui/catalog-controls.tsx:79
+msgid "All rarities"
+msgstr "Tất cả độ hiếm"
+
+#: src/user/login-screen.tsx:195
+msgid "Already have an account? Log in"
+msgstr "Đã có tài khoản? Đăng nhập"
+
+#: src/character/appearance-colors.ts:38
+msgid "Amber"
+msgstr "Hổ phách"
+
+#: src/api/error-messages.ts:68
+#: src/api/error-messages.ts:69
+msgid "An account with this email already exists. Try logging in."
+msgstr "Email này đã có tài khoản. Hãy đăng nhập."
+
+#: src/objective/mission-card.tsx:73
+msgid "Answer at least 5 different questions in each battle. Accuracy uses your first answer to each question."
+msgstr "Trả lời ít nhất 5 câu hỏi khác nhau trong mỗi trận. Độ chính xác tính theo câu trả lời đầu tiên cho mỗi câu hỏi."
+
+#: src/character/appearance-screen.tsx:175
+#: src/character/appearance-screen.tsx:187
+msgid "Appearance"
+msgstr "Diện mạo"
+
+#: src/realm/equipment.ts:22
+msgid "Armor"
+msgstr "Giáp"
+
+#: src/course/course-search.ts:13
+msgid "Arts and humanities"
+msgstr "Nghệ thuật và nhân văn"
+
+#: src/game/art/art-surface.tsx:25
+msgid "Artwork unavailable"
+msgstr "Không tải được hình ảnh"
+
+#: src/game/art/combat-status.tsx:15
+#: src/practice/session.ts:12
+#: src/realm/equipment.ts:25
+msgid "Attack"
+msgstr "Tấn công"
+
+#: src/character/appearance-colors.ts:24
+msgid "Auburn"
+msgstr "Nâu đỏ"
+
+#: src/user/onboarding-progress.tsx:34
+msgid "Back"
+msgstr "Quay lại"
+
+#: src/practice/combatant-info-sheet.tsx:98
+#: src/practice/practice-info-sheet.tsx:46
+msgid "Back to battle"
+msgstr "Trở lại trận đấu"
+
+#: src/realm/realm-shell.tsx:62
+msgid "Back to courses"
+msgstr "Quay lại khóa học"
+
+#: src/objective/missions-screen.tsx:58
+#: src/reward/rewards-screen.tsx:67
+msgid "Back to Home"
+msgstr "Về trang chủ"
+
+#: src/course/lesson-screen.tsx:91
+#: src/course/lesson-screen.tsx:192
+#: src/practice/practice-screen.tsx:278
+msgid "Back to map"
+msgstr "Về bản đồ"
+
+#: src/character/appearance-screen.tsx:165
+#: src/character/cosmetic-shop-screen.tsx:101
+#: src/character/wardrobe-screen.tsx:67
+msgid "Back to Me"
+msgstr "Về trang cá nhân"
+
+#: src/character/cosmetics.ts:33
+msgid "Backgrounds"
+msgstr "Hình nền"
+
+#: src/practice/answer-input.tsx:472
+msgid "Backspace"
+msgstr "Xóa chữ số trước"
+
+#: src/practice/practice-arena.tsx:173
+msgid "Battlefield"
+msgstr "Chiến trường"
+
+#: src/practice/practice-result.tsx:175
+msgid "Before you try again"
+msgstr "Trước khi thử lại"
+
+#: src/user/birth-year-step.tsx:53
+#: src/user/profile-settings.tsx:79
+msgid "Birth year"
+msgstr "Năm sinh"
+
+#: src/character/appearance-colors.ts:20
+msgid "Black"
+msgstr "Đen"
+
+#: src/character/appearance-colors.ts:26
+msgid "Blond"
+msgstr "Vàng"
+
+#: src/character/appearance-colors.ts:40
+msgid "Blue"
+msgstr "Xanh dương"
+
+#: src/game/art/wave-transition.tsx:58
+#: src/practice/combatant-info-sheet.tsx:124
+#: src/realm/practice-sheet.tsx:100
+msgid "Boss"
+msgstr "Trùm"
+
+#: src/character/cosmetics.ts:27
+msgid "Bottoms"
+msgstr "Quần"
+
+#: src/character/appearance-colors.ts:13
+msgid "Bronze"
+msgstr "Đồng"
+
+#: src/character/appearance-colors.ts:22
+#: src/character/appearance-colors.ts:35
+msgid "Brown"
+msgstr "Nâu"
+
+#: src/course/course-search.ts:14
+msgid "Business"
+msgstr "Kinh doanh"
+
+#: src/character/cosmetic-shop-screen.tsx:282
+msgid "Buy"
+msgstr "Mua"
+
+#: src/practice/practice-result.tsx:50
+msgid "Buy and equip gear to get stronger."
+msgstr "Mua và trang bị vật phẩm để mạnh hơn."
+
+#: src/realm/equipment-shop-screen.tsx:173
+msgid "Buy equipment"
+msgstr "Mua trang bị"
+
+#: src/user/profile-settings.tsx:154
+msgid "Cancel"
+msgstr "Hủy"
+
+#: src/character/cosmetic-categories.tsx:27
+msgid "Categories"
+msgstr "Danh mục"
+
+#: src/play/play-screen.tsx:93
+#: src/ui/app-navigation.tsx:106
+msgid "Challenges"
+msgstr "Thử thách"
+
+#: src/user/profile-screen.tsx:86
+msgid "Change appearance"
+msgstr "Đổi diện mạo"
+
+#: src/practice/answer-input.tsx:486
+msgid "Change sign"
+msgstr "Đổi dấu"
+
+#: src/character/appearance-colors.ts:36
+msgid "Charcoal"
+msgstr "Xám than"
+
+#: src/realm/equipment.ts:22
+msgid "Charm"
+msgstr "Bùa"
+
+#: src/course/course-search-screen.tsx:328
+msgid "Check back soon for something new to learn."
+msgstr "Hãy quay lại sau để khám phá khóa học mới."
+
+#: src/api/error-messages.ts:23
+msgid "Check the unit map layout and try again."
+msgstr ""
+
+#: src/api/error-messages.ts:58
+msgid "Check your content and its question and media references."
+msgstr "Kiểm tra nội dung và các câu hỏi, tệp đa phương tiện được đính kèm."
+
+#: src/api/error-messages.ts:8
+msgid "Check your input and try again."
+msgstr "Kiểm tra thông tin đã nhập rồi thử lại."
+
+#: src/api/error-messages.ts:37
+msgid "Check your selection and try again."
+msgstr "Kiểm tra lựa chọn rồi thử lại."
+
+#: src/character/appearance-colors.ts:23
+msgid "Chestnut"
+msgstr "Nâu hạt dẻ"
+
+#: src/api/error-messages.ts:59
+msgid "Choose a supported media file within the upload limits."
+msgstr "Chọn tệp đa phương tiện được hỗ trợ và nằm trong giới hạn tải lên."
+
+#: src/api/error-messages.ts:21
+msgid "Choose a valid learner age range."
+msgstr "Chọn khoảng độ tuổi hợp lệ."
+
+#: src/practice/answer-input.tsx:138
+msgid "Choose all that apply"
+msgstr "Chọn tất cả đáp án phù hợp"
+
+#: src/api/error-messages.ts:43
+msgid "Choose an available action."
+msgstr "Chọn một hành động khả dụng."
+
+#: src/api/error-messages.ts:48
+msgid "Choose an available hairstyle."
+msgstr "Chọn một kiểu tóc khả dụng."
+
+#: src/api/error-messages.ts:31
+msgid "Choose an available target."
+msgstr "Chọn một mục tiêu khả dụng."
+
+#: src/api/error-messages.ts:22
+msgid "Choose an available unit biome and try again."
+msgstr ""
+
+#: src/user/user-language-step.tsx:52
+msgid "Choose the language you’re most comfortable reading."
+msgstr "Chọn ngôn ngữ bạn đọc hiểu dễ dàng nhất."
+
+#: src/objective/mission-card.tsx:156
+#: src/reward/daily-reward-card.tsx:209
+msgid "Claim"
+msgstr "Nhận"
+
+#: src/objective/mission-card.tsx:161
+#: src/reward/daily-reward-card.tsx:174
+#: src/reward/daily-reward-card.tsx:198
+msgid "Claimed"
+msgstr "Đã nhận"
+
+#: src/practice/answer-input.tsx:463
+msgid "Clear"
+msgstr "Xóa hết"
+
+#: src/course/course-search-screen.tsx:333
+msgid "Clear filters"
+msgstr "Xóa bộ lọc"
+
+#: src/course/course-search-field.tsx:109
+msgid "Clear search"
+msgstr "Xóa tìm kiếm"
+
+#: src/ui/sound/audio-unlock-overlay.tsx:42
+msgid "Click to resume"
+msgstr "Nhấp để tiếp tục"
+
+#: src/realm/equipment-info-sheet.tsx:68
+#: src/ui/primitives/bottom-sheet.tsx:167
+#: src/ui/primitives/dialog.tsx:151
+msgid "Close"
+msgstr "Đóng"
+
+#: src/ui/primitives/currency-amount.tsx:24
+msgid "coins"
+msgstr "xu"
+
+#: src/course/lesson-screen.tsx:174
+#: src/ui/catalog-controls.tsx:100
+msgid "Coins"
+msgstr "Xu"
+
+#: src/play/play-screen.tsx:121
+msgid "Coming soon"
+msgstr "Sắp ra mắt"
+
+#: src/ui/catalog-controls.tsx:48
+msgid "Common first"
+msgstr "Thường trước"
+
+#: src/course/lesson-screen.tsx:192
+msgid "Complete"
+msgstr "Hoàn thành"
+
+#: src/objective/mission-card.tsx:64
+msgid "Complete a new lesson or submit a practice answer. Days do not need to be consecutive."
+msgstr "Hoàn thành một bài học mới hoặc trả lời một câu hỏi luyện tập. Các ngày không cần liên tiếp."
+
+#: src/api/error-messages.ts:52
+msgid "Complete the objective before claiming its reward."
+msgstr "Hoàn thành mục tiêu trước khi nhận thưởng."
+
+#: src/api/error-messages.ts:26
+msgid "Complete the previous activities to unlock this one."
+msgstr "Hoàn thành các bài trước để mở khóa bài này."
+
+#: src/api/error-messages.ts:73
+msgid "Complete verification and try again."
+msgstr "Hoàn tất xác minh rồi thử lại."
+
+#: src/course/course-search.ts:15
+msgid "Computer science"
+msgstr "Khoa học máy tính"
+
+#: src/practice/practice-screen.tsx:406
+msgid "Confirm answer"
+msgstr "Xác nhận đáp án"
+
+#: src/character/appearance-screen.tsx:217
+#: src/home/home-screen.tsx:117
+#: src/practice/practice-screen.tsx:441
+#: src/user/onboarding-step.tsx:138
+msgid "Continue"
+msgstr "Tiếp tục"
+
+#: src/user/login-screen.tsx:181
+msgid "Continue as guest"
+msgstr "Tiếp tục với tư cách khách"
+
+#: src/realm/practice-sheet.tsx:89
+msgid "Continue battle"
+msgstr "Tiếp tục trận đấu"
+
+#: src/character/appearance-colors.ts:16
+msgid "Cool deep brown"
+msgstr "Nâu đậm tông lạnh"
+
+#: src/character/appearance-colors.ts:25
+msgid "Copper"
+msgstr "Đỏ đồng"
+
+#: src/character/cosmetic-shop-screen.tsx:212
+#: src/character/cosmetic-shop-screen.tsx:247
+#: src/character/wardrobe-screen.tsx:164
+msgid "Cosmetic"
+msgstr "Trang phục"
+
+#: src/course/lesson-screen.tsx:130
+#: src/realm/equipment-shop-screen.tsx:115
+#: src/realm/loadout-screen.tsx:228
+msgid "Couldn’t complete the request"
+msgstr "Không thể thực hiện yêu cầu"
+
+#: src/api/error-messages.ts:91
+msgid "Couldn’t complete the request. Check your connection and try again."
+msgstr "Không thể hoàn tất yêu cầu. Kiểm tra kết nối rồi thử lại."
+
+#: src/course/course-search-screen.tsx:311
+msgid "Couldn’t load courses"
+msgstr "Không tải được khóa học"
+
+#: src/realm/course-map-screen.tsx:151
+#: src/realm/course-map-screen.tsx:266
+msgid "Couldn’t load the course"
+msgstr "Không thể tải khóa học"
+
+#: src/realm/unit-map-section.tsx:166
+msgid "Couldn’t load the map"
+msgstr "Không thể tải bản đồ"
+
+#: src/realm/loadout-screen.tsx:76
+msgid "Couldn’t load your equipment"
+msgstr "Không thể tải trang bị"
+
+#: src/practice/practice-info-sheet.tsx:54
+#: src/realm/realm-shell.tsx:71
+msgid "Course"
+msgstr "Khóa học"
+
+#: src/course/course-search-screen.tsx:218
+msgid "Course filters"
+msgstr "Bộ lọc khóa học"
+
+#: src/realm/course-map-screen.tsx:135
+msgid "Course map"
+msgstr "Bản đồ khóa học"
+
+#: src/realm/realm-navigation.tsx:50
+msgid "Course navigation"
+msgstr "Điều hướng khóa học"
+
+#: src/realm/equipment-shop-screen.tsx:109
+msgid "Course shop"
+msgstr "Cửa hàng khóa học"
+
+#: src/course/course-search-screen.tsx:287
+#: src/course/course-search-screen.tsx:289
+msgid "Courses"
+msgstr "Khóa học"
+
+#: src/user/login-screen.tsx:169
+msgid "Create account"
+msgstr "Tạo tài khoản"
+
+#: src/user/login-screen.tsx:89
+msgid "Create an account"
+msgstr "Tạo tài khoản"
+
+#: src/api/error-messages.ts:55
+msgid "Create an account to author content."
+msgstr "Tạo tài khoản để biên soạn nội dung."
+
+#: src/user/login-screen.tsx:94
+msgid "Create an account to keep your guest progress."
+msgstr "Tạo tài khoản để giữ lại tiến trình học của khách."
+
+#: src/ui/catalog-controls.tsx:94
+msgid "Currency"
+msgstr "Loại tiền"
+
+#: src/character/appearance-screen.tsx:122
+msgid "Current color"
+msgstr "Màu hiện tại"
+
+#: src/practice/combatant-info-sheet.tsx:133
+msgid "Current stats"
+msgstr "Chỉ số hiện tại"
+
+#: src/reward/rewards-screen.tsx:85
+#: src/reward/rewards-screen.tsx:115
+msgid "Daily reward"
+msgstr "Quà hằng ngày"
+
+#: src/home/home-screen.tsx:85
+msgid "Daily reward available"
+msgstr "Có quà hằng ngày để nhận"
+
+#: src/reward/daily-reward-card.tsx:129
+msgid "Daily rewards"
+msgstr "Quà hằng ngày"
+
+#: src/character/appearance-colors.ts:21
+#: src/character/appearance-colors.ts:34
+msgid "Dark brown"
+msgstr "Nâu sẫm"
+
+#: src/reward/daily-reward-card.tsx:147
+msgid "Day {day}"
+msgstr "Ngày {day}"
+
+#: src/practice/answer-input.tsx:486
+msgid "Decimal point"
+msgstr "Dấu thập phân"
+
+#: src/ui/primitives/number-field.tsx:150
+msgid "Decrease"
+msgstr "Giảm"
+
+#: src/character/appearance-colors.ts:15
+msgid "Deep brown"
+msgstr "Nâu đậm"
+
+#: src/practice/practice-result.tsx:35
+msgid "Defeated"
+msgstr "Bại trận"
+
+#: src/practice/session.ts:12
+msgid "Defend"
+msgstr "Phòng thủ"
+
+#: src/game/art/combat-status.tsx:16
+#: src/realm/equipment.ts:26
+msgid "Defense"
+msgstr "Phòng thủ"
+
+#: src/practice/practice-info-sheet.tsx:72
+msgid "Difficulty"
+msgstr "Độ khó"
+
+#: src/course/course-search.ts:16
+msgid "Economics and finance"
+msgstr "Kinh tế và tài chính"
+
+#: src/user/login-screen.tsx:130
+msgid "Email"
+msgstr "Email"
+
+#: src/realm/loadout-screen.tsx:133
+msgid "Empty"
+msgstr "Trống"
+
+#: src/practice/practice-screen.tsx:533
+msgid "End run"
+msgstr "Kết thúc lượt chơi"
+
+#: src/practice/battle-narration.tsx:29
+#: src/practice/combatant-info-sheet.tsx:91
+#: src/practice/practice-arena.tsx:253
+msgid "Enemy"
+msgstr "Kẻ địch"
+
+#: src/course/course-search.ts:17
+msgid "Engineering"
+msgstr "Kỹ thuật"
+
+#: src/user/app-settings.tsx:51
+#: src/user/login-screen.tsx:210
+#: src/user/profile-settings.tsx:99
+#: src/user/user-language-step.tsx:71
+msgid "English"
+msgstr "Tiếng Anh"
+
+#: src/user/birth-year-step.tsx:55
+#: src/user/profile-settings.tsx:80
+msgid "Enter a year from 1900 to {currentYear}."
+msgstr "Nhập năm từ 1900 đến {currentYear}."
+
+#: src/play/play-screen.tsx:77
+msgid "Enter the dungeon"
+msgstr "Vào hầm ngục"
+
+#: src/play/play-screen.tsx:70
+msgid "Enter Versus"
+msgstr "Vào đối đầu"
+
+#: src/user/birth-year-step.tsx:54
+msgid "Enter your four-digit birth year."
+msgstr "Nhập năm sinh gồm bốn chữ số."
+
+#: src/user/profile-settings.tsx:67
+msgid "Enter your name."
+msgstr "Nhập tên của bạn."
+
+#: src/realm/equipment-shop-screen.tsx:163
+#: src/realm/loadout-screen.tsx:294
+msgid "Equip"
+msgstr "Trang bị"
+
+#: src/practice/combatant-info-sheet.tsx:152
+#: src/practice/practice-result.tsx:151
+msgid "Equipment"
+msgstr "Trang bị"
+
+#: src/realm/equipment-shop-screen.tsx:80
+msgid "Equipment categories"
+msgstr "Loại trang bị"
+
+#: src/realm/equipment-shop-screen.tsx:160
+#: src/realm/loadout-screen.tsx:294
+msgid "Equipped"
+msgstr "Đang trang bị"
+
+#: src/character/appearance-colors.ts:17
+msgid "Espresso"
+msgstr "Nâu sẫm"
+
+#: src/game/realm-progress.tsx:75
+msgid "Experience"
+msgstr "Kinh nghiệm"
+
+#: src/character/appearance-screen.tsx:204
+msgid "Eye color"
+msgstr "Màu mắt"
+
+#: src/play/play-screen.tsx:68
+msgid "Face off against other players. May the sharpest mind win."
+msgstr "So tài cùng những người chơi khác. Chiến thắng thuộc về người nhanh trí nhất."
+
+#: src/character/appearance-colors.ts:6
+msgid "Fair"
+msgstr "Trắng sáng"
+
+#: src/play/play-screen.tsx:75
+msgid "Fight your way through an endless dungeon and see how deep your knowledge goes."
+msgstr "Chiến đấu qua hầm ngục vô tận để xem kiến thức có thể đưa bạn đi xa đến đâu."
+
+#: src/ui/catalog-controls.tsx:60
+#: src/ui/catalog-controls.tsx:65
+msgid "Filter"
+msgstr "Bộ lọc"
+
+#: src/ui/catalog-controls.tsx:65
+msgid "Filter ({filterCount})"
+msgstr "Bộ lọc ({filterCount})"
+
+#: src/home/home-screen.tsx:176
+msgid "Find courses"
+msgstr "Tìm khóa học"
+
+#: src/play/play-screen.tsx:83
+msgid "Game modes"
+msgstr "Chế độ chơi"
+
+#: src/ui/primitives/currency-amount.tsx:25
+msgid "gems"
+msgstr "ngọc"
+
+#: src/ui/catalog-controls.tsx:101
+msgid "Gems"
+msgstr "Ngọc"
+
+#: src/user/onboarding-progress.tsx:45
+#: src/user/onboarding-step.tsx:111
+msgid "Getting started"
+msgstr "Bắt đầu hành trình"
+
+#: src/character/appearance-colors.ts:11
+msgid "Golden"
+msgstr "Vàng nâu"
+
+#: src/play/play-screen.tsx:137
+msgid "Got it"
+msgstr "Đã hiểu"
+
+#: src/character/appearance-colors.ts:28
+#: src/character/appearance-colors.ts:41
+msgid "Gray"
+msgstr "Xám"
+
+#: src/character/appearance-colors.ts:39
+msgid "Green"
+msgstr "Xanh lá"
+
+#: src/game/art/combat-status.tsx:65
+#: src/game/art/combat-status.tsx:68
+msgid "Guard: {reduction}%"
+msgstr "Phòng thủ: {reduction}%"
+
+#: src/user/profile-screen.tsx:106
+msgid "Guest"
+msgstr "Khách"
+
+#: src/character/appearance-screen.tsx:203
+msgid "Hair color"
+msgstr "Màu tóc"
+
+#: src/character/appearance-screen.tsx:192
+#: src/character/appearance-screen.tsx:195
+msgid "Hair style"
+msgstr "Kiểu tóc"
+
+#: src/character/cosmetics.ts:29
+msgid "Hats"
+msgstr "Mũ"
+
+#: src/character/appearance-colors.ts:37
+msgid "Hazel"
+msgstr "Nâu ánh lục"
+
+#: src/realm/equipment.ts:24
+msgid "Health"
+msgstr "Sinh lực"
+
+#: src/course/course-search.ts:18
+msgid "Health and medicine"
+msgstr "Sức khỏe và y học"
+
+#: src/ui/catalog-controls.tsx:53
+msgid "Highest cost"
+msgstr "Giá cao nhất"
+
+#: src/ui/app-navigation.tsx:84
+msgid "Home"
+msgstr "Trang chủ"
+
+#: src/ui/primitives/number-field.tsx:164
+msgid "Increase"
+msgstr "Tăng"
+
+#: src/play/play-screen.tsx:74
+msgid "Infinite Dungeon"
+msgstr "Hầm ngục vô tận"
+
+#: src/user/app-settings.tsx:47
+#: src/user/login-screen.tsx:201
+msgid "Interface language"
+msgstr "Ngôn ngữ giao diện"
+
+#: src/api/error-messages.ts:30
+msgid "It isn’t this character’s turn."
+msgstr "Chưa đến lượt nhân vật này."
+
+#: src/course/course-card.tsx:90
+#: src/course/course-spotlight.tsx:59
+msgid "Join"
+msgstr "Tham gia"
+
+#: src/course/course-card.tsx:86
+#: src/course/course-spotlight.tsx:56
+msgid "Join {title}"
+msgstr "Tham gia {title}"
+
+#: src/home/home-screen.tsx:149
+msgid "Join a course to start learning."
+msgstr "Tham gia một khóa học để bắt đầu."
+
+#: src/course/course-card.tsx:86
+#: src/course/course-spotlight.tsx:56
+msgid "Joining {title}"
+msgstr "Đang tham gia {title}"
+
+#: src/practice/practice-screen.tsx:505
+msgid "Keep playing"
+msgstr "Chơi tiếp"
+
+#: src/course/course-search-screen.tsx:221
+msgid "Language"
+msgstr "Ngôn ngữ"
+
+#: src/course/course-search.ts:19
+msgid "Language arts"
+msgstr "Ngữ văn"
+
+#: src/course/course-search.ts:20
+msgid "Languages"
+msgstr "Ngôn ngữ"
+
+#: src/character/appearance-colors.ts:30
+msgid "Lavender"
+msgstr "Tím nhạt"
+
+#: src/user/profile-settings.tsx:95
+#: src/user/user-language-step.tsx:61
+msgid "Learning language"
+msgstr "Ngôn ngữ học tập"
+
+#: src/practice/practice-screen.tsx:495
+msgid "Leave practice?"
+msgstr "Rời bài luyện tập?"
+
+#: src/ui/catalog-controls.tsx:49
+msgid "Legendary first"
+msgstr "Huyền thoại trước"
+
+#: src/course/lesson-screen.tsx:103
+#: src/course/lesson-screen.tsx:119
+msgid "Lesson"
+msgstr "Bài học"
+
+#: src/game/realm-progress.tsx:57
+msgid "Level {level}"
+msgstr "Cấp {level}"
+
+#: src/realm/realm-shell.tsx:80
+msgid "Level {level}. Open loadout"
+msgstr "Cấp {level}. Mở trang bị"
+
+#: src/game/realm-progress.tsx:87
+msgid "Level up!"
+msgstr "Lên cấp!"
+
+#: src/course/course-search.ts:21
+msgid "Life skills"
+msgstr "Kỹ năng sống"
+
+#: src/character/appearance-colors.ts:8
+msgid "Light rose"
+msgstr "Hồng sáng"
+
+#: src/character/cosmetic-shop-screen.tsx:241
+#: src/character/wardrobe-screen.tsx:185
+#: src/course/course-search-screen.tsx:383
+#: src/home/home-screen.tsx:171
+#: src/realm/course-map-screen.tsx:197
+#: src/realm/course-map-screen.tsx:312
+#: src/realm/equipment-shop-screen.tsx:195
+#: src/realm/loadout-screen.tsx:308
+#: src/realm/unit-map-section.tsx:194
+#: src/reward/rewards-screen.tsx:179
+msgid "Load more"
+msgstr "Xem thêm"
+
+#: src/course/course-search-screen.tsx:301
+#: src/home/home-screen.tsx:125
+msgid "Loading courses…"
+msgstr "Đang tải khóa học…"
+
+#: src/realm/course-map-screen.tsx:165
+#: src/realm/course-map-screen.tsx:278
+#: src/realm/unit-map-section.tsx:162
+msgid "Loading map"
+msgstr "Đang tải bản đồ"
+
+#: src/objective/missions-screen.tsx:100
+msgid "Loading missions…"
+msgstr "Đang tải nhiệm vụ…"
+
+#: src/practice/practice-screen.tsx:354
+msgid "Loading practice"
+msgstr "Đang tải bài luyện tập"
+
+#: src/practice/move-picker.tsx:124
+msgid "Loading question"
+msgstr "Đang tải câu hỏi"
+
+#: src/reward/rewards-screen.tsx:110
+msgid "Loading rewards…"
+msgstr "Đang tải phần thưởng…"
+
+#: src/realm/loadout-screen.tsx:70
+#: src/realm/practice-sheet.tsx:56
+#: src/realm/realm-navigation.tsx:71
+msgid "Loadout"
+msgstr "Trang bị"
+
+#: src/user/login-screen.tsx:89
+#: src/user/login-screen.tsx:169
+msgid "Log in"
+msgstr "Đăng nhập"
+
+#: src/api/error-messages.ts:6
+msgid "Log in to continue."
+msgstr "Đăng nhập để tiếp tục."
+
+#: src/user/guest-banner.tsx:44
+msgid "Log in to save your progress"
+msgstr "Đăng nhập để lưu tiến trình"
+
+#: src/user/profile-settings.tsx:146
+#: src/user/profile-settings.tsx:170
+msgid "Log out"
+msgstr "Đăng xuất"
+
+#: src/user/profile-settings.tsx:142
+msgid "Log out of this guest account?"
+msgstr "Đăng xuất khỏi tài khoản khách?"
+
+#: src/user/login-screen.tsx:96
+msgid "Logging in switches to that account’s progress."
+msgstr "Khi đăng nhập, bạn sẽ chuyển sang tiến trình của tài khoản đó."
+
+#: src/ui/catalog-controls.tsx:52
+msgid "Lowest cost"
+msgstr "Giá thấp nhất"
+
+#: src/game/realm-progress.tsx:60
+msgid "Lv"
+msgstr "Cấp"
+
+#: src/realm/realm-shell.tsx:85
+msgid "Lv {level}"
+msgstr "Cấp {level}"
+
+#: src/ui/app-navigation.tsx:74
+msgid "Main navigation"
+msgstr "Điều hướng chính"
+
+#: src/character/appearance-screen.tsx:175
+msgid "Make it you"
+msgstr "Tạo diện mạo của bạn"
+
+#: src/practice/player-resources.tsx:60
+msgid "Mana"
+msgstr "Năng lượng"
+
+#: src/practice/practice-screen.tsx:452
+#: src/realm/realm-navigation.tsx:60
+msgid "Map"
+msgstr "Bản đồ"
+
+#: src/course/course-search.ts:22
+msgid "Math"
+msgstr "Toán"
+
+#: src/game/art/combat-status.tsx:14
+msgid "Max health"
+msgstr "Máu tối đa"
+
+#: src/game/realm-progress.tsx:67
+msgid "Maximum level"
+msgstr "Đã đạt cấp tối đa"
+
+#: src/ui/app-navigation.tsx:117
+msgid "Me"
+msgstr "Cá nhân"
+
+#: src/ui/primitives/currency-amount.tsx:26
+msgid "medals"
+msgstr "huy chương"
+
+#: src/course/lesson-screen.tsx:162
+msgid "Medals"
+msgstr "Huy chương"
+
+#: src/api/error-messages.ts:60
+msgid "Media uploads are temporarily unavailable."
+msgstr "Tạm thời không thể tải tệp đa phương tiện lên."
+
+#: src/character/appearance-colors.ts:14
+msgid "Medium brown"
+msgstr "Nâu vừa"
+
+#: src/reward/rewards-screen.tsx:125
+#: src/user/profile-screen.tsx:163
+msgid "Milestones"
+msgstr "Cột mốc"
+
+#: src/game/art/battle-feedback.tsx:80
+msgid "Miss"
+msgstr "Trượt"
+
+#: src/home/home-screen.tsx:73
+#: src/objective/missions-screen.tsx:67
+#: src/objective/missions-screen.tsx:72
+msgid "Missions"
+msgstr "Nhiệm vụ"
+
+#: src/home/home-screen.tsx:73
+msgid "Missions, {readyMissions} rewards ready"
+msgstr "Nhiệm vụ, {readyMissions} phần thưởng có thể nhận"
+
+#: src/practice/combatant-info-sheet.tsx:120
+msgid "Monster"
+msgstr "Quái vật"
+
+#: src/practice/practice-screen.tsx:329
+msgid "More below"
+msgstr "Còn nữa bên dưới"
+
+#: src/course/course-search-screen.tsx:355
+msgid "More courses"
+msgstr "Khóa học khác"
+
+#: src/user/settings-menu.tsx:30
+msgid "More options"
+msgstr "Tùy chọn khác"
+
+#: src/user/app-settings.tsx:45
+msgid "Music"
+msgstr "Nhạc nền"
+
+#: src/course/course-search-screen.tsx:250
+msgid "My age ({learnerAge})"
+msgstr "Tuổi của tôi ({learnerAge})"
+
+#: src/user/login-screen.tsx:118
+#: src/user/profile-settings.tsx:67
+msgid "Name"
+msgstr "Tên"
+
+#: src/course/course-search-screen.tsx:270
+msgid "Name: A to Z"
+msgstr "Tên: A đến Z"
+
+#: src/course/course-search-screen.tsx:271
+msgid "Name: Z to A"
+msgstr "Tên: Z đến A"
+
+#: src/user/login-screen.tsx:197
+msgid "New here? Create an account"
+msgstr "Chưa có tài khoản? Đăng ký"
+
+#: src/course/course-search-screen.tsx:324
+msgid "No courses found"
+msgstr "Không tìm thấy khóa học"
+
+#: src/course/course-search-screen.tsx:324
+msgid "No courses yet"
+msgstr "Chưa có khóa học"
+
+#: src/realm/equipment-shop-screen.tsx:133
+msgid "No equipment here"
+msgstr "Chưa có trang bị ở đây"
+
+#: src/realm/loadout-screen.tsx:248
+msgid "No equipment yet"
+msgstr "Bạn chưa có trang bị"
+
+#: src/character/appearance-screen.tsx:111
+msgid "No hair"
+msgstr "Không tóc"
+
+#: src/realm/course-map-screen.tsx:186
+msgid "No levels yet"
+msgstr "Chưa có màn học"
+
+#: src/reward/rewards-screen.tsx:150
+msgid "No milestones yet"
+msgstr "Chưa có cột mốc"
+
+#: src/objective/missions-screen.tsx:109
+msgid "No missions yet"
+msgstr "Chưa có nhiệm vụ"
+
+#: src/character/cosmetic-tile.tsx:136
+#: src/character/wardrobe-screen.tsx:150
+msgid "None"
+msgstr "Không dùng"
+
+#: src/character/cosmetic-shop-screen.tsx:252
+msgid "Not enough coins"
+msgstr "Không đủ xu"
+
+#: src/character/cosmetic-shop-screen.tsx:253
+msgid "Not enough gems"
+msgstr "Không đủ ngọc"
+
+#: src/character/cosmetic-shop-screen.tsx:202
+#: src/character/wardrobe-screen.tsx:144
+msgid "Nothing here yet"
+msgstr "Chưa có vật phẩm"
+
+#: src/practice/answer-input.tsx:480
+msgid "Number pad"
+msgstr "Bàn phím số"
+
+#: src/character/appearance-colors.ts:10
+msgid "Olive"
+msgstr "Ô liu"
+
+#: src/practice/session.ts:15
+#: src/realm/skill-info-dialog.tsx:23
+msgid "One enemy"
+msgstr "Một kẻ địch"
+
+#: src/objective/mission-card.tsx:69
+msgid "Only the first answer to each question in a won battle counts."
+msgstr "Chỉ tính câu trả lời đầu tiên cho mỗi câu hỏi trong trận thắng."
+
+#: src/course/course-card.tsx:90
+#: src/course/course-spotlight.tsx:59
+msgid "Open"
+msgstr "Mở"
+
+#: src/course/course-card.tsx:86
+#: src/course/course-spotlight.tsx:56
+msgid "Open {title}"
+msgstr "Mở {title}"
+
+#: src/realm/loadout-screen.tsx:261
+msgid "Open shop"
+msgstr "Mở cửa hàng"
+
+#: src/course/course-search.ts:26
+msgid "Other"
+msgstr "Khác"
+
+#: src/character/cosmetics.ts:31
+msgid "Outfits"
+msgstr "Trang phục"
+
+#: src/character/cosmetic-tile.tsx:134
+msgid "Owned"
+msgstr "Đã sở hữu"
+
+#: src/user/login-screen.tsx:142
+msgid "Password"
+msgstr "Mật khẩu"
+
+#: src/character/appearance-colors.ts:9
+msgid "Peach"
+msgstr "Hồng đào"
+
+#: src/character/cosmetics.ts:32
+msgid "Pets"
+msgstr "Thú cưng"
+
+#: src/character/appearance-colors.ts:27
+msgid "Platinum blond"
+msgstr "Vàng bạch kim"
+
+#: src/practice/combatant-info-sheet.tsx:120
+msgid "Player"
+msgstr "Người chơi"
+
+#: src/character/appearance-colors.ts:7
+msgid "Porcelain"
+msgstr "Trắng sứ"
+
+#: src/practice/practice-info-sheet.tsx:42
+#: src/practice/practice-screen.tsx:272
+#: src/practice/practice-screen.tsx:332
+#: src/realm/practice-sheet.tsx:89
+msgid "Practice"
+msgstr "Luyện tập"
+
+#: src/practice/practice-result.tsx:36
+msgid "Practice ended"
+msgstr "Đã kết thúc luyện tập"
+
+#: src/practice/practice-screen.tsx:289
+msgid "Practice info"
+msgstr "Thông tin bài luyện tập"
+
+#: src/practice/practice-screen.tsx:426
+#: src/practice/practice-screen.tsx:433
+msgid "Practice results"
+msgstr "Kết quả luyện tập"
+
+#: src/user/profile-screen.tsx:128
+#: src/user/profile-screen.tsx:178
+#: src/user/profile-settings.tsx:62
+msgid "Profile"
+msgstr "Hồ sơ"
+
+#: src/home/home-screen.tsx:112
+#: src/objective/mission-card.tsx:121
+msgid "Progress"
+msgstr "Tiến trình"
+
+#: src/practice/practice-screen.tsx:332
+msgid "Question"
+msgstr "Câu hỏi"
+
+#: src/ui/catalog-controls.tsx:74
+msgid "Rarity"
+msgstr "Độ hiếm"
+
+#: src/practice/practice-result.tsx:55
+msgid "Read new lessons to gain XP and level up."
+msgstr "Đọc bài học mới để nhận XP và lên cấp."
+
+#: src/course/lesson-screen.tsx:116
+msgid "Reading progress"
+msgstr "Tiến độ đọc"
+
+#: src/course/course-search-screen.tsx:269
+msgid "Recommended"
+msgstr "Đề xuất"
+
+#: src/practice/answer-input.tsx:303
+#: src/practice/answer-input.tsx:453
+msgid "Remove {value}"
+msgstr "Bỏ {value}"
+
+#: src/character/cosmetic-shop-screen.tsx:193
+#: src/character/wardrobe-screen.tsx:135
+msgid "Remove outfit"
+msgstr "Tháo trang phục"
+
+#: src/practice/practice-result.tsx:45
+msgid "Replay practices to earn medals and gear."
+msgstr "Chơi lại bài luyện tập để nhận huy chương và trang bị."
+
+#: src/character/cosmetic-shop-screen.tsx:134
+msgid "Reset preview"
+msgstr "Bỏ thử đồ"
+
+#: src/realm/skill-info-dialog.tsx:87
+msgid "Restore {amount} health"
+msgstr "Hồi {amount} máu"
+
+#: src/course/course-search-screen.tsx:295
+msgid "Results for “{q}”"
+msgstr "Kết quả cho “{q}”"
+
+#: src/realm/realm-shell.tsx:92
+msgid "Retry balance"
+msgstr "Tải lại số dư"
+
+#: src/home/home-screen.tsx:85
+#: src/reward/rewards-screen.tsx:76
+#: src/reward/rewards-screen.tsx:81
+msgid "Rewards"
+msgstr "Phần thưởng"
+
+#: src/character/appearance-colors.ts:31
+msgid "Rose"
+msgstr "Hồng"
+
+#: src/practice/practice-screen.tsx:512
+msgid "Save and leave"
+msgstr "Lưu và rời đi"
+
+#: src/character/appearance-screen.tsx:217
+msgid "Save appearance"
+msgstr "Lưu diện mạo"
+
+#: src/user/profile-settings.tsx:124
+msgid "Save profile"
+msgstr "Lưu hồ sơ"
+
+#: src/user/profile-settings.tsx:135
+msgid "Save your progress"
+msgstr "Lưu tiến trình"
+
+#: src/course/course-search.ts:23
+msgid "Science"
+msgstr "Khoa học"
+
+#: src/ui/app-navigation.tsx:95
+msgid "Search"
+msgstr "Tìm kiếm"
+
+#: src/course/course-search-field.tsx:86
+#: src/course/course-search-field.tsx:98
+#: src/course/course-search-field.tsx:99
+msgid "Search courses"
+msgstr "Tìm khóa học"
+
+#: src/practice/session.ts:14
+#: src/realm/skill-info-dialog.tsx:22
+msgid "Self"
+msgstr "Bản thân"
+
+#: src/user/app-settings.tsx:26
+#: src/user/profile-screen.tsx:184
+#: src/user/settings-menu.tsx:40
+msgid "Settings"
+msgstr "Cài đặt"
+
+#: src/game/art/combat-status.tsx:74
+#: src/game/art/combat-status.tsx:77
+msgid "Shield: {shield}"
+msgstr "Lá chắn: {shield}"
+
+#: src/character/cosmetics.ts:28
+msgid "Shoes"
+msgstr "Giày"
+
+#: src/character/cosmetic-shop-screen.tsx:110
+#: src/character/cosmetic-shop-screen.tsx:156
+#: src/character/wardrobe-screen.tsx:80
+#: src/character/wardrobe-shop-card.tsx:34
+#: src/realm/realm-navigation.tsx:82
+#: src/user/profile-screen.tsx:117
+msgid "Shop"
+msgstr "Cửa hàng"
+
+#: src/realm/course-map-screen.tsx:119
+msgid "Show level list"
+msgstr "Xem danh sách màn"
+
+#: src/realm/course-map-screen.tsx:119
+msgid "Show path"
+msgstr "Xem đường đi"
+
+#: src/character/appearance-colors.ts:29
+msgid "Silver"
+msgstr "Bạc"
+
+#: src/practice/battle-narration.tsx:38
+#: src/practice/move-picker.tsx:100
+#: src/practice/session.ts:12
+#: src/realm/skill-chip.tsx:32
+#: src/realm/skill-info-dialog.tsx:44
+msgid "Skill"
+msgstr "Kỹ năng"
+
+#: src/realm/loadout-screen.tsx:273
+msgid "Skill already equipped"
+msgstr "Kỹ năng đã được trang bị"
+
+#: src/practice/combatant-info-sheet.tsx:177
+#: src/realm/equipment-card.tsx:111
+#: src/realm/equipment-info-sheet.tsx:113
+#: src/realm/loadout-screen.tsx:148
+msgid "Skills"
+msgstr "Kỹ năng"
+
+#: src/character/appearance-screen.tsx:189
+msgid "Skin tone"
+msgstr "Màu da"
+
+#: src/course/course-search.ts:24
+msgid "Social sciences"
+msgstr "Khoa học xã hội"
+
+#: src/api/error-messages.ts:10
+#: src/api/error-messages.ts:75
+msgid "Something went wrong. Please try again."
+msgstr "Đã xảy ra lỗi. Vui lòng thử lại."
+
+#: src/course/course-search-screen.tsx:265
+#: src/ui/catalog-controls.tsx:115
+#: src/ui/catalog-controls.tsx:120
+msgid "Sort"
+msgstr "Sắp xếp"
+
+#: src/user/app-settings.tsx:36
+msgid "Sound effects"
+msgstr "Âm thanh"
+
+#: src/game/art/combat-status.tsx:17
+#: src/realm/equipment.ts:27
+msgid "Speed"
+msgstr "Tốc độ"
+
+#: src/realm/equipment-info-sheet.tsx:86
+msgid "Stat modifiers"
+msgstr "Thay đổi chỉ số"
+
+#: src/user/onboarding-progress.tsx:46
+msgid "Step {step} of {totalSteps}"
+msgstr "Bước {step}/{totalSteps}"
+
+#: src/course/course-search-screen.tsx:188
+msgid "Subject"
+msgstr "Môn học"
+
+#: src/practice/answer-input.tsx:291
+msgid "Tap tiles to build your answer"
+msgstr "Chạm các ô để ghép đáp án"
+
+#: src/practice/practice-arena.tsx:241
+msgid "Target"
+msgstr "Mục tiêu"
+
+#: src/course/course-search.ts:25
+msgid "Test preparation"
+msgstr "Luyện thi"
+
+#: src/api/error-messages.ts:29
+msgid "The battle moved on. Refresh to see the current turn."
+msgstr "Trận đấu đã chuyển lượt. Tải lại để xem lượt hiện tại."
+
+#: src/api/error-messages.ts:20
+msgid "The course list changed. Refresh to continue."
+msgstr "Danh sách khóa học đã thay đổi. Tải lại để tiếp tục."
+
+#: src/api/error-messages.ts:67
+msgid "The email or password is incorrect."
+msgstr "Email hoặc mật khẩu không đúng."
+
+#: src/api/error-messages.ts:35
+#: src/api/error-messages.ts:36
+msgid "The question changed. Reload it to continue."
+msgstr "Câu hỏi đã thay đổi. Tải lại để tiếp tục."
+
+#: src/api/error-messages.ts:27
+msgid "This activity has changed. Reload it to continue."
+msgstr "Bài học đã thay đổi. Tải lại để tiếp tục."
+
+#: src/api/error-messages.ts:25
+msgid "This activity is no longer available."
+msgstr "Bài học này không còn khả dụng."
+
+#: src/api/error-messages.ts:24
+msgid "This activity isn’t a lesson."
+msgstr "Hoạt động này không phải bài lý thuyết."
+
+#: src/api/error-messages.ts:40
+msgid "This activity isn’t a practice."
+msgstr "Hoạt động này không phải bài luyện tập."
+
+#: src/api/error-messages.ts:28
+msgid "This battle has already ended."
+msgstr "Trận đấu này đã kết thúc."
+
+#: src/api/error-messages.ts:9
+msgid "This content is no longer available."
+msgstr "Nội dung này không còn khả dụng."
+
+#: src/api/error-messages.ts:57
+msgid "This content is unavailable or belongs to another author."
+msgstr "Nội dung này không khả dụng hoặc thuộc về tác giả khác."
+
+#: src/api/error-messages.ts:44
+msgid "This cosmetic is no longer available."
+msgstr "Vật phẩm ngoại hình này không còn khả dụng."
+
+#: src/api/error-messages.ts:11
+msgid "This course is no longer available."
+msgstr "Khóa học này không còn khả dụng."
+
+#: src/api/error-messages.ts:50
+msgid "This encounter is temporarily unavailable."
+msgstr "Trận đấu này tạm thời không khả dụng."
+
+#: src/api/error-messages.ts:18
+msgid "This equipment has a conflicting skill. Choose another item."
+msgstr "Kỹ năng của trang bị này bị trùng. Hãy chọn trang bị khác."
+
+#: src/api/error-messages.ts:13
+msgid "This equipment is no longer available."
+msgstr "Trang bị này không còn khả dụng."
+
+#: src/user/birth-year-step.tsx:38
+msgid "This helps us suggest courses for your age."
+msgstr "Thông tin này giúp chúng mình gợi ý khóa học phù hợp với độ tuổi của bạn."
+
+#: src/api/error-messages.ts:12
+msgid "This item belongs to another course."
+msgstr "Vật phẩm này thuộc khóa học khác."
+
+#: src/api/error-messages.ts:14
+#: src/api/error-messages.ts:45
+msgid "This item isn’t for sale."
+msgstr "Vật phẩm này không được bán."
+
+#: src/api/error-messages.ts:62
+msgid "This media is attached to learning content and cannot be deleted."
+msgstr "Tệp này đang được đính kèm vào nội dung học tập nên không thể xóa."
+
+#: src/api/error-messages.ts:54
+msgid "This media is no longer available."
+msgstr "Nội dung đa phương tiện này không còn khả dụng."
+
+#: src/play/play-screen.tsx:122
+msgid "This mode is not available yet."
+msgstr "Chế độ này chưa ra mắt."
+
+#: src/api/error-messages.ts:51
+msgid "This objective is no longer available."
+msgstr "Mục tiêu này không còn khả dụng."
+
+#: src/api/error-messages.ts:34
+msgid "This practice is temporarily unavailable."
+msgstr "Bài luyện tập này tạm thời không khả dụng."
+
+#: src/api/error-messages.ts:39
+msgid "This practice session is no longer available."
+msgstr "Phiên luyện tập này không còn khả dụng."
+
+#: src/api/error-messages.ts:7
+msgid "This request isn’t allowed. Reload the app and try again."
+msgstr "Yêu cầu này không được phép. Tải lại ứng dụng rồi thử lại."
+
+#: src/api/error-messages.ts:32
+msgid "This skill is no longer available."
+msgstr "Kỹ năng này không còn khả dụng."
+
+#: src/reward/daily-reward-card.tsx:179
+msgid "Today"
+msgstr "Hôm nay"
+
+#: src/objective/missions-screen.tsx:113
+msgid "Today’s missions"
+msgstr "Nhiệm vụ hôm nay"
+
+#: src/api/error-messages.ts:72
+msgid "Too many attempts. Please wait and try again."
+msgstr "Bạn đã thử quá nhiều lần. Vui lòng chờ rồi thử lại."
+
+#: src/character/cosmetics.ts:26
+msgid "Tops"
+msgstr "Áo"
+
+#: src/character/character-area.tsx:185
+#: src/character/cosmetic-shop-screen.tsx:174
+#: src/character/wardrobe-screen.tsx:116
+#: src/course/course-search-screen.tsx:314
+#: src/course/course-search-screen.tsx:383
+#: src/course/lesson-screen.tsx:140
+#: src/home/home-screen.tsx:139
+#: src/objective/missions-screen.tsx:86
+#: src/practice/practice-screen.tsx:345
+#: src/practice/practice-screen.tsx:473
+#: src/realm/course-map-screen.tsx:159
+#: src/realm/course-map-screen.tsx:274
+#: src/realm/equipment-shop-screen.tsx:126
+#: src/realm/loadout-screen.tsx:84
+#: src/realm/loadout-screen.tsx:239
+#: src/realm/unit-map-section.tsx:174
+#: src/reward/rewards-screen.tsx:100
+#: src/reward/rewards-screen.tsx:138
+#: src/routes/__root.tsx:78
+#: src/user/profile-screen.tsx:141
+msgid "Try again"
+msgstr "Thử lại"
+
+#: src/course/course-search-screen.tsx:327
+msgid "Try another search or subject."
+msgstr "Thử từ khóa hoặc môn học khác."
+
+#: src/character/cosmetic-shop-screen.tsx:129
+msgid "Trying on"
+msgstr "Đang thử"
+
+#: src/practice/practice-result.tsx:37
+msgid "Turn limit reached"
+msgstr "Đã hết số lượt"
+
+#: src/practice/letter-bank.tsx:86
+msgid "Type or tap letters"
+msgstr "Gõ hoặc chọn chữ cái"
+
+#: src/practice/answer-input.tsx:443
+msgid "Type or tap numbers"
+msgstr "Gõ hoặc chọn chữ số"
+
+#: src/realm/loadout-screen.tsx:213
+msgid "Unequip"
+msgstr "Tháo trang bị"
+
+#: src/practice/practice-info-sheet.tsx:63
+msgid "Unit"
+msgstr "Chương"
+
+#: src/course/lesson-screen.tsx:99
+msgid "Unit {unit}"
+msgstr "Chương {unit}"
+
+#: src/realm/course-map-screen.tsx:109
+#: src/realm/course-map-screen.tsx:259
+msgid "Units"
+msgstr "Chương"
+
+#: src/reward/daily-reward-card.tsx:185
+msgid "Upcoming"
+msgstr "Sắp tới"
+
+#: src/api/error-messages.ts:70
+msgid "Use at least 8 characters for your password."
+msgstr "Mật khẩu cần ít nhất 8 ký tự."
+
+#: src/practice/answer-input.tsx:175
+msgid "Use no more than {limit} characters."
+msgstr "Dùng tối đa {limit} ký tự."
+
+#: src/api/error-messages.ts:71
+msgid "Use no more than 128 characters for your password."
+msgstr "Mật khẩu không được quá 128 ký tự."
+
+#: src/user/login-screen.tsx:159
+msgid "Verification couldn’t load. Reload and try again."
+msgstr "Không thể tải xác minh. Hãy tải lại trang và thử lại."
+
+#: src/api/error-messages.ts:74
+msgid "Verification failed. Please try again."
+msgstr "Xác minh thất bại. Vui lòng thử lại."
+
+#: src/api/error-messages.ts:56
+msgid "Verify your email to author content."
+msgstr "Xác minh email để biên soạn nội dung."
+
+#: src/play/play-screen.tsx:67
+msgid "Versus"
+msgstr "Đối đầu"
+
+#: src/practice/practice-result.tsx:34
+msgid "Victory!"
+msgstr "Chiến thắng!"
+
+#: src/user/app-settings.tsx:52
+#: src/user/login-screen.tsx:219
+#: src/user/profile-settings.tsx:100
+#: src/user/user-language-step.tsx:74
+msgid "Vietnamese"
+msgstr "Tiếng Việt"
+
+#: src/objective/mission-card.tsx:136
+msgid "View course"
+msgstr "Xem khóa học"
+
+#: src/character/cosmetic-shop-screen.tsx:114
+#: src/character/wardrobe-screen.tsx:76
+#: src/character/wardrobe-screen.tsx:99
+#: src/user/profile-screen.tsx:97
+#: src/user/profile-screen.tsx:150
+msgid "Wardrobe"
+msgstr "Tủ đồ"
+
+#: src/character/appearance-colors.ts:12
+msgid "Warm tan"
+msgstr "Nâu rám tông ấm"
+
+#: src/practice/battle-narration.tsx:79
+msgid "Wave {wave}"
+msgstr "Đợt {wave}"
+
+#: src/game/art/wave-transition.tsx:60
+msgid "Wave {wave}/{total}"
+msgstr "Đợt {wave}/{total}"
+
+#: src/practice/practice-screen.tsx:414
+msgid "Wave {wave}/{total} · Turn {turn}"
+msgstr "Đợt {wave}/{total} · Lượt {turn}"
+
+#: src/realm/equipment.ts:22
+msgid "Weapon"
+msgstr "Vũ khí"
+
+#: src/character/cosmetic-shop-screen.tsx:266
+msgid "Wear"
+msgstr "Mặc"
+
+#: src/user/birth-year-step.tsx:37
+msgid "What year were you born?"
+msgstr "Bạn sinh năm nào?"
+
+#: src/user/user-language-step.tsx:51
+msgid "Which language do you learn in?"
+msgstr "Bạn muốn học bằng ngôn ngữ nào?"
+
+#: src/character/cosmetic-shop-screen.tsx:266
+#: src/character/cosmetic-tile.tsx:131
+msgid "Worn"
+msgstr "Đang mặc"
+
+#: src/course/lesson-screen.tsx:168
+msgid "XP"
+msgstr "KN"
+
+#: src/practice/battle-narration.tsx:24
+#: src/practice/combatant-info-sheet.tsx:90
+msgid "You"
+msgstr "Bạn"
+
+#: src/api/error-messages.ts:15
+#: src/api/error-messages.ts:46
+msgid "You already own this item."
+msgstr "Bạn đã sở hữu vật phẩm này."
+
+#: src/api/error-messages.ts:49
+msgid "You don’t have enough currency for this purchase."
+msgstr "Bạn không đủ tiền để mua vật phẩm này."
+
+#: src/api/error-messages.ts:33
+msgid "You don’t have enough mana."
+msgstr "Bạn không đủ năng lượng."
+
+#: src/api/error-messages.ts:16
+msgid "You don’t have enough medals."
+msgstr "Bạn không đủ huy chương."
+
+#: src/api/error-messages.ts:47
+msgid "You don’t own this cosmetic."
+msgstr "Bạn chưa sở hữu vật phẩm ngoại hình này."
+
+#: src/api/error-messages.ts:17
+msgid "You don’t own this equipment."
+msgstr "Bạn chưa sở hữu trang bị này."
+
+#: src/api/error-messages.ts:61
+msgid "You have reached your upload limit."
+msgstr "Bạn đã đạt giới hạn tải lên."
+
+#: src/practice/battle-narration.tsx:74
+msgid "You were defeated."
+msgstr "Bạn đã bị hạ."
+
+#: src/practice/player-resources.tsx:87
+msgid "You. View player info"
+msgstr "Bạn. Xem thông tin người chơi"
+
+#: src/user/profile-settings.tsx:159
+msgid "You’ll lose access to all your progress unless you create an account first."
+msgstr "Nếu chưa tạo tài khoản, bạn sẽ không thể truy cập lại toàn bộ tiến trình sau khi đăng xuất."
+
+#: src/practice/answer-input.tsx:174
+#: src/practice/answer-input.tsx:429
+#: src/practice/letter-bank.tsx:75
+msgid "Your answer"
+msgstr "Đáp án của bạn"
+
+#: src/api/error-messages.ts:38
+msgid "Your answer is too long."
+msgstr "Câu trả lời quá dài."
+
+#: src/api/error-messages.ts:19
+msgid "Your balance can’t accept this reward. Please try again later."
+msgstr "Số dư hiện tại không thể nhận thêm phần thưởng. Vui lòng thử lại sau."
+
+#: src/practice/practice-screen.tsx:496
+msgid "Your battle is saved. Come back whenever you’re ready."
+msgstr "Trận đấu đã được lưu. Bạn có thể quay lại bất cứ lúc nào."
+
+#: src/character/appearance-screen.tsx:183
+#: src/character/character-area.tsx:137
+#: src/character/character-area.tsx:152
+#: src/character/character-area.tsx:156
+msgid "Your character"
+msgstr "Nhân vật của bạn"
+
+#: src/home/home-screen.tsx:99
+#: src/home/home-screen.tsx:155
+msgid "Your courses"
+msgstr "Khóa học của bạn"
+
+#: src/practice/player-resources.tsx:55
+msgid "Your health"
+msgstr "Máu của bạn"
+
+#: src/practice/player-resources.tsx:65
+msgid "Your mana"
+msgstr "Năng lượng của bạn"
+
+#: src/home/home-screen.tsx:148
+msgid "Your next adventure starts here"
+msgstr "Bắt đầu hành trình mới"
+
+#: src/character/cosmetic-shop-screen.tsx:197
+#: src/character/wardrobe-screen.tsx:139
+msgid "Your outfit covers these clothes."
+msgstr "Trang phục hiện tại che các món đồ này."
+
+#: src/home/home-screen.tsx:65
+msgid "Your profile"
+msgstr "Hồ sơ của bạn"
+
+#: src/api/error-messages.ts:41
+#: src/api/error-messages.ts:42
+msgid "Your session changed. Refresh to continue."
+msgstr "Phiên học đã thay đổi. Tải lại để tiếp tục."
+
+#: src/practice/battle-narration.tsx:31
+msgid "Your turn."
+msgstr "Đến lượt bạn."

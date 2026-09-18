@@ -1,0 +1,31 @@
+/*
+ * Unlayered CSS outranks StyleX's @layer priority1..N, so the reset would win
+ * over every component style. Keep it in a layer declared before those, and
+ * keep it to rules no primitive sets itself.
+ */
+@layer reset, priority1, priority2, priority3, priority4, priority5, priority6, priority7, priority8, priority9, priority10;
+
+@layer reset {
+  :root {
+    --stylex-injection: 0;
+    color-scheme: light;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  img,
+  svg {
+    max-width: 100%;
+  }
+}

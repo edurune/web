@@ -1,0 +1,26 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["eslint", "typescript", "oxc", "react"],
+  "jsPlugins": ["eslint-plugin-lingui"],
+  "categories": {
+    "correctness": "error",
+    "perf": "error",
+    "suspicious": "warn"
+  },
+  "ignorePatterns": [
+    "dist",
+    "storybook-static",
+    "src/routeTree.gen.ts",
+    "src/locales",
+    "src/api/generated"
+  ],
+  "rules": {
+    "lingui/t-call-in-function": "error",
+    "lingui/no-single-tag-to-translate": "warn",
+    "lingui/no-single-variables-to-translate": "warn",
+    "lingui/no-trans-inside-trans": "warn",
+    "lingui/no-expression-in-message": "warn",
+    "react/react-in-jsx-scope": "off",
+    "react/only-export-components": "off"
+  }
+}

@@ -1,0 +1,1930 @@
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2026-09-16 11:26+0700\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: @lingui/cli\n"
+"Language: en\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Plural-Forms: \n"
+
+#: src/realm/skill-info-dialog.tsx:89
+msgid "{amount} shield"
+msgstr "{amount} shield"
+
+#: src/home/home-screen.tsx:113
+msgid "{completed} of {total} complete"
+msgstr "{completed} of {total} complete"
+
+#: src/realm/skill-info-dialog.tsx:53
+msgid "{cost} mana"
+msgstr "{cost} mana"
+
+#: src/user/profile-screen.tsx:109
+msgid "{courses, plural, one {# course} other {# courses}}"
+msgstr "{courses, plural, one {# course} other {# courses}}"
+
+#: src/game/realm-progress.tsx:79
+msgid "{earned} / {required} XP"
+msgstr "{earned} / {required} XP"
+
+#: src/course/course-metadata.tsx:20
+msgid "{minimumAge}–{maximumAge} yrs"
+msgstr "{minimumAge}–{maximumAge} yrs"
+
+#: src/course/lesson-screen.tsx:110
+msgid "{minutes}m"
+msgstr "{minutes}m"
+
+#: src/realm/skill-info-dialog.tsx:85
+msgid "{multiplier}× attack"
+msgstr "{multiplier}× attack"
+
+#: src/practice/battle-narration.tsx:44
+msgid "{name} attacked!"
+msgstr "{name} attacked!"
+
+#: src/practice/battle-narration.tsx:49
+msgid "{name} blocked {absorbed} damage."
+msgstr "{name} blocked {absorbed} damage."
+
+#: src/practice/battle-narration.tsx:59
+msgid "{name} gained a shield."
+msgstr "{name} gained a shield."
+
+#: src/practice/battle-narration.tsx:49
+msgid "{name} lost {amount} HP."
+msgstr "{name} lost {amount} HP."
+
+#: src/practice/battle-narration.tsx:35
+msgid "{name} missed!"
+msgstr "{name} missed!"
+
+#: src/practice/battle-narration.tsx:54
+msgid "{name} recovered {amount} HP."
+msgstr "{name} recovered {amount} HP."
+
+#: src/practice/battle-narration.tsx:42
+msgid "{name} took a defensive stance."
+msgstr "{name} took a defensive stance."
+
+#: src/practice/battle-narration.tsx:39
+msgid "{name} used {move}."
+msgstr "{name} used {move}."
+
+#: src/practice/battle-narration.tsx:75
+msgid "{name} was defeated."
+msgstr "{name} was defeated."
+
+#: src/practice/practice-arena.tsx:269
+msgid "{name}: {health}/{max} health"
+msgstr "{name}: {health}/{max} health"
+
+#: src/practice/battle-narration.tsx:63
+msgid "{name}: {stat} fell!"
+msgstr "{name}: {stat} fell!"
+
+#: src/practice/battle-narration.tsx:63
+msgid "{name}: {stat} rose!"
+msgstr "{name}: {stat} rose!"
+
+#: src/game/art/combat-status.tsx:89
+#: src/game/art/combat-status.tsx:94
+msgid "{name}: {value}"
+msgstr "{name}: {value}"
+
+#: src/practice/battle-narration.tsx:68
+msgid "{name}: an effect wore off."
+msgstr "{name}: an effect wore off."
+
+#: src/practice/move-picker.tsx:108
+msgid "{name}. Not enough mana"
+msgstr "{name}. Not enough mana"
+
+#: src/practice/practice-arena.tsx:287
+msgid "{name}. View enemy info"
+msgstr "{name}. View enemy info"
+
+#: src/practice/practice-result.tsx:159
+#: src/realm/equipment-card.tsx:72
+msgid "{name}. View equipment info"
+msgstr "{name}. View equipment info"
+
+#: src/practice/move-picker.tsx:137
+#: src/realm/skill-chip.tsx:48
+msgid "{name}. View skill"
+msgstr "{name}. View skill"
+
+#: src/practice/player-resources.tsx:87
+msgid "{playerName}. View player info"
+msgstr "{playerName}. View player info"
+
+#: src/objective/mission-card.tsx:125
+msgid "{progress} of {target} complete"
+msgstr "{progress} of {target} complete"
+
+#: src/reward/daily-reward-card.tsx:122
+msgid "{streak, plural, one {# day streak} other {# day streak}}"
+msgstr "{streak, plural, one {# day streak} other {# day streak}}"
+
+#: src/objective/mission-card.tsx:31
+msgid "{target, plural, one {Answer # question correctly in won battles} other {Answer # questions correctly in won battles}}"
+msgstr "{target, plural, one {Answer # question correctly in won battles} other {Answer # questions correctly in won battles}}"
+
+#: src/objective/mission-card.tsx:20
+msgid "{target, plural, one {Clear # practice} other {Clear # practices}}"
+msgstr "{target, plural, one {Clear # practice} other {Clear # practices}}"
+
+#: src/objective/mission-card.tsx:24
+msgid "{target, plural, one {Clear # unit} other {Clear # units}}"
+msgstr "{target, plural, one {Clear # unit} other {Clear # units}}"
+
+#: src/objective/mission-card.tsx:26
+msgid "{target, plural, one {Complete # course} other {Complete # courses}}"
+msgstr "{target, plural, one {Complete # course} other {Complete # courses}}"
+
+#: src/objective/mission-card.tsx:18
+msgid "{target, plural, one {Finish # lesson} other {Finish # lessons}}"
+msgstr "{target, plural, one {Finish # lesson} other {Finish # lessons}}"
+
+#: src/objective/mission-card.tsx:28
+msgid "{target, plural, one {Learn on # day} other {Learn on # days}}"
+msgstr "{target, plural, one {Learn on # day} other {Learn on # days}}"
+
+#: src/objective/mission-card.tsx:43
+msgid "{target, plural, one {Win # battle with at least 80% accuracy} other {Win # battles with at least 80% accuracy}}"
+msgstr "{target, plural, one {Win # battle with at least 80% accuracy} other {Win # battles with at least 80% accuracy}}"
+
+#: src/objective/mission-card.tsx:51
+msgid "{target, plural, one {Win # battle with perfect accuracy} other {Win # battles with perfect accuracy}}"
+msgstr "{target, plural, one {Win # battle with perfect accuracy} other {Win # battles with perfect accuracy}}"
+
+#: src/objective/mission-card.tsx:22
+msgid "{target, plural, one {Win # battle} other {Win # battles}}"
+msgstr "{target, plural, one {Win # battle} other {Win # battles}}"
+
+#: src/objective/mission-card.tsx:40
+msgid "{target, plural, one {Win # practice replay} other {Win # practice replays}}"
+msgstr "{target, plural, one {Win # practice replay} other {Win # practice replays}}"
+
+#: src/objective/mission-card.tsx:38
+msgid "{target, plural, one {Win # unit review} other {Win # unit reviews}}"
+msgstr "{target, plural, one {Win # unit review} other {Win # unit reviews}}"
+
+#: src/realm/course-path.tsx:143
+#: src/realm/unit-map-section.tsx:132
+msgid "{title}, battle in progress"
+msgstr "{title}, battle in progress"
+
+#: src/realm/course-path.tsx:145
+msgid "{title}, completed"
+msgstr "{title}, completed"
+
+#: src/realm/course-path.tsx:141
+msgid "{title}, locked"
+msgstr "{title}, locked"
+
+#: src/realm/skill-info-dialog.tsx:99
+msgid "{turns, plural, one {# target turn} other {# target turns}}"
+msgstr "{turns, plural, one {# target turn} other {# target turns}}"
+
+#: src/ui/primitives/resource-bar.tsx:125
+msgid "{value} of {max}"
+msgstr "{value} of {max}"
+
+#: src/practice/practice-result.tsx:133
+msgid "+{xp} XP"
+msgstr "+{xp} XP"
+
+#: src/api/error-messages.ts:53
+msgid "A new day has started. Refresh to claim today’s reward."
+msgstr "A new day has started. Refresh to claim today’s reward."
+
+#: src/character/cosmetics.ts:30
+msgid "Accessories"
+msgstr "Accessories"
+
+#: src/course/course-search-screen.tsx:243
+msgid "Age"
+msgstr "Age"
+
+#: src/course/course-search-screen.tsx:169
+msgid "Ages {minimumAge}–{maximumAge}"
+msgstr "Ages {minimumAge}–{maximumAge}"
+
+#: src/course/course-search-screen.tsx:169
+msgid "Ages {minimumAge}+"
+msgstr "Ages {minimumAge}+"
+
+#: src/course/course-search-screen.tsx:199
+#: src/realm/equipment-shop-screen.tsx:91
+msgid "All"
+msgstr "All"
+
+#: src/course/course-search-screen.tsx:247
+msgid "All ages"
+msgstr "All ages"
+
+#: src/practice/session.ts:17
+#: src/realm/skill-info-dialog.tsx:25
+msgid "All allies"
+msgstr "All allies"
+
+#: src/ui/catalog-controls.tsx:99
+msgid "All currencies"
+msgstr "All currencies"
+
+#: src/practice/session.ts:16
+#: src/realm/skill-info-dialog.tsx:24
+msgid "All enemies"
+msgstr "All enemies"
+
+#: src/course/course-search-screen.tsx:225
+msgid "All languages"
+msgstr "All languages"
+
+#: src/ui/catalog-controls.tsx:79
+msgid "All rarities"
+msgstr "All rarities"
+
+#: src/user/login-screen.tsx:195
+msgid "Already have an account? Log in"
+msgstr "Already have an account? Log in"
+
+#: src/character/appearance-colors.ts:38
+msgid "Amber"
+msgstr "Amber"
+
+#: src/api/error-messages.ts:68
+#: src/api/error-messages.ts:69
+msgid "An account with this email already exists. Try logging in."
+msgstr "An account with this email already exists. Try logging in."
+
+#: src/objective/mission-card.tsx:73
+msgid "Answer at least 5 different questions in each battle. Accuracy uses your first answer to each question."
+msgstr "Answer at least 5 different questions in each battle. Accuracy uses your first answer to each question."
+
+#: src/character/appearance-screen.tsx:175
+#: src/character/appearance-screen.tsx:187
+msgid "Appearance"
+msgstr "Appearance"
+
+#: src/realm/equipment.ts:22
+msgid "Armor"
+msgstr "Armor"
+
+#: src/course/course-search.ts:13
+msgid "Arts and humanities"
+msgstr "Arts and humanities"
+
+#: src/game/art/art-surface.tsx:25
+msgid "Artwork unavailable"
+msgstr "Artwork unavailable"
+
+#: src/game/art/combat-status.tsx:15
+#: src/practice/session.ts:12
+#: src/realm/equipment.ts:25
+msgid "Attack"
+msgstr "Attack"
+
+#: src/character/appearance-colors.ts:24
+msgid "Auburn"
+msgstr "Auburn"
+
+#: src/user/onboarding-progress.tsx:34
+msgid "Back"
+msgstr "Back"
+
+#: src/practice/combatant-info-sheet.tsx:98
+#: src/practice/practice-info-sheet.tsx:46
+msgid "Back to battle"
+msgstr "Back to battle"
+
+#: src/realm/realm-shell.tsx:62
+msgid "Back to courses"
+msgstr "Back to courses"
+
+#: src/objective/missions-screen.tsx:58
+#: src/reward/rewards-screen.tsx:67
+msgid "Back to Home"
+msgstr "Back to Home"
+
+#: src/course/lesson-screen.tsx:91
+#: src/course/lesson-screen.tsx:192
+#: src/practice/practice-screen.tsx:278
+msgid "Back to map"
+msgstr "Back to map"
+
+#: src/character/appearance-screen.tsx:165
+#: src/character/cosmetic-shop-screen.tsx:101
+#: src/character/wardrobe-screen.tsx:67
+msgid "Back to Me"
+msgstr "Back to Me"
+
+#: src/character/cosmetics.ts:33
+msgid "Backgrounds"
+msgstr "Backgrounds"
+
+#: src/practice/answer-input.tsx:472
+msgid "Backspace"
+msgstr "Backspace"
+
+#: src/practice/practice-arena.tsx:173
+msgid "Battlefield"
+msgstr "Battlefield"
+
+#: src/practice/practice-result.tsx:175
+msgid "Before you try again"
+msgstr "Before you try again"
+
+#: src/user/birth-year-step.tsx:53
+#: src/user/profile-settings.tsx:79
+msgid "Birth year"
+msgstr "Birth year"
+
+#: src/character/appearance-colors.ts:20
+msgid "Black"
+msgstr "Black"
+
+#: src/character/appearance-colors.ts:26
+msgid "Blond"
+msgstr "Blond"
+
+#: src/character/appearance-colors.ts:40
+msgid "Blue"
+msgstr "Blue"
+
+#: src/game/art/wave-transition.tsx:58
+#: src/practice/combatant-info-sheet.tsx:124
+#: src/realm/practice-sheet.tsx:100
+msgid "Boss"
+msgstr "Boss"
+
+#: src/character/cosmetics.ts:27
+msgid "Bottoms"
+msgstr "Bottoms"
+
+#: src/character/appearance-colors.ts:13
+msgid "Bronze"
+msgstr "Bronze"
+
+#: src/character/appearance-colors.ts:22
+#: src/character/appearance-colors.ts:35
+msgid "Brown"
+msgstr "Brown"
+
+#: src/course/course-search.ts:14
+msgid "Business"
+msgstr "Business"
+
+#: src/character/cosmetic-shop-screen.tsx:282
+msgid "Buy"
+msgstr "Buy"
+
+#: src/practice/practice-result.tsx:50
+msgid "Buy and equip gear to get stronger."
+msgstr "Buy and equip gear to get stronger."
+
+#: src/realm/equipment-shop-screen.tsx:173
+msgid "Buy equipment"
+msgstr "Buy equipment"
+
+#: src/user/profile-settings.tsx:154
+msgid "Cancel"
+msgstr "Cancel"
+
+#: src/character/cosmetic-categories.tsx:27
+msgid "Categories"
+msgstr "Categories"
+
+#: src/play/play-screen.tsx:93
+#: src/ui/app-navigation.tsx:106
+msgid "Challenges"
+msgstr "Challenges"
+
+#: src/user/profile-screen.tsx:86
+msgid "Change appearance"
+msgstr "Change appearance"
+
+#: src/practice/answer-input.tsx:486
+msgid "Change sign"
+msgstr "Change sign"
+
+#: src/character/appearance-colors.ts:36
+msgid "Charcoal"
+msgstr "Charcoal"
+
+#: src/realm/equipment.ts:22
+msgid "Charm"
+msgstr "Charm"
+
+#: src/course/course-search-screen.tsx:328
+msgid "Check back soon for something new to learn."
+msgstr "Check back soon for something new to learn."
+
+#: src/api/error-messages.ts:23
+msgid "Check the unit map layout and try again."
+msgstr "Check the unit map layout and try again."
+
+#: src/api/error-messages.ts:58
+msgid "Check your content and its question and media references."
+msgstr "Check your content and its question and media references."
+
+#: src/api/error-messages.ts:8
+msgid "Check your input and try again."
+msgstr "Check your input and try again."
+
+#: src/api/error-messages.ts:37
+msgid "Check your selection and try again."
+msgstr "Check your selection and try again."
+
+#: src/character/appearance-colors.ts:23
+msgid "Chestnut"
+msgstr "Chestnut"
+
+#: src/api/error-messages.ts:59
+msgid "Choose a supported media file within the upload limits."
+msgstr "Choose a supported media file within the upload limits."
+
+#: src/api/error-messages.ts:21
+msgid "Choose a valid learner age range."
+msgstr "Choose a valid learner age range."
+
+#: src/practice/answer-input.tsx:138
+msgid "Choose all that apply"
+msgstr "Choose all that apply"
+
+#: src/api/error-messages.ts:43
+msgid "Choose an available action."
+msgstr "Choose an available action."
+
+#: src/api/error-messages.ts:48
+msgid "Choose an available hairstyle."
+msgstr "Choose an available hairstyle."
+
+#: src/api/error-messages.ts:31
+msgid "Choose an available target."
+msgstr "Choose an available target."
+
+#: src/api/error-messages.ts:22
+msgid "Choose an available unit biome and try again."
+msgstr "Choose an available unit biome and try again."
+
+#: src/user/user-language-step.tsx:52
+msgid "Choose the language you’re most comfortable reading."
+msgstr "Choose the language you’re most comfortable reading."
+
+#: src/objective/mission-card.tsx:156
+#: src/reward/daily-reward-card.tsx:209
+msgid "Claim"
+msgstr "Claim"
+
+#: src/objective/mission-card.tsx:161
+#: src/reward/daily-reward-card.tsx:174
+#: src/reward/daily-reward-card.tsx:198
+msgid "Claimed"
+msgstr "Claimed"
+
+#: src/practice/answer-input.tsx:463
+msgid "Clear"
+msgstr "Clear"
+
+#: src/course/course-search-screen.tsx:333
+msgid "Clear filters"
+msgstr "Clear filters"
+
+#: src/course/course-search-field.tsx:109
+msgid "Clear search"
+msgstr "Clear search"
+
+#: src/ui/sound/audio-unlock-overlay.tsx:42
+msgid "Click to resume"
+msgstr "Click to resume"
+
+#: src/realm/equipment-info-sheet.tsx:68
+#: src/ui/primitives/bottom-sheet.tsx:167
+#: src/ui/primitives/dialog.tsx:151
+msgid "Close"
+msgstr "Close"
+
+#: src/ui/primitives/currency-amount.tsx:24
+msgid "coins"
+msgstr "coins"
+
+#: src/course/lesson-screen.tsx:174
+#: src/ui/catalog-controls.tsx:100
+msgid "Coins"
+msgstr "Coins"
+
+#: src/play/play-screen.tsx:121
+msgid "Coming soon"
+msgstr "Coming soon"
+
+#: src/ui/catalog-controls.tsx:48
+msgid "Common first"
+msgstr "Common first"
+
+#: src/course/lesson-screen.tsx:192
+msgid "Complete"
+msgstr "Complete"
+
+#: src/objective/mission-card.tsx:64
+msgid "Complete a new lesson or submit a practice answer. Days do not need to be consecutive."
+msgstr "Complete a new lesson or submit a practice answer. Days do not need to be consecutive."
+
+#: src/api/error-messages.ts:52
+msgid "Complete the objective before claiming its reward."
+msgstr "Complete the objective before claiming its reward."
+
+#: src/api/error-messages.ts:26
+msgid "Complete the previous activities to unlock this one."
+msgstr "Complete the previous activities to unlock this one."
+
+#: src/api/error-messages.ts:73
+msgid "Complete verification and try again."
+msgstr "Complete verification and try again."
+
+#: src/course/course-search.ts:15
+msgid "Computer science"
+msgstr "Computer science"
+
+#: src/practice/practice-screen.tsx:406
+msgid "Confirm answer"
+msgstr "Confirm answer"
+
+#: src/character/appearance-screen.tsx:217
+#: src/home/home-screen.tsx:117
+#: src/practice/practice-screen.tsx:441
+#: src/user/onboarding-step.tsx:138
+msgid "Continue"
+msgstr "Continue"
+
+#: src/user/login-screen.tsx:181
+msgid "Continue as guest"
+msgstr "Continue as guest"
+
+#: src/realm/practice-sheet.tsx:89
+msgid "Continue battle"
+msgstr "Continue battle"
+
+#: src/character/appearance-colors.ts:16
+msgid "Cool deep brown"
+msgstr "Cool deep brown"
+
+#: src/character/appearance-colors.ts:25
+msgid "Copper"
+msgstr "Copper"
+
+#: src/character/cosmetic-shop-screen.tsx:212
+#: src/character/cosmetic-shop-screen.tsx:247
+#: src/character/wardrobe-screen.tsx:164
+msgid "Cosmetic"
+msgstr "Cosmetic"
+
+#: src/course/lesson-screen.tsx:130
+#: src/realm/equipment-shop-screen.tsx:115
+#: src/realm/loadout-screen.tsx:228
+msgid "Couldn’t complete the request"
+msgstr "Couldn’t complete the request"
+
+#: src/api/error-messages.ts:91
+msgid "Couldn’t complete the request. Check your connection and try again."
+msgstr "Couldn’t complete the request. Check your connection and try again."
+
+#: src/course/course-search-screen.tsx:311
+msgid "Couldn’t load courses"
+msgstr "Couldn’t load courses"
+
+#: src/realm/course-map-screen.tsx:151
+#: src/realm/course-map-screen.tsx:266
+msgid "Couldn’t load the course"
+msgstr "Couldn’t load the course"
+
+#: src/realm/unit-map-section.tsx:166
+msgid "Couldn’t load the map"
+msgstr "Couldn’t load the map"
+
+#: src/realm/loadout-screen.tsx:76
+msgid "Couldn’t load your equipment"
+msgstr "Couldn’t load your equipment"
+
+#: src/practice/practice-info-sheet.tsx:54
+#: src/realm/realm-shell.tsx:71
+msgid "Course"
+msgstr "Course"
+
+#: src/course/course-search-screen.tsx:218
+msgid "Course filters"
+msgstr "Course filters"
+
+#: src/realm/course-map-screen.tsx:135
+msgid "Course map"
+msgstr "Course map"
+
+#: src/realm/realm-navigation.tsx:50
+msgid "Course navigation"
+msgstr "Course navigation"
+
+#: src/realm/equipment-shop-screen.tsx:109
+msgid "Course shop"
+msgstr "Course shop"
+
+#: src/course/course-search-screen.tsx:287
+#: src/course/course-search-screen.tsx:289
+msgid "Courses"
+msgstr "Courses"
+
+#: src/user/login-screen.tsx:169
+msgid "Create account"
+msgstr "Create account"
+
+#: src/user/login-screen.tsx:89
+msgid "Create an account"
+msgstr "Create an account"
+
+#: src/api/error-messages.ts:55
+msgid "Create an account to author content."
+msgstr "Create an account to author content."
+
+#: src/user/login-screen.tsx:94
+msgid "Create an account to keep your guest progress."
+msgstr "Create an account to keep your guest progress."
+
+#: src/ui/catalog-controls.tsx:94
+msgid "Currency"
+msgstr "Currency"
+
+#: src/character/appearance-screen.tsx:122
+msgid "Current color"
+msgstr "Current color"
+
+#: src/practice/combatant-info-sheet.tsx:133
+msgid "Current stats"
+msgstr "Current stats"
+
+#: src/reward/rewards-screen.tsx:85
+#: src/reward/rewards-screen.tsx:115
+msgid "Daily reward"
+msgstr "Daily reward"
+
+#: src/home/home-screen.tsx:85
+msgid "Daily reward available"
+msgstr "Daily reward available"
+
+#: src/reward/daily-reward-card.tsx:129
+msgid "Daily rewards"
+msgstr "Daily rewards"
+
+#: src/character/appearance-colors.ts:21
+#: src/character/appearance-colors.ts:34
+msgid "Dark brown"
+msgstr "Dark brown"
+
+#: src/reward/daily-reward-card.tsx:147
+msgid "Day {day}"
+msgstr "Day {day}"
+
+#: src/practice/answer-input.tsx:486
+msgid "Decimal point"
+msgstr "Decimal point"
+
+#: src/ui/primitives/number-field.tsx:150
+msgid "Decrease"
+msgstr "Decrease"
+
+#: src/character/appearance-colors.ts:15
+msgid "Deep brown"
+msgstr "Deep brown"
+
+#: src/practice/practice-result.tsx:35
+msgid "Defeated"
+msgstr "Defeated"
+
+#: src/practice/session.ts:12
+msgid "Defend"
+msgstr "Defend"
+
+#: src/game/art/combat-status.tsx:16
+#: src/realm/equipment.ts:26
+msgid "Defense"
+msgstr "Defense"
+
+#: src/practice/practice-info-sheet.tsx:72
+msgid "Difficulty"
+msgstr "Difficulty"
+
+#: src/course/course-search.ts:16
+msgid "Economics and finance"
+msgstr "Economics and finance"
+
+#: src/user/login-screen.tsx:130
+msgid "Email"
+msgstr "Email"
+
+#: src/realm/loadout-screen.tsx:133
+msgid "Empty"
+msgstr "Empty"
+
+#: src/practice/practice-screen.tsx:533
+msgid "End run"
+msgstr "End run"
+
+#: src/practice/battle-narration.tsx:29
+#: src/practice/combatant-info-sheet.tsx:91
+#: src/practice/practice-arena.tsx:253
+msgid "Enemy"
+msgstr "Enemy"
+
+#: src/course/course-search.ts:17
+msgid "Engineering"
+msgstr "Engineering"
+
+#: src/user/app-settings.tsx:51
+#: src/user/login-screen.tsx:210
+#: src/user/profile-settings.tsx:99
+#: src/user/user-language-step.tsx:71
+msgid "English"
+msgstr "English"
+
+#: src/user/birth-year-step.tsx:55
+#: src/user/profile-settings.tsx:80
+msgid "Enter a year from 1900 to {currentYear}."
+msgstr "Enter a year from 1900 to {currentYear}."
+
+#: src/play/play-screen.tsx:77
+msgid "Enter the dungeon"
+msgstr "Enter the dungeon"
+
+#: src/play/play-screen.tsx:70
+msgid "Enter Versus"
+msgstr "Enter Versus"
+
+#: src/user/birth-year-step.tsx:54
+msgid "Enter your four-digit birth year."
+msgstr "Enter your four-digit birth year."
+
+#: src/user/profile-settings.tsx:67
+msgid "Enter your name."
+msgstr "Enter your name."
+
+#: src/realm/equipment-shop-screen.tsx:163
+#: src/realm/loadout-screen.tsx:294
+msgid "Equip"
+msgstr "Equip"
+
+#: src/practice/combatant-info-sheet.tsx:152
+#: src/practice/practice-result.tsx:151
+msgid "Equipment"
+msgstr "Equipment"
+
+#: src/realm/equipment-shop-screen.tsx:80
+msgid "Equipment categories"
+msgstr "Equipment categories"
+
+#: src/realm/equipment-shop-screen.tsx:160
+#: src/realm/loadout-screen.tsx:294
+msgid "Equipped"
+msgstr "Equipped"
+
+#: src/character/appearance-colors.ts:17
+msgid "Espresso"
+msgstr "Espresso"
+
+#: src/game/realm-progress.tsx:75
+msgid "Experience"
+msgstr "Experience"
+
+#: src/character/appearance-screen.tsx:204
+msgid "Eye color"
+msgstr "Eye color"
+
+#: src/play/play-screen.tsx:68
+msgid "Face off against other players. May the sharpest mind win."
+msgstr "Face off against other players. May the sharpest mind win."
+
+#: src/character/appearance-colors.ts:6
+msgid "Fair"
+msgstr "Fair"
+
+#: src/play/play-screen.tsx:75
+msgid "Fight your way through an endless dungeon and see how deep your knowledge goes."
+msgstr "Fight your way through an endless dungeon and see how deep your knowledge goes."
+
+#: src/ui/catalog-controls.tsx:60
+#: src/ui/catalog-controls.tsx:65
+msgid "Filter"
+msgstr "Filter"
+
+#: src/ui/catalog-controls.tsx:65
+msgid "Filter ({filterCount})"
+msgstr "Filter ({filterCount})"
+
+#: src/home/home-screen.tsx:176
+msgid "Find courses"
+msgstr "Find courses"
+
+#: src/play/play-screen.tsx:83
+msgid "Game modes"
+msgstr "Game modes"
+
+#: src/ui/primitives/currency-amount.tsx:25
+msgid "gems"
+msgstr "gems"
+
+#: src/ui/catalog-controls.tsx:101
+msgid "Gems"
+msgstr "Gems"
+
+#: src/user/onboarding-progress.tsx:45
+#: src/user/onboarding-step.tsx:111
+msgid "Getting started"
+msgstr "Getting started"
+
+#: src/character/appearance-colors.ts:11
+msgid "Golden"
+msgstr "Golden"
+
+#: src/play/play-screen.tsx:137
+msgid "Got it"
+msgstr "Got it"
+
+#: src/character/appearance-colors.ts:28
+#: src/character/appearance-colors.ts:41
+msgid "Gray"
+msgstr "Gray"
+
+#: src/character/appearance-colors.ts:39
+msgid "Green"
+msgstr "Green"
+
+#: src/game/art/combat-status.tsx:65
+#: src/game/art/combat-status.tsx:68
+msgid "Guard: {reduction}%"
+msgstr "Guard: {reduction}%"
+
+#: src/user/profile-screen.tsx:106
+msgid "Guest"
+msgstr "Guest"
+
+#: src/character/appearance-screen.tsx:203
+msgid "Hair color"
+msgstr "Hair color"
+
+#: src/character/appearance-screen.tsx:192
+#: src/character/appearance-screen.tsx:195
+msgid "Hair style"
+msgstr "Hair style"
+
+#: src/character/cosmetics.ts:29
+msgid "Hats"
+msgstr "Hats"
+
+#: src/character/appearance-colors.ts:37
+msgid "Hazel"
+msgstr "Hazel"
+
+#: src/realm/equipment.ts:24
+msgid "Health"
+msgstr "Health"
+
+#: src/course/course-search.ts:18
+msgid "Health and medicine"
+msgstr "Health and medicine"
+
+#: src/ui/catalog-controls.tsx:53
+msgid "Highest cost"
+msgstr "Highest cost"
+
+#: src/ui/app-navigation.tsx:84
+msgid "Home"
+msgstr "Home"
+
+#: src/ui/primitives/number-field.tsx:164
+msgid "Increase"
+msgstr "Increase"
+
+#: src/play/play-screen.tsx:74
+msgid "Infinite Dungeon"
+msgstr "Infinite Dungeon"
+
+#: src/user/app-settings.tsx:47
+#: src/user/login-screen.tsx:201
+msgid "Interface language"
+msgstr "Interface language"
+
+#: src/api/error-messages.ts:30
+msgid "It isn’t this character’s turn."
+msgstr "It isn’t this character’s turn."
+
+#: src/course/course-card.tsx:90
+#: src/course/course-spotlight.tsx:59
+msgid "Join"
+msgstr "Join"
+
+#: src/course/course-card.tsx:86
+#: src/course/course-spotlight.tsx:56
+msgid "Join {title}"
+msgstr "Join {title}"
+
+#: src/home/home-screen.tsx:149
+msgid "Join a course to start learning."
+msgstr "Join a course to start learning."
+
+#: src/course/course-card.tsx:86
+#: src/course/course-spotlight.tsx:56
+msgid "Joining {title}"
+msgstr "Joining {title}"
+
+#: src/practice/practice-screen.tsx:505
+msgid "Keep playing"
+msgstr "Keep playing"
+
+#: src/course/course-search-screen.tsx:221
+msgid "Language"
+msgstr "Language"
+
+#: src/course/course-search.ts:19
+msgid "Language arts"
+msgstr "Language arts"
+
+#: src/course/course-search.ts:20
+msgid "Languages"
+msgstr "Languages"
+
+#: src/character/appearance-colors.ts:30
+msgid "Lavender"
+msgstr "Lavender"
+
+#: src/user/profile-settings.tsx:95
+#: src/user/user-language-step.tsx:61
+msgid "Learning language"
+msgstr "Learning language"
+
+#: src/practice/practice-screen.tsx:495
+msgid "Leave practice?"
+msgstr "Leave practice?"
+
+#: src/ui/catalog-controls.tsx:49
+msgid "Legendary first"
+msgstr "Legendary first"
+
+#: src/course/lesson-screen.tsx:103
+#: src/course/lesson-screen.tsx:119
+msgid "Lesson"
+msgstr "Lesson"
+
+#: src/game/realm-progress.tsx:57
+msgid "Level {level}"
+msgstr "Level {level}"
+
+#: src/realm/realm-shell.tsx:80
+msgid "Level {level}. Open loadout"
+msgstr "Level {level}. Open loadout"
+
+#: src/game/realm-progress.tsx:87
+msgid "Level up!"
+msgstr "Level up!"
+
+#: src/course/course-search.ts:21
+msgid "Life skills"
+msgstr "Life skills"
+
+#: src/character/appearance-colors.ts:8
+msgid "Light rose"
+msgstr "Light rose"
+
+#: src/character/cosmetic-shop-screen.tsx:241
+#: src/character/wardrobe-screen.tsx:185
+#: src/course/course-search-screen.tsx:383
+#: src/home/home-screen.tsx:171
+#: src/realm/course-map-screen.tsx:197
+#: src/realm/course-map-screen.tsx:312
+#: src/realm/equipment-shop-screen.tsx:195
+#: src/realm/loadout-screen.tsx:308
+#: src/realm/unit-map-section.tsx:194
+#: src/reward/rewards-screen.tsx:179
+msgid "Load more"
+msgstr "Load more"
+
+#: src/course/course-search-screen.tsx:301
+#: src/home/home-screen.tsx:125
+msgid "Loading courses…"
+msgstr "Loading courses…"
+
+#: src/realm/course-map-screen.tsx:165
+#: src/realm/course-map-screen.tsx:278
+#: src/realm/unit-map-section.tsx:162
+msgid "Loading map"
+msgstr "Loading map"
+
+#: src/objective/missions-screen.tsx:100
+msgid "Loading missions…"
+msgstr "Loading missions…"
+
+#: src/practice/practice-screen.tsx:354
+msgid "Loading practice"
+msgstr "Loading practice"
+
+#: src/practice/move-picker.tsx:124
+msgid "Loading question"
+msgstr "Loading question"
+
+#: src/reward/rewards-screen.tsx:110
+msgid "Loading rewards…"
+msgstr "Loading rewards…"
+
+#: src/realm/loadout-screen.tsx:70
+#: src/realm/practice-sheet.tsx:56
+#: src/realm/realm-navigation.tsx:71
+msgid "Loadout"
+msgstr "Loadout"
+
+#: src/user/login-screen.tsx:89
+#: src/user/login-screen.tsx:169
+msgid "Log in"
+msgstr "Log in"
+
+#: src/api/error-messages.ts:6
+msgid "Log in to continue."
+msgstr "Log in to continue."
+
+#: src/user/guest-banner.tsx:44
+msgid "Log in to save your progress"
+msgstr "Log in to save your progress"
+
+#: src/user/profile-settings.tsx:146
+#: src/user/profile-settings.tsx:170
+msgid "Log out"
+msgstr "Log out"
+
+#: src/user/profile-settings.tsx:142
+msgid "Log out of this guest account?"
+msgstr "Log out of this guest account?"
+
+#: src/user/login-screen.tsx:96
+msgid "Logging in switches to that account’s progress."
+msgstr "Logging in switches to that account’s progress."
+
+#: src/ui/catalog-controls.tsx:52
+msgid "Lowest cost"
+msgstr "Lowest cost"
+
+#: src/game/realm-progress.tsx:60
+msgid "Lv"
+msgstr "Lv"
+
+#: src/realm/realm-shell.tsx:85
+msgid "Lv {level}"
+msgstr "Lv {level}"
+
+#: src/ui/app-navigation.tsx:74
+msgid "Main navigation"
+msgstr "Main navigation"
+
+#: src/character/appearance-screen.tsx:175
+msgid "Make it you"
+msgstr "Make it you"
+
+#: src/practice/player-resources.tsx:60
+msgid "Mana"
+msgstr "Mana"
+
+#: src/practice/practice-screen.tsx:452
+#: src/realm/realm-navigation.tsx:60
+msgid "Map"
+msgstr "Map"
+
+#: src/course/course-search.ts:22
+msgid "Math"
+msgstr "Math"
+
+#: src/game/art/combat-status.tsx:14
+msgid "Max health"
+msgstr "Max health"
+
+#: src/game/realm-progress.tsx:67
+msgid "Maximum level"
+msgstr "Maximum level"
+
+#: src/ui/app-navigation.tsx:117
+msgid "Me"
+msgstr "Me"
+
+#: src/ui/primitives/currency-amount.tsx:26
+msgid "medals"
+msgstr "medals"
+
+#: src/course/lesson-screen.tsx:162
+msgid "Medals"
+msgstr "Medals"
+
+#: src/api/error-messages.ts:60
+msgid "Media uploads are temporarily unavailable."
+msgstr "Media uploads are temporarily unavailable."
+
+#: src/character/appearance-colors.ts:14
+msgid "Medium brown"
+msgstr "Medium brown"
+
+#: src/reward/rewards-screen.tsx:125
+#: src/user/profile-screen.tsx:163
+msgid "Milestones"
+msgstr "Milestones"
+
+#: src/game/art/battle-feedback.tsx:80
+msgid "Miss"
+msgstr "Miss"
+
+#: src/home/home-screen.tsx:73
+#: src/objective/missions-screen.tsx:67
+#: src/objective/missions-screen.tsx:72
+msgid "Missions"
+msgstr "Missions"
+
+#: src/home/home-screen.tsx:73
+msgid "Missions, {readyMissions} rewards ready"
+msgstr "Missions, {readyMissions} rewards ready"
+
+#: src/practice/combatant-info-sheet.tsx:120
+msgid "Monster"
+msgstr "Monster"
+
+#: src/practice/practice-screen.tsx:329
+msgid "More below"
+msgstr "More below"
+
+#: src/course/course-search-screen.tsx:355
+msgid "More courses"
+msgstr "More courses"
+
+#: src/user/settings-menu.tsx:30
+msgid "More options"
+msgstr "More options"
+
+#: src/user/app-settings.tsx:45
+msgid "Music"
+msgstr "Music"
+
+#: src/course/course-search-screen.tsx:250
+msgid "My age ({learnerAge})"
+msgstr "My age ({learnerAge})"
+
+#: src/user/login-screen.tsx:118
+#: src/user/profile-settings.tsx:67
+msgid "Name"
+msgstr "Name"
+
+#: src/course/course-search-screen.tsx:270
+msgid "Name: A to Z"
+msgstr "Name: A to Z"
+
+#: src/course/course-search-screen.tsx:271
+msgid "Name: Z to A"
+msgstr "Name: Z to A"
+
+#: src/user/login-screen.tsx:197
+msgid "New here? Create an account"
+msgstr "New here? Create an account"
+
+#: src/course/course-search-screen.tsx:324
+msgid "No courses found"
+msgstr "No courses found"
+
+#: src/course/course-search-screen.tsx:324
+msgid "No courses yet"
+msgstr "No courses yet"
+
+#: src/realm/equipment-shop-screen.tsx:133
+msgid "No equipment here"
+msgstr "No equipment here"
+
+#: src/realm/loadout-screen.tsx:248
+msgid "No equipment yet"
+msgstr "No equipment yet"
+
+#: src/character/appearance-screen.tsx:111
+msgid "No hair"
+msgstr "No hair"
+
+#: src/realm/course-map-screen.tsx:186
+msgid "No levels yet"
+msgstr "No levels yet"
+
+#: src/reward/rewards-screen.tsx:150
+msgid "No milestones yet"
+msgstr "No milestones yet"
+
+#: src/objective/missions-screen.tsx:109
+msgid "No missions yet"
+msgstr "No missions yet"
+
+#: src/character/cosmetic-tile.tsx:136
+#: src/character/wardrobe-screen.tsx:150
+msgid "None"
+msgstr "None"
+
+#: src/character/cosmetic-shop-screen.tsx:252
+msgid "Not enough coins"
+msgstr "Not enough coins"
+
+#: src/character/cosmetic-shop-screen.tsx:253
+msgid "Not enough gems"
+msgstr "Not enough gems"
+
+#: src/character/cosmetic-shop-screen.tsx:202
+#: src/character/wardrobe-screen.tsx:144
+msgid "Nothing here yet"
+msgstr "Nothing here yet"
+
+#: src/practice/answer-input.tsx:480
+msgid "Number pad"
+msgstr "Number pad"
+
+#: src/character/appearance-colors.ts:10
+msgid "Olive"
+msgstr "Olive"
+
+#: src/practice/session.ts:15
+#: src/realm/skill-info-dialog.tsx:23
+msgid "One enemy"
+msgstr "One enemy"
+
+#: src/objective/mission-card.tsx:69
+msgid "Only the first answer to each question in a won battle counts."
+msgstr "Only the first answer to each question in a won battle counts."
+
+#: src/course/course-card.tsx:90
+#: src/course/course-spotlight.tsx:59
+msgid "Open"
+msgstr "Open"
+
+#: src/course/course-card.tsx:86
+#: src/course/course-spotlight.tsx:56
+msgid "Open {title}"
+msgstr "Open {title}"
+
+#: src/realm/loadout-screen.tsx:261
+msgid "Open shop"
+msgstr "Open shop"
+
+#: src/course/course-search.ts:26
+msgid "Other"
+msgstr "Other"
+
+#: src/character/cosmetics.ts:31
+msgid "Outfits"
+msgstr "Outfits"
+
+#: src/character/cosmetic-tile.tsx:134
+msgid "Owned"
+msgstr "Owned"
+
+#: src/user/login-screen.tsx:142
+msgid "Password"
+msgstr "Password"
+
+#: src/character/appearance-colors.ts:9
+msgid "Peach"
+msgstr "Peach"
+
+#: src/character/cosmetics.ts:32
+msgid "Pets"
+msgstr "Pets"
+
+#: src/character/appearance-colors.ts:27
+msgid "Platinum blond"
+msgstr "Platinum blond"
+
+#: src/practice/combatant-info-sheet.tsx:120
+msgid "Player"
+msgstr "Player"
+
+#: src/character/appearance-colors.ts:7
+msgid "Porcelain"
+msgstr "Porcelain"
+
+#: src/practice/practice-info-sheet.tsx:42
+#: src/practice/practice-screen.tsx:272
+#: src/practice/practice-screen.tsx:332
+#: src/realm/practice-sheet.tsx:89
+msgid "Practice"
+msgstr "Practice"
+
+#: src/practice/practice-result.tsx:36
+msgid "Practice ended"
+msgstr "Practice ended"
+
+#: src/practice/practice-screen.tsx:289
+msgid "Practice info"
+msgstr "Practice info"
+
+#: src/practice/practice-screen.tsx:426
+#: src/practice/practice-screen.tsx:433
+msgid "Practice results"
+msgstr "Practice results"
+
+#: src/user/profile-screen.tsx:128
+#: src/user/profile-screen.tsx:178
+#: src/user/profile-settings.tsx:62
+msgid "Profile"
+msgstr "Profile"
+
+#: src/home/home-screen.tsx:112
+#: src/objective/mission-card.tsx:121
+msgid "Progress"
+msgstr "Progress"
+
+#: src/practice/practice-screen.tsx:332
+msgid "Question"
+msgstr "Question"
+
+#: src/ui/catalog-controls.tsx:74
+msgid "Rarity"
+msgstr "Rarity"
+
+#: src/practice/practice-result.tsx:55
+msgid "Read new lessons to gain XP and level up."
+msgstr "Read new lessons to gain XP and level up."
+
+#: src/course/lesson-screen.tsx:116
+msgid "Reading progress"
+msgstr "Reading progress"
+
+#: src/course/course-search-screen.tsx:269
+msgid "Recommended"
+msgstr "Recommended"
+
+#: src/practice/answer-input.tsx:303
+#: src/practice/answer-input.tsx:453
+msgid "Remove {value}"
+msgstr "Remove {value}"
+
+#: src/character/cosmetic-shop-screen.tsx:193
+#: src/character/wardrobe-screen.tsx:135
+msgid "Remove outfit"
+msgstr "Remove outfit"
+
+#: src/practice/practice-result.tsx:45
+msgid "Replay practices to earn medals and gear."
+msgstr "Replay practices to earn medals and gear."
+
+#: src/character/cosmetic-shop-screen.tsx:134
+msgid "Reset preview"
+msgstr "Reset preview"
+
+#: src/realm/skill-info-dialog.tsx:87
+msgid "Restore {amount} health"
+msgstr "Restore {amount} health"
+
+#: src/course/course-search-screen.tsx:295
+msgid "Results for “{q}”"
+msgstr "Results for “{q}”"
+
+#: src/realm/realm-shell.tsx:92
+msgid "Retry balance"
+msgstr "Retry balance"
+
+#: src/home/home-screen.tsx:85
+#: src/reward/rewards-screen.tsx:76
+#: src/reward/rewards-screen.tsx:81
+msgid "Rewards"
+msgstr "Rewards"
+
+#: src/character/appearance-colors.ts:31
+msgid "Rose"
+msgstr "Rose"
+
+#: src/practice/practice-screen.tsx:512
+msgid "Save and leave"
+msgstr "Save and leave"
+
+#: src/character/appearance-screen.tsx:217
+msgid "Save appearance"
+msgstr "Save appearance"
+
+#: src/user/profile-settings.tsx:124
+msgid "Save profile"
+msgstr "Save profile"
+
+#: src/user/profile-settings.tsx:135
+msgid "Save your progress"
+msgstr "Save your progress"
+
+#: src/course/course-search.ts:23
+msgid "Science"
+msgstr "Science"
+
+#: src/ui/app-navigation.tsx:95
+msgid "Search"
+msgstr "Search"
+
+#: src/course/course-search-field.tsx:86
+#: src/course/course-search-field.tsx:98
+#: src/course/course-search-field.tsx:99
+msgid "Search courses"
+msgstr "Search courses"
+
+#: src/practice/session.ts:14
+#: src/realm/skill-info-dialog.tsx:22
+msgid "Self"
+msgstr "Self"
+
+#: src/user/app-settings.tsx:26
+#: src/user/profile-screen.tsx:184
+#: src/user/settings-menu.tsx:40
+msgid "Settings"
+msgstr "Settings"
+
+#: src/game/art/combat-status.tsx:74
+#: src/game/art/combat-status.tsx:77
+msgid "Shield: {shield}"
+msgstr "Shield: {shield}"
+
+#: src/character/cosmetics.ts:28
+msgid "Shoes"
+msgstr "Shoes"
+
+#: src/character/cosmetic-shop-screen.tsx:110
+#: src/character/cosmetic-shop-screen.tsx:156
+#: src/character/wardrobe-screen.tsx:80
+#: src/character/wardrobe-shop-card.tsx:34
+#: src/realm/realm-navigation.tsx:82
+#: src/user/profile-screen.tsx:117
+msgid "Shop"
+msgstr "Shop"
+
+#: src/realm/course-map-screen.tsx:119
+msgid "Show level list"
+msgstr "Show level list"
+
+#: src/realm/course-map-screen.tsx:119
+msgid "Show path"
+msgstr "Show path"
+
+#: src/character/appearance-colors.ts:29
+msgid "Silver"
+msgstr "Silver"
+
+#: src/practice/battle-narration.tsx:38
+#: src/practice/move-picker.tsx:100
+#: src/practice/session.ts:12
+#: src/realm/skill-chip.tsx:32
+#: src/realm/skill-info-dialog.tsx:44
+msgid "Skill"
+msgstr "Skill"
+
+#: src/realm/loadout-screen.tsx:273
+msgid "Skill already equipped"
+msgstr "Skill already equipped"
+
+#: src/practice/combatant-info-sheet.tsx:177
+#: src/realm/equipment-card.tsx:111
+#: src/realm/equipment-info-sheet.tsx:113
+#: src/realm/loadout-screen.tsx:148
+msgid "Skills"
+msgstr "Skills"
+
+#: src/character/appearance-screen.tsx:189
+msgid "Skin tone"
+msgstr "Skin tone"
+
+#: src/course/course-search.ts:24
+msgid "Social sciences"
+msgstr "Social sciences"
+
+#: src/api/error-messages.ts:10
+#: src/api/error-messages.ts:75
+msgid "Something went wrong. Please try again."
+msgstr "Something went wrong. Please try again."
+
+#: src/course/course-search-screen.tsx:265
+#: src/ui/catalog-controls.tsx:115
+#: src/ui/catalog-controls.tsx:120
+msgid "Sort"
+msgstr "Sort"
+
+#: src/user/app-settings.tsx:36
+msgid "Sound effects"
+msgstr "Sound effects"
+
+#: src/game/art/combat-status.tsx:17
+#: src/realm/equipment.ts:27
+msgid "Speed"
+msgstr "Speed"
+
+#: src/realm/equipment-info-sheet.tsx:86
+msgid "Stat modifiers"
+msgstr "Stat modifiers"
+
+#: src/user/onboarding-progress.tsx:46
+msgid "Step {step} of {totalSteps}"
+msgstr "Step {step} of {totalSteps}"
+
+#: src/course/course-search-screen.tsx:188
+msgid "Subject"
+msgstr "Subject"
+
+#: src/practice/answer-input.tsx:291
+msgid "Tap tiles to build your answer"
+msgstr "Tap tiles to build your answer"
+
+#: src/practice/practice-arena.tsx:241
+msgid "Target"
+msgstr "Target"
+
+#: src/course/course-search.ts:25
+msgid "Test preparation"
+msgstr "Test preparation"
+
+#: src/api/error-messages.ts:29
+msgid "The battle moved on. Refresh to see the current turn."
+msgstr "The battle moved on. Refresh to see the current turn."
+
+#: src/api/error-messages.ts:20
+msgid "The course list changed. Refresh to continue."
+msgstr "The course list changed. Refresh to continue."
+
+#: src/api/error-messages.ts:67
+msgid "The email or password is incorrect."
+msgstr "The email or password is incorrect."
+
+#: src/api/error-messages.ts:35
+#: src/api/error-messages.ts:36
+msgid "The question changed. Reload it to continue."
+msgstr "The question changed. Reload it to continue."
+
+#: src/api/error-messages.ts:27
+msgid "This activity has changed. Reload it to continue."
+msgstr "This activity has changed. Reload it to continue."
+
+#: src/api/error-messages.ts:25
+msgid "This activity is no longer available."
+msgstr "This activity is no longer available."
+
+#: src/api/error-messages.ts:24
+msgid "This activity isn’t a lesson."
+msgstr "This activity isn’t a lesson."
+
+#: src/api/error-messages.ts:40
+msgid "This activity isn’t a practice."
+msgstr "This activity isn’t a practice."
+
+#: src/api/error-messages.ts:28
+msgid "This battle has already ended."
+msgstr "This battle has already ended."
+
+#: src/api/error-messages.ts:9
+msgid "This content is no longer available."
+msgstr "This content is no longer available."
+
+#: src/api/error-messages.ts:57
+msgid "This content is unavailable or belongs to another author."
+msgstr "This content is unavailable or belongs to another author."
+
+#: src/api/error-messages.ts:44
+msgid "This cosmetic is no longer available."
+msgstr "This cosmetic is no longer available."
+
+#: src/api/error-messages.ts:11
+msgid "This course is no longer available."
+msgstr "This course is no longer available."
+
+#: src/api/error-messages.ts:50
+msgid "This encounter is temporarily unavailable."
+msgstr "This encounter is temporarily unavailable."
+
+#: src/api/error-messages.ts:18
+msgid "This equipment has a conflicting skill. Choose another item."
+msgstr "This equipment has a conflicting skill. Choose another item."
+
+#: src/api/error-messages.ts:13
+msgid "This equipment is no longer available."
+msgstr "This equipment is no longer available."
+
+#: src/user/birth-year-step.tsx:38
+msgid "This helps us suggest courses for your age."
+msgstr "This helps us suggest courses for your age."
+
+#: src/api/error-messages.ts:12
+msgid "This item belongs to another course."
+msgstr "This item belongs to another course."
+
+#: src/api/error-messages.ts:14
+#: src/api/error-messages.ts:45
+msgid "This item isn’t for sale."
+msgstr "This item isn’t for sale."
+
+#: src/api/error-messages.ts:62
+msgid "This media is attached to learning content and cannot be deleted."
+msgstr "This media is attached to learning content and cannot be deleted."
+
+#: src/api/error-messages.ts:54
+msgid "This media is no longer available."
+msgstr "This media is no longer available."
+
+#: src/play/play-screen.tsx:122
+msgid "This mode is not available yet."
+msgstr "This mode is not available yet."
+
+#: src/api/error-messages.ts:51
+msgid "This objective is no longer available."
+msgstr "This objective is no longer available."
+
+#: src/api/error-messages.ts:34
+msgid "This practice is temporarily unavailable."
+msgstr "This practice is temporarily unavailable."
+
+#: src/api/error-messages.ts:39
+msgid "This practice session is no longer available."
+msgstr "This practice session is no longer available."
+
+#: src/api/error-messages.ts:7
+msgid "This request isn’t allowed. Reload the app and try again."
+msgstr "This request isn’t allowed. Reload the app and try again."
+
+#: src/api/error-messages.ts:32
+msgid "This skill is no longer available."
+msgstr "This skill is no longer available."
+
+#: src/reward/daily-reward-card.tsx:179
+msgid "Today"
+msgstr "Today"
+
+#: src/objective/missions-screen.tsx:113
+msgid "Today’s missions"
+msgstr "Today’s missions"
+
+#: src/api/error-messages.ts:72
+msgid "Too many attempts. Please wait and try again."
+msgstr "Too many attempts. Please wait and try again."
+
+#: src/character/cosmetics.ts:26
+msgid "Tops"
+msgstr "Tops"
+
+#: src/character/character-area.tsx:185
+#: src/character/cosmetic-shop-screen.tsx:174
+#: src/character/wardrobe-screen.tsx:116
+#: src/course/course-search-screen.tsx:314
+#: src/course/course-search-screen.tsx:383
+#: src/course/lesson-screen.tsx:140
+#: src/home/home-screen.tsx:139
+#: src/objective/missions-screen.tsx:86
+#: src/practice/practice-screen.tsx:345
+#: src/practice/practice-screen.tsx:473
+#: src/realm/course-map-screen.tsx:159
+#: src/realm/course-map-screen.tsx:274
+#: src/realm/equipment-shop-screen.tsx:126
+#: src/realm/loadout-screen.tsx:84
+#: src/realm/loadout-screen.tsx:239
+#: src/realm/unit-map-section.tsx:174
+#: src/reward/rewards-screen.tsx:100
+#: src/reward/rewards-screen.tsx:138
+#: src/routes/__root.tsx:78
+#: src/user/profile-screen.tsx:141
+msgid "Try again"
+msgstr "Try again"
+
+#: src/course/course-search-screen.tsx:327
+msgid "Try another search or subject."
+msgstr "Try another search or subject."
+
+#: src/character/cosmetic-shop-screen.tsx:129
+msgid "Trying on"
+msgstr "Trying on"
+
+#: src/practice/practice-result.tsx:37
+msgid "Turn limit reached"
+msgstr "Turn limit reached"
+
+#: src/practice/letter-bank.tsx:86
+msgid "Type or tap letters"
+msgstr "Type or tap letters"
+
+#: src/practice/answer-input.tsx:443
+msgid "Type or tap numbers"
+msgstr "Type or tap numbers"
+
+#: src/realm/loadout-screen.tsx:213
+msgid "Unequip"
+msgstr "Unequip"
+
+#: src/practice/practice-info-sheet.tsx:63
+msgid "Unit"
+msgstr "Unit"
+
+#: src/course/lesson-screen.tsx:99
+msgid "Unit {unit}"
+msgstr "Unit {unit}"
+
+#: src/realm/course-map-screen.tsx:109
+#: src/realm/course-map-screen.tsx:259
+msgid "Units"
+msgstr "Units"
+
+#: src/reward/daily-reward-card.tsx:185
+msgid "Upcoming"
+msgstr "Upcoming"
+
+#: src/api/error-messages.ts:70
+msgid "Use at least 8 characters for your password."
+msgstr "Use at least 8 characters for your password."
+
+#: src/practice/answer-input.tsx:175
+msgid "Use no more than {limit} characters."
+msgstr "Use no more than {limit} characters."
+
+#: src/api/error-messages.ts:71
+msgid "Use no more than 128 characters for your password."
+msgstr "Use no more than 128 characters for your password."
+
+#: src/user/login-screen.tsx:159
+msgid "Verification couldn’t load. Reload and try again."
+msgstr "Verification couldn’t load. Reload and try again."
+
+#: src/api/error-messages.ts:74
+msgid "Verification failed. Please try again."
+msgstr "Verification failed. Please try again."
+
+#: src/api/error-messages.ts:56
+msgid "Verify your email to author content."
+msgstr "Verify your email to author content."
+
+#: src/play/play-screen.tsx:67
+msgid "Versus"
+msgstr "Versus"
+
+#: src/practice/practice-result.tsx:34
+msgid "Victory!"
+msgstr "Victory!"
+
+#: src/user/app-settings.tsx:52
+#: src/user/login-screen.tsx:219
+#: src/user/profile-settings.tsx:100
+#: src/user/user-language-step.tsx:74
+msgid "Vietnamese"
+msgstr "Vietnamese"
+
+#: src/objective/mission-card.tsx:136
+msgid "View course"
+msgstr "View course"
+
+#: src/character/cosmetic-shop-screen.tsx:114
+#: src/character/wardrobe-screen.tsx:76
+#: src/character/wardrobe-screen.tsx:99
+#: src/user/profile-screen.tsx:97
+#: src/user/profile-screen.tsx:150
+msgid "Wardrobe"
+msgstr "Wardrobe"
+
+#: src/character/appearance-colors.ts:12
+msgid "Warm tan"
+msgstr "Warm tan"
+
+#: src/practice/battle-narration.tsx:79
+msgid "Wave {wave}"
+msgstr "Wave {wave}"
+
+#: src/game/art/wave-transition.tsx:60
+msgid "Wave {wave}/{total}"
+msgstr "Wave {wave}/{total}"
+
+#: src/practice/practice-screen.tsx:414
+msgid "Wave {wave}/{total} · Turn {turn}"
+msgstr "Wave {wave}/{total} · Turn {turn}"
+
+#: src/realm/equipment.ts:22
+msgid "Weapon"
+msgstr "Weapon"
+
+#: src/character/cosmetic-shop-screen.tsx:266
+msgid "Wear"
+msgstr "Wear"
+
+#: src/user/birth-year-step.tsx:37
+msgid "What year were you born?"
+msgstr "What year were you born?"
+
+#: src/user/user-language-step.tsx:51
+msgid "Which language do you learn in?"
+msgstr "Which language do you learn in?"
+
+#: src/character/cosmetic-shop-screen.tsx:266
+#: src/character/cosmetic-tile.tsx:131
+msgid "Worn"
+msgstr "Worn"
+
+#: src/course/lesson-screen.tsx:168
+msgid "XP"
+msgstr "XP"
+
+#: src/practice/battle-narration.tsx:24
+#: src/practice/combatant-info-sheet.tsx:90
+msgid "You"
+msgstr "You"
+
+#: src/api/error-messages.ts:15
+#: src/api/error-messages.ts:46
+msgid "You already own this item."
+msgstr "You already own this item."
+
+#: src/api/error-messages.ts:49
+msgid "You don’t have enough currency for this purchase."
+msgstr "You don’t have enough currency for this purchase."
+
+#: src/api/error-messages.ts:33
+msgid "You don’t have enough mana."
+msgstr "You don’t have enough mana."
+
+#: src/api/error-messages.ts:16
+msgid "You don’t have enough medals."
+msgstr "You don’t have enough medals."
+
+#: src/api/error-messages.ts:47
+msgid "You don’t own this cosmetic."
+msgstr "You don’t own this cosmetic."
+
+#: src/api/error-messages.ts:17
+msgid "You don’t own this equipment."
+msgstr "You don’t own this equipment."
+
+#: src/api/error-messages.ts:61
+msgid "You have reached your upload limit."
+msgstr "You have reached your upload limit."
+
+#: src/practice/battle-narration.tsx:74
+msgid "You were defeated."
+msgstr "You were defeated."
+
+#: src/practice/player-resources.tsx:87
+msgid "You. View player info"
+msgstr "You. View player info"
+
+#: src/user/profile-settings.tsx:159
+msgid "You’ll lose access to all your progress unless you create an account first."
+msgstr "You’ll lose access to all your progress unless you create an account first."
+
+#: src/practice/answer-input.tsx:174
+#: src/practice/answer-input.tsx:429
+#: src/practice/letter-bank.tsx:75
+msgid "Your answer"
+msgstr "Your answer"
+
+#: src/api/error-messages.ts:38
+msgid "Your answer is too long."
+msgstr "Your answer is too long."
+
+#: src/api/error-messages.ts:19
+msgid "Your balance can’t accept this reward. Please try again later."
+msgstr "Your balance can’t accept this reward. Please try again later."
+
+#: src/practice/practice-screen.tsx:496
+msgid "Your battle is saved. Come back whenever you’re ready."
+msgstr "Your battle is saved. Come back whenever you’re ready."
+
+#: src/character/appearance-screen.tsx:183
+#: src/character/character-area.tsx:137
+#: src/character/character-area.tsx:152
+#: src/character/character-area.tsx:156
+msgid "Your character"
+msgstr "Your character"
+
+#: src/home/home-screen.tsx:99
+#: src/home/home-screen.tsx:155
+msgid "Your courses"
+msgstr "Your courses"
+
+#: src/practice/player-resources.tsx:55
+msgid "Your health"
+msgstr "Your health"
+
+#: src/practice/player-resources.tsx:65
+msgid "Your mana"
+msgstr "Your mana"
+
+#: src/home/home-screen.tsx:148
+msgid "Your next adventure starts here"
+msgstr "Your next adventure starts here"
+
+#: src/character/cosmetic-shop-screen.tsx:197
+#: src/character/wardrobe-screen.tsx:139
+msgid "Your outfit covers these clothes."
+msgstr "Your outfit covers these clothes."
+
+#: src/home/home-screen.tsx:65
+msgid "Your profile"
+msgstr "Your profile"
+
+#: src/api/error-messages.ts:41
+#: src/api/error-messages.ts:42
+msgid "Your session changed. Refresh to continue."
+msgstr "Your session changed. Refresh to continue."
+
+#: src/practice/battle-narration.tsx:31
+msgid "Your turn."
+msgstr "Your turn."
