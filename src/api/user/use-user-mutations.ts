@@ -5,6 +5,7 @@ import { getApiMeOptions } from "../generated/@tanstack/react-query.gen.ts";
 import { getApiMe } from "../generated/sdk.gen.ts";
 import { isUnauthenticated } from "../error-messages.ts";
 import type { GetApiMeResponse } from "../generated/types.gen.ts";
+import { usePostHog } from "@posthog/react";
 
 // better-auth routes are hidden from the OpenAPI document, so these are written out.
 export interface EmailCredentials {
@@ -85,8 +86,12 @@ export function useEmailSignUpMutation() {
 export function useSignOutMutation() {
   const client = useApiClient();
   const queryClient = useQueryClient();
+  const analytics = usePostHog();
   return useMutation({
     mutationFn: () => post(client, "/api/auth/sign-out", {}),
-    onSuccess: () => queryClient.clear(),
+    onSuccess: () => {
+      analytics.reset();
+      queryClient.clear();
+    },
   });
 }

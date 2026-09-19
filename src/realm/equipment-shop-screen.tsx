@@ -151,7 +151,7 @@ export function EquipmentShopScreen({
                       disabled={pending}
                       loading={equip.isPending && equip.variables?.body.equipmentId === id}
                       onClick={() =>
-                        equip.mutate({ path: { courseId }, body: { equipmentId: id } })
+                        equip.mutate({ path: { courseId }, body: { equipmentId: id, ref: "shop" } })
                       }
                     >
                       {equipped ? (

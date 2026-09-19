@@ -5730,6 +5730,7 @@ export type DeleteApiCharacterCosmeticsResponse =
 export type PutApiCharacterCosmeticsData = {
   body: {
     cosmeticId: string;
+    ref?: "shop" | "inventory";
   };
   path?: never;
   query?: never;
@@ -6833,6 +6834,7 @@ export type DeleteApiCoursesByCourseIdRealmEquipmentsResponse =
 export type PutApiCoursesByCourseIdRealmEquipmentsData = {
   body: {
     equipmentId: string;
+    ref?: "shop" | "inventory";
   };
   path: {
     courseId: string;

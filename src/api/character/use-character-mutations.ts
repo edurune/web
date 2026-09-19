@@ -46,7 +46,9 @@ export function useUpdateAppearanceMutation() {
 
 export function useEquipCosmeticMutation() {
   return useMutation({
-    ...putApiCharacterCosmeticsMutation({ client: useApiClient() }),
+    ...putApiCharacterCosmeticsMutation({
+      client: useApiClient(),
+    }),
     ...useCharacterSettlement(),
   });
 }

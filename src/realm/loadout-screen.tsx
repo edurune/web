@@ -286,7 +286,10 @@ function EquipmentPicker({
                 }
                 onClick={() =>
                   equip.mutate(
-                    { path: { courseId }, body: { equipmentId: item.equipment.equipment.id } },
+                    {
+                      path: { courseId },
+                      body: { equipmentId: item.equipment.equipment.id, ref: "inventory" },
+                    },
                     { onSuccess: onClose },
                   )
                 }

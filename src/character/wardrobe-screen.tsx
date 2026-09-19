@@ -166,7 +166,9 @@ export function WardrobeScreen({
                   disabled={busy}
                   blocked={!item.available}
                   loading={equip.isPending && equip.variables?.body.cosmeticId === item.cosmetic.id}
-                  onClick={() => equip.mutate({ body: { cosmeticId: item.cosmetic.id } })}
+                  onClick={() =>
+                    equip.mutate({ body: { cosmeticId: item.cosmetic.id, ref: "inventory" } })
+                  }
                 />
               );
             })}

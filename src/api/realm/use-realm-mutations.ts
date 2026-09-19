@@ -33,7 +33,9 @@ function useRealmSettlement(courseId: string, shop = false) {
 
 export function useEquipEquipmentMutation(courseId: string) {
   return useMutation({
-    ...putApiCoursesByCourseIdRealmEquipmentsMutation({ client: useApiClient() }),
+    ...putApiCoursesByCourseIdRealmEquipmentsMutation({
+      client: useApiClient(),
+    }),
     ...useRealmSettlement(courseId),
   });
 }

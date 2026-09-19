@@ -261,7 +261,9 @@ export function CosmeticShopScreen({
                 blocked={worn || !!covered}
                 disabled={busy}
                 loading={equip.isPending}
-                onClick={() => equip.mutate({ body: { cosmeticId: selected.cosmetic.id } })}
+                onClick={() =>
+                  equip.mutate({ body: { cosmeticId: selected.cosmetic.id, ref: "shop" } })
+                }
               >
                 {worn ? <Trans>Worn</Trans> : <Trans>Wear</Trans>}
               </Button>
