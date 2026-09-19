@@ -10,7 +10,7 @@ export function AnalyticsIdentity() {
   const language = user?.language;
 
   useEffect(() => {
-    if (!userId || anonymous) return;
+    if (!import.meta.env.VITE_POSTHOG_PROJECT_TOKEN || !userId || anonymous) return;
     analytics.identify(userId, {
       language,
     });

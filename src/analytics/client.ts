@@ -1,16 +1,15 @@
 import posthog from "posthog-js";
 
-const projectToken = "phc_vU4w9VdGwY9VDxddR9AFUHSfwVsx36j78bGKdMmnHSKx";
-const ingestionHost = "https://t.settenhq.com";
-const projectHost = "https://us.posthog.com";
-
 export const analyticsClient = posthog;
 
 export function initializeAnalytics(apiUrl: string) {
+  const projectToken = import.meta.env.VITE_POSTHOG_PROJECT_TOKEN;
+  const ingestionHost = import.meta.env.VITE_POSTHOG_HOST;
+  if (!projectToken) return;
   const apiHost = new URL(apiUrl || window.location.origin, window.location.origin).hostname;
   posthog.init(projectToken, {
-    api_host: ingestionHost,
-    ui_host: projectHost,
+    ...(ingestionHost && { api_host: ingestionHost }),
+    ui_host: "https://us.posthog.com",
     defaults: "2026-08-30",
     strict_script_versioning: true,
     opt_out_capturing_by_default: import.meta.env.DEV,

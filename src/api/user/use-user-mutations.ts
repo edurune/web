@@ -90,7 +90,7 @@ export function useSignOutMutation() {
   return useMutation({
     mutationFn: () => post(client, "/api/auth/sign-out", {}),
     onSuccess: () => {
-      analytics.reset();
+      if (import.meta.env.VITE_POSTHOG_PROJECT_TOKEN) analytics.reset();
       queryClient.clear();
     },
   });

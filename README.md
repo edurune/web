@@ -1,8 +1,8 @@
-# EduRune web client
+![EduRune](https://raw.githubusercontent.com/edurune/game/refs/heads/main/art/exports/social-card-1200x630.png)
 
 EduRune is a learning game with courses, lesson maps, and turn-based battles. Learners answer questions to fight enemies and earn XP, coins, gear, and cosmetics.
 
-## Run it
+## Development
 
 ```sh
 bun install
@@ -16,10 +16,13 @@ Build and review interfaces in Storybook:
 bun run storybook
 ```
 
-## Checks
+## Translation
+
+Help translating by updating [.po files](./art/src/locales).
 
 ```sh
-bun run typecheck && bun run lint && bun run fmt
+bun run i18n:extract
+bun run i18n:compile
 ```
 
 ## License

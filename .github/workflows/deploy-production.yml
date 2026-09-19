@@ -19,6 +19,8 @@ jobs:
     env:
       VITE_API_URL: ${{ vars.API_URL }}
       VITE_TURNSTILE_SITE_KEY: ${{ vars.TURNSTILE_SITE_KEY }}
+      VITE_POSTHOG_HOST: ${{ vars.POSTHOG_HOST }}
+      VITE_POSTHOG_PROJECT_TOKEN: ${{ vars.POSTHOG_PROJECT_TOKEN }}
     outputs:
       artifact-id: ${{ steps.artifact.outputs.artifact-id }}
 
