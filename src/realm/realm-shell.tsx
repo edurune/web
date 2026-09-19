@@ -7,6 +7,8 @@ import { useLoadoutQuery } from "../api/realm/use-realm-queries.ts";
 import { CurrencyChip } from "../ui/primitives/currency-chip.tsx";
 import { Button, IconButton } from "../ui/primitives/button.tsx";
 import { Text } from "../ui/primitives/text.tsx";
+import { Stack } from "../ui/primitives/stack.tsx";
+import { CourseCreator } from "../course/course-creator.tsx";
 import { Skeleton } from "../ui/primitives/skeleton.tsx";
 import { color } from "../ui/tokens/color.stylex.ts";
 import { space } from "../ui/tokens/space.stylex.ts";
@@ -67,9 +69,12 @@ export function RealmShell({ courseId }: { courseId: string }) {
               void navigate({ to: "/" });
             }}
           />
-          <Text as="h1" variant="bodyStrong" tone="inverse" lines={2} style={realmStyles.grow}>
-            {course.data?.title ?? <Trans>Course</Trans>}
-          </Text>
+          <Stack gap="xs" style={realmStyles.grow}>
+            <Text as="h1" variant="bodyStrong" tone="inverse" lines={2}>
+              {course.data?.title ?? <Trans>Course</Trans>}
+            </Text>
+            {course.data && <CourseCreator creator={course.data.creator} tone="inverse" />}
+          </Stack>
           {loadout.data ? (
             <>
               <Button

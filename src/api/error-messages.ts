@@ -57,6 +57,8 @@ export const businessErrorMessages = {
   unknown_authored_content: msg`This content is unavailable or belongs to another author.`,
   invalid_authored_content: msg`Check your content and its question and media references.`,
   invalid_upload: msg`Choose a supported media file within the upload limits.`,
+  unknown_upload: msg`This media is no longer available.`,
+  upload_not_ready: msg`This upload is not ready yet. Try again shortly.`,
   upload_unavailable: msg`Media uploads are temporarily unavailable.`,
   upload_quota_exceeded: msg`You have reached your upload limit.`,
   asset_in_use: msg`This media is attached to learning content and cannot be deleted.`,

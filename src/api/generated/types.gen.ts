@@ -4,6 +4,12 @@ export type ClientOptions = {
   baseUrl: `${string}://${string}` | (string & {});
 };
 
+export type PublicUser = {
+  id: string;
+  name: string;
+  image: string | null;
+};
+
 export type ApiError = {
   code:
     | "unauthenticated"
@@ -61,6 +67,8 @@ export type ApiError = {
     | "unknown_asset"
     | "invalid_upload"
     | "upload_unavailable"
+    | "unknown_upload"
+    | "upload_not_ready"
     | "upload_quota_exceeded"
     | "asset_in_use"
     | "registered_account_required"
@@ -329,10 +337,7 @@ export type CharacterView = {
   hairStyles: Array<{
     id: string;
   }>;
-  wallet: {
-    coins: number;
-    gems: number;
-  };
+  wallet: WalletView;
   cosmetics: Array<{
     cosmetic: {
       id: string;
@@ -381,6 +386,7 @@ export type CharacterProfile = {
 
 export type CourseView = {
   id: string;
+  creator: PublicUser | null;
   title: string;
   icon: string;
   subject:
@@ -447,6 +453,7 @@ export type CourseView = {
 
 export type CourseNavigation = {
   id: string;
+  creator: PublicUser | null;
   title: string;
   icon: string;
   subject:
@@ -584,18 +591,7 @@ export type UnitMap = {
 export type RealmView = {
   courseId: string;
   medals: number;
-  progression: {
-    experience: number;
-    level: number;
-    levelExperience: number;
-    nextLevelExperience: number | null;
-    baseStats: {
-      maxHealth: number;
-      attack: number;
-      defense: number;
-      speed: number;
-    };
-  };
+  progression: RealmProgression;
   equipments: Array<{
     equipment: {
       equipment: {
@@ -689,18 +685,7 @@ export type RealmView = {
 export type RealmLoadout = {
   courseId: string;
   medals: number;
-  progression: {
-    experience: number;
-    level: number;
-    levelExperience: number;
-    nextLevelExperience: number | null;
-    baseStats: {
-      maxHealth: number;
-      attack: number;
-      defense: number;
-      speed: number;
-    };
-  };
+  progression: RealmProgression;
   stats: {
     maxHealth: number;
     attack: number;
@@ -888,560 +873,10 @@ export type SessionResult = {
   courseId: string;
   itemId: string;
   number: number;
-  session: {
-    encounter: {
-      itemId: string;
-      kind: "normal" | "boss";
-      difficulty: "easy" | "medium" | "hard";
-      sceneId: string | null;
-      waves: Array<{
-        enemies: Array<{
-          id: string;
-          enemyId: string;
-          role: "normal" | "boss";
-        }>;
-      }>;
-    };
-    rewards: {
-      medals: number;
-      coins: number;
-      experience: number;
-      equipments: Array<string>;
-    };
-    wave: {
-      number: number;
-      total: number;
-    };
-    revision: number;
-    playerId: string;
-    turn: number;
-    maxMana: number;
-    combatants: Array<{
-      id: string;
-      teamId: string;
-      name: string | null;
-      equipmentIds: Array<string>;
-      skills: Array<{
-        id: string;
-        manaCost: number;
-        targeting: "self" | "single_enemy" | "all_enemies" | "all_allies";
-        effects: Array<
-          | {
-              kind: "damage";
-              multiplier: number;
-            }
-          | {
-              kind: "heal";
-              amount: number;
-            }
-          | {
-              kind: "shield";
-              amount: number;
-              duration: number;
-            }
-          | {
-              kind: "modify_stat";
-              stat: "maxHealth" | "attack" | "defense" | "speed";
-              amount: number;
-              duration: number;
-            }
-        >;
-      }>;
-      stats: {
-        maxHealth: number;
-        attack: number;
-        defense: number;
-        speed: number;
-      };
-      health: number;
-      mana: number;
-      guard: number;
-      shield: number;
-      effects: Array<
-        | {
-            id: number;
-            kind: "shield";
-            remaining: number;
-          }
-        | {
-            id: number;
-            kind: "modify_stat";
-            stat: "maxHealth" | "attack" | "defense" | "speed";
-            amount: number;
-          }
-      >;
-    }>;
-    phase:
-      | {
-          kind: "awaiting_action";
-          actions: Array<{
-            action:
-              | {
-                  kind: "attack";
-                }
-              | {
-                  kind: "defend";
-                }
-              | {
-                  kind: "skill";
-                  skillId: string;
-                };
-            available: boolean;
-            reason: "insufficient_mana" | null;
-            targeting: "self" | "single_enemy" | "all_enemies" | "all_allies";
-            manaCost: number;
-            targetIds: Array<string>;
-          }>;
-        }
-      | {
-          kind: "awaiting_answer";
-          selection: {
-            action:
-              | {
-                  kind: "attack";
-                }
-              | {
-                  kind: "defend";
-                }
-              | {
-                  kind: "skill";
-                  skillId: string;
-                };
-            targetId: string | null;
-          };
-          question: {
-            id: string;
-            questionText: string;
-            images: Array<{
-              assetId: string;
-              alternativeText: string;
-            }>;
-            attachments?: Array<{
-              assetId: string;
-              kind: "image" | "audio" | "video";
-              description: string;
-            }>;
-            difficulty: "easy" | "medium" | "hard";
-            interaction:
-              | {
-                  kind: "choice";
-                  mode: "single" | "multiple";
-                  options: Array<{
-                    id: string;
-                    value: string;
-                    images: Array<{
-                      assetId: string;
-                      alternativeText: string;
-                    }>;
-                  }>;
-                }
-              | {
-                  kind: "text";
-                  maxLength: number;
-                  caseSensitive: boolean;
-                  control:
-                    | {
-                        kind: "text_input";
-                      }
-                    | {
-                        kind: "letter_bank";
-                        letters: Array<{
-                          id: string;
-                          value: string;
-                          images: Array<{
-                            assetId: string;
-                            alternativeText: string;
-                          }>;
-                        }>;
-                      };
-                }
-              | {
-                  kind: "number";
-                }
-              | {
-                  kind: "matching";
-                  left: Array<{
-                    id: string;
-                    value: string;
-                    images: Array<{
-                      assetId: string;
-                      alternativeText: string;
-                    }>;
-                  }>;
-                  right: Array<{
-                    id: string;
-                    value: string;
-                    images: Array<{
-                      assetId: string;
-                      alternativeText: string;
-                    }>;
-                  }>;
-                }
-              | {
-                  kind: "ordering";
-                  items: Array<{
-                    id: string;
-                    value: string;
-                    images: Array<{
-                      assetId: string;
-                      alternativeText: string;
-                    }>;
-                  }>;
-                };
-          };
-        }
-      | {
-          kind: "finished";
-          outcome: "won" | "lost" | "abandoned" | "turn_limit_reached";
-        };
-    feedback: {
-      revision: number;
-      evaluation: {
-        questionId: string;
-        correct: boolean;
-      } | null;
-      actions: Array<{
-        actorId: string;
-        action:
-          | {
-              kind: "attack";
-            }
-          | {
-              kind: "defend";
-            }
-          | {
-              kind: "skill";
-              skillId: string;
-            };
-        targetId: string | null;
-        outcome: "hit" | "miss";
-      }>;
-      events: Array<
-        | {
-            wave: number;
-            turn: number;
-            kind: "action_resolved";
-            actorId: string;
-            action:
-              | {
-                  kind: "attack";
-                }
-              | {
-                  kind: "defend";
-                }
-              | {
-                  kind: "skill";
-                  skillId: string;
-                };
-            targetId: string | null;
-            outcome: "hit" | "miss";
-          }
-        | {
-            wave: number;
-            turn: number;
-            kind: "damage_dealt";
-            sourceId: string;
-            targetId: string;
-            amount: number;
-            absorbed: number;
-          }
-        | {
-            wave: number;
-            turn: number;
-            kind: "health_restored";
-            sourceId: string;
-            targetId: string;
-            amount: number;
-          }
-        | {
-            wave: number;
-            turn: number;
-            kind: "health_capped";
-            targetId: string;
-            amount: number;
-          }
-        | {
-            wave: number;
-            turn: number;
-            kind: "mana_changed";
-            actorId: string;
-            amount: number;
-          }
-        | {
-            wave: number;
-            turn: number;
-            kind: "guard_changed";
-            actorId: string;
-            reduction: number;
-          }
-        | {
-            wave: number;
-            turn: number;
-            kind: "effect_applied";
-            targetId: string;
-            effect:
-              | {
-                  id?: number;
-                  kind: "shield";
-                  remaining: number;
-                }
-              | {
-                  id?: number;
-                  kind: "modify_stat";
-                  stat: "maxHealth" | "attack" | "defense" | "speed";
-                  amount: number;
-                };
-          }
-        | {
-            wave: number;
-            turn: number;
-            kind: "effect_removed";
-            targetId: string;
-            effectId: number;
-            reason?: "expired" | "absorbed" | "defeated";
-          }
-        | {
-            wave: number;
-            turn: number;
-            kind: "combatant_defeated";
-            combatantId: string;
-          }
-        | {
-            wave: number;
-            turn: number;
-            kind: "wave_started";
-            combatants?: Array<{
-              id: string;
-              teamId: string;
-              name: string | null;
-              equipmentIds: Array<string>;
-              skills: Array<{
-                id: string;
-                manaCost: number;
-                targeting: "self" | "single_enemy" | "all_enemies" | "all_allies";
-                effects: Array<
-                  | {
-                      kind: "damage";
-                      multiplier: number;
-                    }
-                  | {
-                      kind: "heal";
-                      amount: number;
-                    }
-                  | {
-                      kind: "shield";
-                      amount: number;
-                      duration: number;
-                    }
-                  | {
-                      kind: "modify_stat";
-                      stat: "maxHealth" | "attack" | "defense" | "speed";
-                      amount: number;
-                      duration: number;
-                    }
-                >;
-              }>;
-              stats: {
-                maxHealth: number;
-                attack: number;
-                defense: number;
-                speed: number;
-              };
-              health: number;
-              mana: number;
-              guard: number;
-              shield: number;
-              effects: Array<
-                | {
-                    id: number;
-                    kind: "shield";
-                    remaining: number;
-                  }
-                | {
-                    id: number;
-                    kind: "modify_stat";
-                    stat: "maxHealth" | "attack" | "defense" | "speed";
-                    amount: number;
-                  }
-              >;
-            }>;
-          }
-      >;
-    };
-  };
-  course: {
-    id: string;
-    title: string;
-    icon: string;
-    subject:
-      | "arts_humanities"
-      | "business"
-      | "computer_science"
-      | "economics_finance"
-      | "engineering"
-      | "health_medicine"
-      | "language_arts"
-      | "languages"
-      | "life_skills"
-      | "math"
-      | "science"
-      | "social_sciences"
-      | "test_preparation"
-      | "other";
-    language: string;
-    ageRange: {
-      minimum: number;
-      maximum: number;
-    };
-    totalUnits: number;
-    status: "not_started" | "in_progress" | "completed";
-    completedItems: number;
-    totalItems: number;
-    seed: number;
-    units: Array<{
-      id: string;
-      sceneId: string | null;
-      order: number;
-      title: string;
-      description: string;
-      status: "not_started" | "in_progress" | "completed";
-      available: boolean;
-      reason: "previous_unit_incomplete" | null;
-      completedItems: number;
-      totalItems: number;
-      items: Array<
-        | {
-            id: string;
-            order: number;
-            title: string;
-            description: string;
-            completed: boolean;
-            available: boolean;
-            reason: "unit_locked" | "previous_item_incomplete" | null;
-            kind: "lesson";
-          }
-        | {
-            id: string;
-            order: number;
-            title: string;
-            description: string;
-            completed: boolean;
-            available: boolean;
-            reason: "unit_locked" | "previous_item_incomplete" | null;
-            kind: "practice";
-            role: "standard" | "unit_review";
-          }
-      >;
-    }>;
-  };
-  realm: {
-    courseId: string;
-    medals: number;
-    progression: {
-      experience: number;
-      level: number;
-      levelExperience: number;
-      nextLevelExperience: number | null;
-      baseStats: {
-        maxHealth: number;
-        attack: number;
-        defense: number;
-        speed: number;
-      };
-    };
-    equipments: Array<{
-      equipment: {
-        equipment: {
-          id: string;
-          statModifiers: {
-            maxHealth: number;
-            attack: number;
-            defense: number;
-            speed: number;
-          };
-          skills: Array<{
-            id: string;
-            manaCost: number;
-            targeting: "self" | "single_enemy" | "all_enemies" | "all_allies";
-            effects: Array<
-              | {
-                  kind: "damage";
-                  multiplier: number;
-                }
-              | {
-                  kind: "heal";
-                  amount: number;
-                }
-              | {
-                  kind: "shield";
-                  amount: number;
-                  duration: number;
-                }
-              | {
-                  kind: "modify_stat";
-                  stat: "maxHealth" | "attack" | "defense" | "speed";
-                  amount: number;
-                  duration: number;
-                }
-            >;
-          }>;
-        };
-        rarity: "common" | "uncommon" | "rare" | "epic" | "legendary";
-        slot: "weapon" | "armor" | "charm";
-      };
-      equipped: boolean;
-      available: boolean;
-      reason: "already_equipped" | "conflicting_skill" | null;
-    }>;
-    shop: Array<{
-      equipment: {
-        equipment: {
-          id: string;
-          statModifiers: {
-            maxHealth: number;
-            attack: number;
-            defense: number;
-            speed: number;
-          };
-          skills: Array<{
-            id: string;
-            manaCost: number;
-            targeting: "self" | "single_enemy" | "all_enemies" | "all_allies";
-            effects: Array<
-              | {
-                  kind: "damage";
-                  multiplier: number;
-                }
-              | {
-                  kind: "heal";
-                  amount: number;
-                }
-              | {
-                  kind: "shield";
-                  amount: number;
-                  duration: number;
-                }
-              | {
-                  kind: "modify_stat";
-                  stat: "maxHealth" | "attack" | "defense" | "speed";
-                  amount: number;
-                  duration: number;
-                }
-            >;
-          }>;
-        };
-        rarity: "common" | "uncommon" | "rare" | "epic" | "legendary";
-        slot: "weapon" | "armor" | "charm";
-      };
-      medalCost: number;
-      available: boolean;
-      reason: "already_owned" | "insufficient_medals" | null;
-    }>;
-  };
-  wallet: {
-    coins: number;
-    gems: number;
-  };
+  session: SessionView;
+  course: CourseView;
+  realm: RealmView;
+  wallet: WalletView;
 };
 
 export type SessionView = {
@@ -1572,11 +1007,7 @@ export type SessionView = {
             assetId: string;
             alternativeText: string;
           }>;
-          attachments?: Array<{
-            assetId: string;
-            kind: "image" | "audio" | "video";
-            description: string;
-          }>;
+          attachments?: Array<MediaReference>;
           difficulty: "easy" | "medium" | "hard";
           interaction:
             | {
@@ -1672,157 +1103,7 @@ export type SessionView = {
       targetId: string | null;
       outcome: "hit" | "miss";
     }>;
-    events: Array<
-      | {
-          wave: number;
-          turn: number;
-          kind: "action_resolved";
-          actorId: string;
-          action:
-            | {
-                kind: "attack";
-              }
-            | {
-                kind: "defend";
-              }
-            | {
-                kind: "skill";
-                skillId: string;
-              };
-          targetId: string | null;
-          outcome: "hit" | "miss";
-        }
-      | {
-          wave: number;
-          turn: number;
-          kind: "damage_dealt";
-          sourceId: string;
-          targetId: string;
-          amount: number;
-          absorbed: number;
-        }
-      | {
-          wave: number;
-          turn: number;
-          kind: "health_restored";
-          sourceId: string;
-          targetId: string;
-          amount: number;
-        }
-      | {
-          wave: number;
-          turn: number;
-          kind: "health_capped";
-          targetId: string;
-          amount: number;
-        }
-      | {
-          wave: number;
-          turn: number;
-          kind: "mana_changed";
-          actorId: string;
-          amount: number;
-        }
-      | {
-          wave: number;
-          turn: number;
-          kind: "guard_changed";
-          actorId: string;
-          reduction: number;
-        }
-      | {
-          wave: number;
-          turn: number;
-          kind: "effect_applied";
-          targetId: string;
-          effect:
-            | {
-                id?: number;
-                kind: "shield";
-                remaining: number;
-              }
-            | {
-                id?: number;
-                kind: "modify_stat";
-                stat: "maxHealth" | "attack" | "defense" | "speed";
-                amount: number;
-              };
-        }
-      | {
-          wave: number;
-          turn: number;
-          kind: "effect_removed";
-          targetId: string;
-          effectId: number;
-          reason?: "expired" | "absorbed" | "defeated";
-        }
-      | {
-          wave: number;
-          turn: number;
-          kind: "combatant_defeated";
-          combatantId: string;
-        }
-      | {
-          wave: number;
-          turn: number;
-          kind: "wave_started";
-          combatants?: Array<{
-            id: string;
-            teamId: string;
-            name: string | null;
-            equipmentIds: Array<string>;
-            skills: Array<{
-              id: string;
-              manaCost: number;
-              targeting: "self" | "single_enemy" | "all_enemies" | "all_allies";
-              effects: Array<
-                | {
-                    kind: "damage";
-                    multiplier: number;
-                  }
-                | {
-                    kind: "heal";
-                    amount: number;
-                  }
-                | {
-                    kind: "shield";
-                    amount: number;
-                    duration: number;
-                  }
-                | {
-                    kind: "modify_stat";
-                    stat: "maxHealth" | "attack" | "defense" | "speed";
-                    amount: number;
-                    duration: number;
-                  }
-              >;
-            }>;
-            stats: {
-              maxHealth: number;
-              attack: number;
-              defense: number;
-              speed: number;
-            };
-            health: number;
-            mana: number;
-            guard: number;
-            shield: number;
-            effects: Array<
-              | {
-                  id: number;
-                  kind: "shield";
-                  remaining: number;
-                }
-              | {
-                  id: number;
-                  kind: "modify_stat";
-                  stat: "maxHealth" | "attack" | "defense" | "speed";
-                  amount: number;
-                }
-            >;
-          }>;
-        }
-    >;
+    events: Array<PresentationEvent>;
   };
 };
 
@@ -2551,16 +1832,16 @@ export type PostApiAuthoringCoursesData = {
       | "other";
     language: string;
     ageRange: {
-      minimum: string | number;
-      maximum: string | number;
+      minimum: number;
+      maximum: number;
     };
-    seed: string | number;
+    seed: number;
     units: Array<{
       id: string;
       hidden?: boolean;
       title: string;
       description: string;
-      order: string | number;
+      order: number;
       unlockRule: "open" | "previous_unit_completed";
       biomeId?: string;
       map?: {
@@ -2579,9 +1860,9 @@ export type PostApiAuthoringCoursesData = {
             hidden?: boolean;
             title: string;
             description: string;
-            order: string | number;
+            order: number;
             kind: "lesson";
-            estimatedDurationMinutes: string | number;
+            estimatedDurationMinutes: number;
             contentMd: string;
             attachments?: Array<{
               assetId: string;
@@ -2594,7 +1875,7 @@ export type PostApiAuthoringCoursesData = {
             hidden?: boolean;
             title: string;
             description: string;
-            order: string | number;
+            order: number;
             kind: "practice";
             role: "standard" | "unit_review";
             practice: {
@@ -2604,7 +1885,7 @@ export type PostApiAuthoringCoursesData = {
               questionGoal?:
                 | {
                     kind: "count";
-                    count: string | number;
+                    count: number;
                   }
                 | {
                     kind: "percentage";
@@ -2619,7 +1900,7 @@ export type PostApiAuthoringCoursesData = {
                     kind: "bank_sample";
                     banks: Array<{
                       bankId: string;
-                      count: string | number;
+                      count: number;
                     }>;
                   };
               encounter?:
@@ -2629,7 +1910,7 @@ export type PostApiAuthoringCoursesData = {
                       enemies: Array<{
                         enemyId: string;
                         role: "normal" | "boss";
-                        level?: string | number;
+                        level?: number;
                         equipmentIds?: Array<string>;
                       }>;
                     }>;
@@ -2639,15 +1920,15 @@ export type PostApiAuthoringCoursesData = {
                     waves: Array<{
                       groups: Array<{
                         role: "normal" | "boss";
-                        minEnemies: string | number;
-                        maxEnemies: string | number;
+                        minEnemies: number;
+                        maxEnemies: number;
                         allowDuplicates: boolean;
                         pool: Array<{
                           enemyId: string;
                           weight: number;
                           level?: {
-                            minimum: string | number;
-                            maximum: string | number;
+                            minimum: number;
+                            maximum: number;
                           };
                           equipmentIds?: Array<string>;
                         }>;
@@ -2837,16 +2118,16 @@ export type PutApiAuthoringCoursesByCourseIdData = {
       | "other";
     language: string;
     ageRange: {
-      minimum: string | number;
-      maximum: string | number;
+      minimum: number;
+      maximum: number;
     };
-    seed: string | number;
+    seed: number;
     units: Array<{
       id: string;
       hidden?: boolean;
       title: string;
       description: string;
-      order: string | number;
+      order: number;
       unlockRule: "open" | "previous_unit_completed";
       biomeId?: string;
       map?: {
@@ -2865,9 +2146,9 @@ export type PutApiAuthoringCoursesByCourseIdData = {
             hidden?: boolean;
             title: string;
             description: string;
-            order: string | number;
+            order: number;
             kind: "lesson";
-            estimatedDurationMinutes: string | number;
+            estimatedDurationMinutes: number;
             contentMd: string;
             attachments?: Array<{
               assetId: string;
@@ -2880,7 +2161,7 @@ export type PutApiAuthoringCoursesByCourseIdData = {
             hidden?: boolean;
             title: string;
             description: string;
-            order: string | number;
+            order: number;
             kind: "practice";
             role: "standard" | "unit_review";
             practice: {
@@ -2890,7 +2171,7 @@ export type PutApiAuthoringCoursesByCourseIdData = {
               questionGoal?:
                 | {
                     kind: "count";
-                    count: string | number;
+                    count: number;
                   }
                 | {
                     kind: "percentage";
@@ -2905,7 +2186,7 @@ export type PutApiAuthoringCoursesByCourseIdData = {
                     kind: "bank_sample";
                     banks: Array<{
                       bankId: string;
-                      count: string | number;
+                      count: number;
                     }>;
                   };
               encounter?:
@@ -2915,7 +2196,7 @@ export type PutApiAuthoringCoursesByCourseIdData = {
                       enemies: Array<{
                         enemyId: string;
                         role: "normal" | "boss";
-                        level?: string | number;
+                        level?: number;
                         equipmentIds?: Array<string>;
                       }>;
                     }>;
@@ -2925,15 +2206,15 @@ export type PutApiAuthoringCoursesByCourseIdData = {
                     waves: Array<{
                       groups: Array<{
                         role: "normal" | "boss";
-                        minEnemies: string | number;
-                        maxEnemies: string | number;
+                        minEnemies: number;
+                        maxEnemies: number;
                         allowDuplicates: boolean;
                         pool: Array<{
                           enemyId: string;
                           weight: number;
                           level?: {
-                            minimum: string | number;
-                            maximum: string | number;
+                            minimum: number;
+                            maximum: number;
                           };
                           equipmentIds?: Array<string>;
                         }>;
@@ -3124,7 +2405,7 @@ export type PostApiAuthoringCoursesByCourseIdPracticesByItemIdEncounterPreviewDa
       questionGoal?:
         | {
             kind: "count";
-            count: string | number;
+            count: number;
           }
         | {
             kind: "percentage";
@@ -3139,7 +2420,7 @@ export type PostApiAuthoringCoursesByCourseIdPracticesByItemIdEncounterPreviewDa
             kind: "bank_sample";
             banks: Array<{
               bankId: string;
-              count: string | number;
+              count: number;
             }>;
           };
       encounter?:
@@ -3149,7 +2430,7 @@ export type PostApiAuthoringCoursesByCourseIdPracticesByItemIdEncounterPreviewDa
               enemies: Array<{
                 enemyId: string;
                 role: "normal" | "boss";
-                level?: string | number;
+                level?: number;
                 equipmentIds?: Array<string>;
               }>;
             }>;
@@ -3159,15 +2440,15 @@ export type PostApiAuthoringCoursesByCourseIdPracticesByItemIdEncounterPreviewDa
             waves: Array<{
               groups: Array<{
                 role: "normal" | "boss";
-                minEnemies: string | number;
-                maxEnemies: string | number;
+                minEnemies: number;
+                maxEnemies: number;
                 allowDuplicates: boolean;
                 pool: Array<{
                   enemyId: string;
                   weight: number;
                   level?: {
-                    minimum: string | number;
-                    maximum: string | number;
+                    minimum: number;
+                    maximum: number;
                   };
                   equipmentIds?: Array<string>;
                 }>;
@@ -3175,7 +2456,7 @@ export type PostApiAuthoringCoursesByCourseIdPracticesByItemIdEncounterPreviewDa
             }>;
           };
     };
-    sample?: string | number;
+    sample?: number;
   };
   path: {
     courseId: string;
@@ -3761,14 +3042,14 @@ export type PostApiAuthoringQuestionBanksByBankIdQuestionsData = {
             }>;
           }>;
           correctOptionIds: Array<string>;
-          displayCount: string | number;
+          displayCount: number;
         }
       | {
           kind: "text";
           correctAnswer: string;
           acceptedAlternatives: Array<string>;
           caseSensitive: boolean;
-          maxLength: string | number;
+          maxLength: number;
           control:
             | {
                 kind: "text_input";
@@ -3776,7 +3057,7 @@ export type PostApiAuthoringQuestionBanksByBankIdQuestionsData = {
             | {
                 kind: "letter_bank";
                 letters: Array<string>;
-                displayCount: string | number;
+                displayCount: number;
               };
         }
       | {
@@ -4017,14 +3298,14 @@ export type PutApiAuthoringQuestionBanksByBankIdQuestionsByQuestionIdData = {
             }>;
           }>;
           correctOptionIds: Array<string>;
-          displayCount: string | number;
+          displayCount: number;
         }
       | {
           kind: "text";
           correctAnswer: string;
           acceptedAlternatives: Array<string>;
           caseSensitive: boolean;
-          maxLength: string | number;
+          maxLength: number;
           control:
             | {
                 kind: "text_input";
@@ -4032,7 +3313,7 @@ export type PutApiAuthoringQuestionBanksByBankIdQuestionsByQuestionIdData = {
             | {
                 kind: "letter_bank";
                 letters: Array<string>;
-                displayCount: string | number;
+                displayCount: number;
               };
         }
       | {
@@ -4267,6 +3548,7 @@ export type GetApiCoursesResponses = {
   200: {
     items: Array<{
       id: string;
+      creator: PublicUser | null;
       title: string;
       icon: string;
       subject:

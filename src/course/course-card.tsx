@@ -15,6 +15,7 @@ import { space } from "../ui/tokens/space.stylex.ts";
 import type { CourseSummary } from "./course-search.ts";
 import { errorMessage } from "../api/error-messages.ts";
 import { CourseMetadata } from "./course-metadata.tsx";
+import { CourseCreator } from "./course-creator.tsx";
 
 export interface CourseCardProps {
   /** Membership and completion are returned by the server. */
@@ -74,6 +75,7 @@ export function CourseCard({
           <Text as="h2" variant="bodyStrong">
             {title}
           </Text>
+          <CourseCreator creator={course.creator} />
           <CourseMetadata course={course} />
         </Stack>
         <Button

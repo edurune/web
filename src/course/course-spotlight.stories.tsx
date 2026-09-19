@@ -23,6 +23,9 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Available: Story = {};
+export const PlatformCourse: Story = {
+  args: { course: { ...courseFixtures[0]!, creator: null } },
+};
 export const Joined: Story = { args: { course: { ...courseFixtures[0]!, joined: true } } };
 export const Joining: Story = { args: { joining: true } };
 export const JoinFailed: Story = { args: { joinFailed: true } };

@@ -390,6 +390,7 @@ export type {
   PostApiMissionsByPeriodIdByMissionIdClaimResponse,
   PostApiMissionsByPeriodIdByMissionIdClaimResponses,
   PresentationEvent,
+  PublicUser,
   PutApiAuthoringCoursesByCourseIdData,
   PutApiAuthoringCoursesByCourseIdError,
   PutApiAuthoringCoursesByCourseIdErrors,

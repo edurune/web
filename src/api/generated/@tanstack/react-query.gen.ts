@@ -718,7 +718,7 @@ export const postApiAuthoringCoursesMutation = (
 };
 
 /**
- * Delete your course and its content while preserving learner records
+ * Delete your course and its content
  */
 export const deleteApiAuthoringCoursesByCourseIdMutation = (
   options?: Partial<Options<DeleteApiAuthoringCoursesByCourseIdData>>,
@@ -883,7 +883,7 @@ export const postApiAuthoringCoursesByCourseIdPublishMutation = (
 };
 
 /**
- * Take your course offline while preserving its draft and learner progress
+ * Unpublish your course
  */
 export const postApiAuthoringCoursesByCourseIdUnpublishMutation = (
   options?: Partial<Options<PostApiAuthoringCoursesByCourseIdUnpublishData>>,

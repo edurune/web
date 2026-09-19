@@ -4,6 +4,7 @@ import type { CourseSummary } from "./course-search.ts";
 export const courseFixtures: CourseSummary[] = [
   {
     id: "english-basics",
+    creator: { id: "teacher-alex", name: "Alex Morgan", image: null },
     featured: true,
     title: "English basics",
     icon: "english-basics",
@@ -18,6 +19,7 @@ export const courseFixtures: CourseSummary[] = [
   },
   {
     id: "math-foundations",
+    creator: null,
     featured: true,
     title: "Math foundations",
     icon: "math-foundations",
@@ -32,6 +34,7 @@ export const courseFixtures: CourseSummary[] = [
   },
   {
     id: "vietnamese-basics",
+    creator: { id: "teacher-linh", name: "Nguyễn Thùy Linh", image: null },
     featured: false,
     title: "Vietnamese basics",
     icon: "vietnamese-basics",
@@ -46,6 +49,7 @@ export const courseFixtures: CourseSummary[] = [
   },
   {
     id: "intro-to-code",
+    creator: { id: "teacher-sam", name: "Sam Rivera", image: null },
     featured: false,
     title: "Introduction to programming",
     icon: "intro-to-code",

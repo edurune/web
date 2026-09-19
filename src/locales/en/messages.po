@@ -205,7 +205,7 @@ msgstr "+{xp} XP"
 msgid "A new day has started. Refresh to claim today’s reward."
 msgstr "A new day has started. Refresh to claim today’s reward."
 
-#: src/pwa/update-banner.tsx:50
+#: src/pwa/update-banner.tsx:51
 msgid "A new version is ready"
 msgstr "A new version is ready"
 
@@ -264,8 +264,8 @@ msgstr "Already have an account? Log in"
 msgid "Amber"
 msgstr "Amber"
 
-#: src/api/error-messages.ts:68
-#: src/api/error-messages.ts:69
+#: src/api/error-messages.ts:70
+#: src/api/error-messages.ts:71
 msgid "An account with this email already exists. Try logging in."
 msgstr "An account with this email already exists. Try logging in."
 
@@ -286,7 +286,7 @@ msgstr "Armor"
 msgid "Arts and humanities"
 msgstr "Arts and humanities"
 
-#: src/game/art/art-surface.tsx:25
+#: src/game/art/art-surface.tsx:31
 msgid "Artwork unavailable"
 msgstr "Artwork unavailable"
 
@@ -309,7 +309,7 @@ msgstr "Back"
 msgid "Back to battle"
 msgstr "Back to battle"
 
-#: src/realm/realm-shell.tsx:62
+#: src/realm/realm-shell.tsx:64
 msgid "Back to courses"
 msgstr "Back to courses"
 
@@ -386,7 +386,7 @@ msgstr "Brown"
 msgid "Business"
 msgstr "Business"
 
-#: src/character/cosmetic-shop-screen.tsx:282
+#: src/character/cosmetic-shop-screen.tsx:284
 msgid "Buy"
 msgstr "Buy"
 
@@ -397,6 +397,10 @@ msgstr "Buy and equip gear to get stronger."
 #: src/realm/equipment-shop-screen.tsx:173
 msgid "Buy equipment"
 msgstr "Buy equipment"
+
+#: src/course/course-creator.tsx:19
+msgid "By {name}"
+msgstr "By {name}"
 
 #: src/user/profile-settings.tsx:154
 msgid "Cancel"
@@ -549,7 +553,7 @@ msgstr "Complete the objective before claiming its reward."
 msgid "Complete the previous activities to unlock this one."
 msgstr "Complete the previous activities to unlock this one."
 
-#: src/api/error-messages.ts:73
+#: src/api/error-messages.ts:75
 msgid "Complete verification and try again."
 msgstr "Complete verification and try again."
 
@@ -596,7 +600,7 @@ msgstr "Cosmetic"
 msgid "Couldn’t complete the request"
 msgstr "Couldn’t complete the request"
 
-#: src/api/error-messages.ts:91
+#: src/api/error-messages.ts:93
 msgid "Couldn’t complete the request. Check your connection and try again."
 msgstr "Couldn’t complete the request. Check your connection and try again."
 
@@ -618,7 +622,7 @@ msgid "Couldn’t load your equipment"
 msgstr "Couldn’t load your equipment"
 
 #: src/practice/practice-info-sheet.tsx:54
-#: src/realm/realm-shell.tsx:71
+#: src/realm/realm-shell.tsx:74
 msgid "Course"
 msgstr "Course"
 
@@ -722,7 +726,7 @@ msgstr "Defense"
 msgid "Difficulty"
 msgstr "Difficulty"
 
-#: src/pwa/update-banner.tsx:40
+#: src/pwa/update-banner.tsx:41
 msgid "Dismiss"
 msgstr "Dismiss"
 
@@ -781,7 +785,7 @@ msgid "Enter your name."
 msgstr "Enter your name."
 
 #: src/realm/equipment-shop-screen.tsx:163
-#: src/realm/loadout-screen.tsx:294
+#: src/realm/loadout-screen.tsx:297
 msgid "Equip"
 msgstr "Equip"
 
@@ -795,7 +799,7 @@ msgid "Equipment categories"
 msgstr "Equipment categories"
 
 #: src/realm/equipment-shop-screen.tsx:160
-#: src/realm/loadout-screen.tsx:294
+#: src/realm/loadout-screen.tsx:297
 msgid "Equipped"
 msgstr "Equipped"
 
@@ -929,13 +933,13 @@ msgstr "Interface language"
 msgid "It isn’t this character’s turn."
 msgstr "It isn’t this character’s turn."
 
-#: src/course/course-card.tsx:90
-#: src/course/course-spotlight.tsx:59
+#: src/course/course-card.tsx:92
+#: src/course/course-spotlight.tsx:61
 msgid "Join"
 msgstr "Join"
 
-#: src/course/course-card.tsx:86
-#: src/course/course-spotlight.tsx:56
+#: src/course/course-card.tsx:88
+#: src/course/course-spotlight.tsx:58
 msgid "Join {title}"
 msgstr "Join {title}"
 
@@ -943,8 +947,8 @@ msgstr "Join {title}"
 msgid "Join a course to start learning."
 msgstr "Join a course to start learning."
 
-#: src/course/course-card.tsx:86
-#: src/course/course-spotlight.tsx:56
+#: src/course/course-card.tsx:88
+#: src/course/course-spotlight.tsx:58
 msgid "Joining {title}"
 msgstr "Joining {title}"
 
@@ -990,7 +994,7 @@ msgstr "Lesson"
 msgid "Level {level}"
 msgstr "Level {level}"
 
-#: src/realm/realm-shell.tsx:80
+#: src/realm/realm-shell.tsx:85
 msgid "Level {level}. Open loadout"
 msgstr "Level {level}. Open loadout"
 
@@ -1007,13 +1011,13 @@ msgid "Light rose"
 msgstr "Light rose"
 
 #: src/character/cosmetic-shop-screen.tsx:241
-#: src/character/wardrobe-screen.tsx:185
+#: src/character/wardrobe-screen.tsx:187
 #: src/course/course-search-screen.tsx:383
 #: src/home/home-screen.tsx:171
 #: src/realm/course-map-screen.tsx:197
 #: src/realm/course-map-screen.tsx:312
 #: src/realm/equipment-shop-screen.tsx:195
-#: src/realm/loadout-screen.tsx:308
+#: src/realm/loadout-screen.tsx:311
 #: src/realm/unit-map-section.tsx:194
 #: src/reward/rewards-screen.tsx:179
 msgid "Load more"
@@ -1061,7 +1065,7 @@ msgstr "Log in"
 msgid "Log in to continue."
 msgstr "Log in to continue."
 
-#: src/user/guest-banner.tsx:44
+#: src/user/guest-banner.tsx:15
 msgid "Log in to save your progress"
 msgstr "Log in to save your progress"
 
@@ -1086,7 +1090,7 @@ msgstr "Lowest cost"
 msgid "Lv"
 msgstr "Lv"
 
-#: src/realm/realm-shell.tsx:85
+#: src/realm/realm-shell.tsx:90
 msgid "Lv {level}"
 msgstr "Lv {level}"
 
@@ -1131,7 +1135,7 @@ msgstr "medals"
 msgid "Medals"
 msgstr "Medals"
 
-#: src/api/error-messages.ts:60
+#: src/api/error-messages.ts:62
 msgid "Media uploads are temporarily unavailable."
 msgstr "Media uploads are temporarily unavailable."
 
@@ -1266,13 +1270,13 @@ msgstr "One enemy"
 msgid "Only the first answer to each question in a won battle counts."
 msgstr "Only the first answer to each question in a won battle counts."
 
-#: src/course/course-card.tsx:90
-#: src/course/course-spotlight.tsx:59
+#: src/course/course-card.tsx:92
+#: src/course/course-spotlight.tsx:61
 msgid "Open"
 msgstr "Open"
 
-#: src/course/course-card.tsx:86
-#: src/course/course-spotlight.tsx:56
+#: src/course/course-card.tsx:88
+#: src/course/course-spotlight.tsx:58
 msgid "Open {title}"
 msgstr "Open {title}"
 
@@ -1393,7 +1397,7 @@ msgstr "Restore {amount} health"
 msgid "Results for “{q}”"
 msgstr "Results for “{q}”"
 
-#: src/realm/realm-shell.tsx:92
+#: src/realm/realm-shell.tsx:97
 msgid "Retry balance"
 msgstr "Retry balance"
 
@@ -1506,7 +1510,7 @@ msgid "Social sciences"
 msgstr "Social sciences"
 
 #: src/api/error-messages.ts:10
-#: src/api/error-messages.ts:75
+#: src/api/error-messages.ts:77
 msgid "Something went wrong. Please try again."
 msgstr "Something went wrong. Please try again."
 
@@ -1557,7 +1561,7 @@ msgstr "The battle moved on. Refresh to see the current turn."
 msgid "The course list changed. Refresh to continue."
 msgstr "The course list changed. Refresh to continue."
 
-#: src/api/error-messages.ts:67
+#: src/api/error-messages.ts:69
 msgid "The email or password is incorrect."
 msgstr "The email or password is incorrect."
 
@@ -1627,11 +1631,12 @@ msgstr "This item belongs to another course."
 msgid "This item isn’t for sale."
 msgstr "This item isn’t for sale."
 
-#: src/api/error-messages.ts:62
+#: src/api/error-messages.ts:64
 msgid "This media is attached to learning content and cannot be deleted."
 msgstr "This media is attached to learning content and cannot be deleted."
 
 #: src/api/error-messages.ts:54
+#: src/api/error-messages.ts:60
 msgid "This media is no longer available."
 msgstr "This media is no longer available."
 
@@ -1659,6 +1664,10 @@ msgstr "This request isn’t allowed. Reload the app and try again."
 msgid "This skill is no longer available."
 msgstr "This skill is no longer available."
 
+#: src/api/error-messages.ts:61
+msgid "This upload is not ready yet. Try again shortly."
+msgstr "This upload is not ready yet. Try again shortly."
+
 #: src/reward/daily-reward-card.tsx:179
 msgid "Today"
 msgstr "Today"
@@ -1667,7 +1676,7 @@ msgstr "Today"
 msgid "Today’s missions"
 msgstr "Today’s missions"
 
-#: src/api/error-messages.ts:72
+#: src/api/error-messages.ts:74
 msgid "Too many attempts. Please wait and try again."
 msgstr "Too many attempts. Please wait and try again."
 
@@ -1739,11 +1748,11 @@ msgstr "Units"
 msgid "Upcoming"
 msgstr "Upcoming"
 
-#: src/pwa/update-banner.tsx:36
+#: src/pwa/update-banner.tsx:37
 msgid "Update"
 msgstr "Update"
 
-#: src/api/error-messages.ts:70
+#: src/api/error-messages.ts:72
 msgid "Use at least 8 characters for your password."
 msgstr "Use at least 8 characters for your password."
 
@@ -1751,7 +1760,7 @@ msgstr "Use at least 8 characters for your password."
 msgid "Use no more than {limit} characters."
 msgstr "Use no more than {limit} characters."
 
-#: src/api/error-messages.ts:71
+#: src/api/error-messages.ts:73
 msgid "Use no more than 128 characters for your password."
 msgstr "Use no more than 128 characters for your password."
 
@@ -1759,7 +1768,7 @@ msgstr "Use no more than 128 characters for your password."
 msgid "Verification couldn’t load. Reload and try again."
 msgstr "Verification couldn’t load. Reload and try again."
 
-#: src/api/error-messages.ts:74
+#: src/api/error-messages.ts:76
 msgid "Verification failed. Please try again."
 msgstr "Verification failed. Please try again."
 
@@ -1814,7 +1823,7 @@ msgstr "Wave {wave}/{total} · Turn {turn}"
 msgid "Weapon"
 msgstr "Weapon"
 
-#: src/character/cosmetic-shop-screen.tsx:266
+#: src/character/cosmetic-shop-screen.tsx:268
 msgid "Wear"
 msgstr "Wear"
 
@@ -1826,7 +1835,7 @@ msgstr "What year were you born?"
 msgid "Which language do you learn in?"
 msgstr "Which language do you learn in?"
 
-#: src/character/cosmetic-shop-screen.tsx:266
+#: src/character/cosmetic-shop-screen.tsx:268
 #: src/character/cosmetic-tile.tsx:131
 msgid "Worn"
 msgstr "Worn"
@@ -1869,7 +1878,7 @@ msgstr "You don’t own this cosmetic."
 msgid "You don’t own this equipment."
 msgstr "You don’t own this equipment."
 
-#: src/api/error-messages.ts:61
+#: src/api/error-messages.ts:63
 msgid "You have reached your upload limit."
 msgstr "You have reached your upload limit."
 

@@ -11,6 +11,7 @@ import { space } from "../ui/tokens/space.stylex.ts";
 import type { CourseCardProps } from "./course-card.tsx";
 import { errorMessage } from "../api/error-messages.ts";
 import { CourseMetadata } from "./course-metadata.tsx";
+import { CourseCreator } from "./course-creator.tsx";
 
 const styles = stylex.create({
   card: { overflow: "hidden" },
@@ -45,6 +46,7 @@ export function CourseSpotlight({
         <Text as="h2" variant="subheading" style={styles.title}>
           {title}
         </Text>
+        <CourseCreator creator={course.creator} />
         <CourseMetadata course={course} />
         <Stack direction="row" justify="end" align="center" wrap={false}>
           <Button

@@ -375,7 +375,7 @@ export const postApiAuthoringCourses = <ThrowOnError extends boolean = false>(
   });
 
 /**
- * Delete your course and its content while preserving learner records
+ * Delete your course and its content
  */
 export const deleteApiAuthoringCoursesByCourseId = <ThrowOnError extends boolean = false>(
   options: Options<DeleteApiAuthoringCoursesByCourseIdData, ThrowOnError>,
@@ -506,7 +506,7 @@ export const postApiAuthoringCoursesByCourseIdPublish = <ThrowOnError extends bo
   });
 
 /**
- * Take your course offline while preserving its draft and learner progress
+ * Unpublish your course
  */
 export const postApiAuthoringCoursesByCourseIdUnpublish = <ThrowOnError extends boolean = false>(
   options: Options<PostApiAuthoringCoursesByCourseIdUnpublishData, ThrowOnError>,
