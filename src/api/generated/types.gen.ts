@@ -85,7 +85,13 @@ export type MediaReference = {
 };
 
 export type AuthoredCourse = {
+  /**
+   * Identifier, between 1 and 128 characters.
+   */
   id: string;
+  /**
+   * Identifier, between 1 and 128 characters.
+   */
   userId: string;
   published: boolean;
   hasUnpublishedChanges: boolean;
@@ -93,8 +99,17 @@ export type AuthoredCourse = {
   publishedUnitIds: Array<string>;
   publishedItemIds: Array<string>;
   definition: {
+    /**
+     * Display title, between 1 and 300 characters.
+     */
     title: string;
+    /**
+     * Identifier, between 1 and 128 characters.
+     */
     icon: string;
+    /**
+     * Subject area of the course.
+     */
     subject:
       | "arts_humanities"
       | "business"
@@ -110,106 +125,280 @@ export type AuthoredCourse = {
       | "social_sciences"
       | "test_preparation"
       | "other";
+    /**
+     * Course language as a BCP 47 language tag, between 2 and 35 characters.
+     */
     language: string;
     ageRange: {
+      /**
+       * Minimum recommended age, from 0 to 120.
+       */
       minimum: number;
+      /**
+       * Maximum recommended age, from 0 to 120.
+       */
       maximum: number;
     };
+    /**
+     * Course generation seed, from 0 to 4294967295.
+     */
     seed: number;
+    /**
+     * Course units, up to 100 items.
+     */
     units: Array<{
+      /**
+       * Identifier, between 1 and 128 characters.
+       */
       id: string;
       hidden?: boolean;
+      /**
+       * Display title, between 1 and 300 characters.
+       */
       title: string;
+      /**
+       * Description, up to 5000 characters.
+       */
       description: string;
+      /**
+       * Unit order, from 0 to 10000.
+       */
       order: number;
+      /**
+       * Rule that determines when the unit becomes available.
+       */
       unlockRule: "open" | "previous_unit_completed";
+      /**
+       * Identifier, between 1 and 128 characters.
+       */
       biomeId?: string;
       map?: {
+        /**
+         * Map height, greater than 0 and at most 100000.
+         */
         height: number;
+        /**
+         * Map nodes, up to 200 items.
+         */
         nodes: Array<{
+          /**
+           * Identifier, between 1 and 128 characters.
+           */
           itemId: string;
           position: {
+            /**
+             * Map coordinate, from 0 to 100000.
+             */
             x: number;
+            /**
+             * Map coordinate, from 0 to 100000.
+             */
             y: number;
           };
         }>;
       };
+      /**
+       * Course items in the unit, up to 200 items.
+       */
       items: Array<
         | {
+            /**
+             * Identifier, between 1 and 128 characters.
+             */
             id: string;
             hidden?: boolean;
+            /**
+             * Display title, between 1 and 300 characters.
+             */
             title: string;
+            /**
+             * Description, up to 5000 characters.
+             */
             description: string;
+            /**
+             * Item order, from 0 to 10000.
+             */
             order: number;
             kind: "lesson";
+            /**
+             * Estimated lesson duration, from 1 to 10000 minutes.
+             */
             estimatedDurationMinutes: number;
+            /**
+             * Lesson content in Markdown, up to 100000 characters.
+             */
             contentMd: string;
+            /**
+             * Media attachments, up to 20 items.
+             */
             attachments?: Array<{
+              /**
+               * Identifier, between 1 and 128 characters.
+               */
               assetId: string;
+              /**
+               * Kind of media asset.
+               */
               kind: "image" | "audio" | "video";
+              /**
+               * Accessible media description, between 1 and 300 characters.
+               */
               description: string;
             }>;
           }
         | {
+            /**
+             * Identifier, between 1 and 128 characters.
+             */
             id: string;
             hidden?: boolean;
+            /**
+             * Display title, between 1 and 300 characters.
+             */
             title: string;
+            /**
+             * Description, up to 5000 characters.
+             */
             description: string;
+            /**
+             * Item order, from 0 to 10000.
+             */
             order: number;
             kind: "practice";
+            /**
+             * Role of the practice in the unit.
+             */
             role: "standard" | "unit_review";
             practice: {
+              /**
+               * Identifier, between 1 and 128 characters.
+               */
               id: string;
+              /**
+               * Difficulty of the practice.
+               */
               difficulty: "easy" | "medium" | "hard";
+              /**
+               * Order in which to present the selected questions.
+               */
               questionOrder: "ordered" | "randomized";
               questionGoal?:
                 | {
                     kind: "count";
+                    /**
+                     * Question goal, from 1 to 10000 questions.
+                     */
                     count: number;
                   }
                 | {
                     kind: "percentage";
+                    /**
+                     * Percentage of selected questions, greater than 0 and at most 100.
+                     */
                     percentage: number;
                   };
               selection:
                 | {
                     kind: "fixed";
+                    /**
+                     * Question IDs, between 1 and 1000 unique values.
+                     */
                     questionIds: Array<string>;
                   }
                 | {
                     kind: "bank_sample";
+                    /**
+                     * Question-bank samples, between 1 and 100 items.
+                     */
                     banks: Array<{
+                      /**
+                       * Identifier, between 1 and 128 characters.
+                       */
                       bankId: string;
+                      /**
+                       * Number of questions to sample, from 1 to 10000.
+                       */
                       count: number;
                     }>;
                   };
               encounter?:
                 | {
                     kind: "fixed";
+                    /**
+                     * Encounter waves, between 1 and 20 items.
+                     */
                     waves: Array<{
+                      /**
+                       * Enemies in the wave, between 1 and 10 items.
+                       */
                       enemies: Array<{
+                        /**
+                         * Identifier, between 1 and 128 characters.
+                         */
                         enemyId: string;
+                        /**
+                         * Role of the enemy in the encounter.
+                         */
                         role: "normal" | "boss";
+                        /**
+                         * Enemy level, from 1 to 10000.
+                         */
                         level?: number;
+                        /**
+                         * Equipment IDs, up to 3 items.
+                         */
                         equipmentIds?: Array<string>;
                       }>;
                     }>;
                   }
                 | {
                     kind: "randomized";
+                    /**
+                     * Encounter waves, between 1 and 20 items.
+                     */
                     waves: Array<{
+                      /**
+                       * Enemy groups, between 1 and 10 items.
+                       */
                       groups: Array<{
+                        /**
+                         * Role assigned to enemies generated by this group.
+                         */
                         role: "normal" | "boss";
+                        /**
+                         * Minimum enemy count, from 1 to 10.
+                         */
                         minEnemies: number;
+                        /**
+                         * Maximum enemy count, from 1 to 10.
+                         */
                         maxEnemies: number;
                         allowDuplicates: boolean;
+                        /**
+                         * Enemy pool entries, between 1 and 100 items.
+                         */
                         pool: Array<{
+                          /**
+                           * Identifier, between 1 and 128 characters.
+                           */
                           enemyId: string;
+                          /**
+                           * Relative selection weight, greater than 0.
+                           */
                           weight: number;
                           level?: {
+                            /**
+                             * Minimum enemy level, from 1 to 10000.
+                             */
                             minimum: number;
+                            /**
+                             * Maximum enemy level, from 1 to 10000.
+                             */
                             maximum: number;
                           };
+                          /**
+                           * Equipment IDs, up to 3 items.
+                           */
                           equipmentIds?: Array<string>;
                         }>;
                       }>;
@@ -223,47 +412,131 @@ export type AuthoredCourse = {
 };
 
 export type AuthoredQuestionBank = {
+  /**
+   * Identifier, between 1 and 128 characters.
+   */
   id: string;
+  /**
+   * Identifier, between 1 and 128 characters.
+   */
   userId: string;
+  /**
+   * Display title, between 1 and 300 characters.
+   */
   title: string;
+  /**
+   * Description, up to 5000 characters.
+   */
   description: string;
 };
 
 export type AuthoredQuestion = {
+  /**
+   * Identifier, between 1 and 128 characters.
+   */
   id: string;
+  /**
+   * Identifier, between 1 and 128 characters.
+   */
   userId: string;
+  /**
+   * Identifier, between 1 and 128 characters.
+   */
   bankId: string;
+  /**
+   * Question prompt, between 1 and 20000 characters.
+   */
   questionText: string;
+  /**
+   * Difficulty of the question.
+   */
   difficulty: "easy" | "medium" | "hard";
+  /**
+   * Image references, up to 20 items.
+   */
   images?: Array<{
+    /**
+     * Identifier, between 1 and 128 characters.
+     */
     assetId: string;
+    /**
+     * Image alternative text, between 1 and 300 characters.
+     */
     alternativeText: string;
   }>;
+  /**
+   * Media attachments, up to 20 items.
+   */
   attachments?: Array<{
+    /**
+     * Identifier, between 1 and 128 characters.
+     */
     assetId: string;
+    /**
+     * Kind of media asset.
+     */
     kind: "image" | "audio" | "video";
+    /**
+     * Accessible media description, between 1 and 300 characters.
+     */
     description: string;
   }>;
   answer:
     | {
         kind: "choice";
+        /**
+         * Whether learners select one or multiple options.
+         */
         mode: "single" | "multiple";
+        /**
+         * Answer options, between 2 and 100 items.
+         */
         options: Array<{
+          /**
+           * Identifier, between 1 and 128 characters.
+           */
           id: string;
+          /**
+           * Text content, up to 20000 characters.
+           */
           value: string;
+          /**
+           * Image references, up to 20 items.
+           */
           images?: Array<{
+            /**
+             * Identifier, between 1 and 128 characters.
+             */
             assetId: string;
+            /**
+             * Image alternative text, between 1 and 300 characters.
+             */
             alternativeText: string;
           }>;
         }>;
+        /**
+         * Correct option IDs, between 1 and 100 unique values.
+         */
         correctOptionIds: Array<string>;
+        /**
+         * Number of options to display, from 2 to 100.
+         */
         displayCount: number;
       }
     | {
         kind: "text";
+        /**
+         * Correct answer, up to 20000 characters.
+         */
         correctAnswer: string;
+        /**
+         * Accepted alternative answers, up to 100 items.
+         */
         acceptedAlternatives: Array<string>;
         caseSensitive: boolean;
+        /**
+         * Maximum accepted answer length, from 1 to 10000 characters.
+         */
         maxLength: number;
         control:
           | {
@@ -271,7 +544,13 @@ export type AuthoredQuestion = {
             }
           | {
               kind: "letter_bank";
+              /**
+               * Letter-bank entries, between 1 and 200 items.
+               */
               letters: Array<string>;
+              /**
+               * Number of letter-bank entries to display, from 1 to 200.
+               */
               displayCount: number;
             };
       }
@@ -281,22 +560,49 @@ export type AuthoredQuestion = {
       }
     | {
         kind: "matching";
+        /**
+         * Matching pairs, between 1 and 100 items.
+         */
         pairs: Array<{
           left:
             | string
             | {
+                /**
+                 * Text content, up to 20000 characters.
+                 */
                 value: string;
+                /**
+                 * Image references, up to 20 items.
+                 */
                 images: Array<{
+                  /**
+                   * Identifier, between 1 and 128 characters.
+                   */
                   assetId: string;
+                  /**
+                   * Image alternative text, between 1 and 300 characters.
+                   */
                   alternativeText: string;
                 }>;
               };
           right:
             | string
             | {
+                /**
+                 * Text content, up to 20000 characters.
+                 */
                 value: string;
+                /**
+                 * Image references, up to 20 items.
+                 */
                 images: Array<{
+                  /**
+                   * Identifier, between 1 and 128 characters.
+                   */
                   assetId: string;
+                  /**
+                   * Image alternative text, between 1 and 300 characters.
+                   */
                   alternativeText: string;
                 }>;
               };
@@ -304,22 +610,52 @@ export type AuthoredQuestion = {
       }
     | {
         kind: "ordering";
+        /**
+         * Items in the correct order, between 1 and 100 items.
+         */
         items: Array<
           | string
           | {
+              /**
+               * Text content, up to 20000 characters.
+               */
               value: string;
+              /**
+               * Image references, up to 20 items.
+               */
               images: Array<{
+                /**
+                 * Identifier, between 1 and 128 characters.
+                 */
                 assetId: string;
+                /**
+                 * Image alternative text, between 1 and 300 characters.
+                 */
                 alternativeText: string;
               }>;
             }
         >;
+        /**
+         * Ordering distractors, up to 100 items.
+         */
         distractors: Array<
           | string
           | {
+              /**
+               * Text content, up to 20000 characters.
+               */
               value: string;
+              /**
+               * Image references, up to 20 items.
+               */
               images: Array<{
+                /**
+                 * Identifier, between 1 and 128 characters.
+                 */
                 assetId: string;
+                /**
+                 * Image alternative text, between 1 and 300 characters.
+                 */
                 alternativeText: string;
               }>;
             }
@@ -1441,7 +1777,13 @@ export type GetApiAuthoringAssetsData = {
   body?: never;
   path?: never;
   query?: {
+    /**
+     * Number of items to return, defaults to 20 and must be between 1 and 50.
+     */
     limit?: string | number;
+    /**
+     * Identifier, between 1 and 128 characters.
+     */
     cursor?: string;
   };
   url: "/api/authoring/assets";
@@ -1633,6 +1975,9 @@ export type DeleteApiAuthoringAssetsByAssetIdResponses = {
    * Response for status 200
    */
   200: {
+    /**
+     * Identifier, between 1 and 128 characters.
+     */
     id: string;
   };
 };
@@ -1688,11 +2033,17 @@ export type GetApiAuthoringEncountersCatalogResponses = {
   200: {
     maximumLevel: number;
     biomes: Array<{
+      /**
+       * Identifier, between 1 and 128 characters.
+       */
       id: string;
       normalEnemyIds: Array<string>;
       bossEnemyIds: Array<string>;
     }>;
     enemies: Array<{
+      /**
+       * Identifier, between 1 and 128 characters.
+       */
       id: string;
       baseStats: {
         maxHealth: number;
@@ -1704,6 +2055,9 @@ export type GetApiAuthoringEncountersCatalogResponses = {
       equipmentIds: Array<string>;
     }>;
     equipments: Array<{
+      /**
+       * Identifier, between 1 and 128 characters.
+       */
       id: string;
       slot: "weapon" | "armor" | "charm";
       rarity: "common" | "uncommon" | "rare" | "epic" | "legendary";
@@ -1751,7 +2105,13 @@ export type GetApiAuthoringCoursesData = {
   body?: never;
   path?: never;
   query?: {
+    /**
+     * Number of items to return, defaults to 20 and must be between 1 and 50.
+     */
     limit?: string | number;
+    /**
+     * Identifier, between 1 and 128 characters.
+     */
     cursor?: string;
   };
   url: "/api/authoring/courses";
@@ -1797,11 +2157,20 @@ export type GetApiAuthoringCoursesResponses = {
    */
   200: {
     items: Array<{
+      /**
+       * Identifier, between 1 and 128 characters.
+       */
       id: string;
+      /**
+       * Identifier, between 1 and 128 characters.
+       */
       userId: string;
       published: boolean;
       hasUnpublishedChanges: boolean;
       featured: boolean;
+      /**
+       * Display title, between 1 and 300 characters.
+       */
       title: string;
     }>;
     nextCursor: string | null;
@@ -1813,7 +2182,13 @@ export type GetApiAuthoringCoursesResponse =
 
 export type PostApiAuthoringCoursesData = {
   body: {
+    /**
+     * Display title, between 1 and 300 characters.
+     */
     title: string;
+    /**
+     * Identifier, between 1 and 128 characters.
+     */
     icon: string;
     subject:
       | "arts_humanities"
@@ -1830,106 +2205,259 @@ export type PostApiAuthoringCoursesData = {
       | "social_sciences"
       | "test_preparation"
       | "other";
+    /**
+     * Course language as a BCP 47 language tag, between 2 and 35 characters.
+     */
     language: string;
     ageRange: {
+      /**
+       * Minimum recommended age, from 0 to 120.
+       */
       minimum: number;
+      /**
+       * Maximum recommended age, from 0 to 120.
+       */
       maximum: number;
     };
+    /**
+     * Course generation seed, from 0 to 4294967295.
+     */
     seed: number;
+    /**
+     * Course units, up to 100 items.
+     */
     units: Array<{
+      /**
+       * Identifier, between 1 and 128 characters.
+       */
       id: string;
       hidden?: boolean;
+      /**
+       * Display title, between 1 and 300 characters.
+       */
       title: string;
+      /**
+       * Description, up to 5000 characters.
+       */
       description: string;
+      /**
+       * Unit order, from 0 to 10000.
+       */
       order: number;
       unlockRule: "open" | "previous_unit_completed";
+      /**
+       * Identifier, between 1 and 128 characters.
+       */
       biomeId?: string;
       map?: {
+        /**
+         * Map height, greater than 0 and at most 100000.
+         */
         height: number;
+        /**
+         * Map nodes, up to 200 items.
+         */
         nodes: Array<{
+          /**
+           * Identifier, between 1 and 128 characters.
+           */
           itemId: string;
           position: {
+            /**
+             * Map coordinate, from 0 to 100000.
+             */
             x: number;
+            /**
+             * Map coordinate, from 0 to 100000.
+             */
             y: number;
           };
         }>;
       };
+      /**
+       * Course items in the unit, up to 200 items.
+       */
       items: Array<
         | {
+            /**
+             * Identifier, between 1 and 128 characters.
+             */
             id: string;
             hidden?: boolean;
+            /**
+             * Display title, between 1 and 300 characters.
+             */
             title: string;
+            /**
+             * Description, up to 5000 characters.
+             */
             description: string;
+            /**
+             * Item order, from 0 to 10000.
+             */
             order: number;
             kind: "lesson";
+            /**
+             * Estimated lesson duration, from 1 to 10000 minutes.
+             */
             estimatedDurationMinutes: number;
+            /**
+             * Lesson content in Markdown, up to 100000 characters.
+             */
             contentMd: string;
+            /**
+             * Media attachments, up to 20 items.
+             */
             attachments?: Array<{
+              /**
+               * Identifier, between 1 and 128 characters.
+               */
               assetId: string;
               kind: "image" | "audio" | "video";
+              /**
+               * Accessible media description, between 1 and 300 characters.
+               */
               description: string;
             }>;
           }
         | {
+            /**
+             * Identifier, between 1 and 128 characters.
+             */
             id: string;
             hidden?: boolean;
+            /**
+             * Display title, between 1 and 300 characters.
+             */
             title: string;
+            /**
+             * Description, up to 5000 characters.
+             */
             description: string;
+            /**
+             * Item order, from 0 to 10000.
+             */
             order: number;
             kind: "practice";
             role: "standard" | "unit_review";
             practice: {
+              /**
+               * Identifier, between 1 and 128 characters.
+               */
               id: string;
               difficulty: "easy" | "medium" | "hard";
               questionOrder: "ordered" | "randomized";
               questionGoal?:
                 | {
                     kind: "count";
+                    /**
+                     * Question goal, from 1 to 10000 questions.
+                     */
                     count: number;
                   }
                 | {
                     kind: "percentage";
+                    /**
+                     * Percentage of selected questions, greater than 0 and at most 100.
+                     */
                     percentage: number;
                   };
               selection:
                 | {
                     kind: "fixed";
+                    /**
+                     * Question IDs, between 1 and 1000 unique values.
+                     */
                     questionIds: Array<string>;
                   }
                 | {
                     kind: "bank_sample";
+                    /**
+                     * Question-bank samples, between 1 and 100 items.
+                     */
                     banks: Array<{
+                      /**
+                       * Identifier, between 1 and 128 characters.
+                       */
                       bankId: string;
+                      /**
+                       * Number of questions to sample, from 1 to 10000.
+                       */
                       count: number;
                     }>;
                   };
               encounter?:
                 | {
                     kind: "fixed";
+                    /**
+                     * Encounter waves, between 1 and 20 items.
+                     */
                     waves: Array<{
+                      /**
+                       * Enemies in the wave, between 1 and 10 items.
+                       */
                       enemies: Array<{
+                        /**
+                         * Identifier, between 1 and 128 characters.
+                         */
                         enemyId: string;
                         role: "normal" | "boss";
+                        /**
+                         * Enemy level, from 1 to 10000.
+                         */
                         level?: number;
+                        /**
+                         * Equipment IDs, up to 3 items.
+                         */
                         equipmentIds?: Array<string>;
                       }>;
                     }>;
                   }
                 | {
                     kind: "randomized";
+                    /**
+                     * Encounter waves, between 1 and 20 items.
+                     */
                     waves: Array<{
+                      /**
+                       * Enemy groups, between 1 and 10 items.
+                       */
                       groups: Array<{
                         role: "normal" | "boss";
+                        /**
+                         * Minimum enemy count, from 1 to 10.
+                         */
                         minEnemies: number;
+                        /**
+                         * Maximum enemy count, from 1 to 10.
+                         */
                         maxEnemies: number;
                         allowDuplicates: boolean;
+                        /**
+                         * Enemy pool entries, between 1 and 100 items.
+                         */
                         pool: Array<{
+                          /**
+                           * Identifier, between 1 and 128 characters.
+                           */
                           enemyId: string;
+                          /**
+                           * Relative selection weight, greater than 0.
+                           */
                           weight: number;
                           level?: {
+                            /**
+                             * Minimum enemy level, from 1 to 10000.
+                             */
                             minimum: number;
+                            /**
+                             * Maximum enemy level, from 1 to 10000.
+                             */
                             maximum: number;
                           };
+                          /**
+                           * Equipment IDs, up to 3 items.
+                           */
                           equipmentIds?: Array<string>;
                         }>;
                       }>;
@@ -1992,6 +2520,9 @@ export type PostApiAuthoringCoursesResponse =
 export type DeleteApiAuthoringCoursesByCourseIdData = {
   body?: never;
   path: {
+    /**
+     * Identifier, between 1 and 128 characters.
+     */
     courseId: string;
   };
   query?: never;
@@ -2037,6 +2568,9 @@ export type DeleteApiAuthoringCoursesByCourseIdResponses = {
    * Response for status 200
    */
   200: {
+    /**
+     * Identifier, between 1 and 128 characters.
+     */
     id: string;
   };
 };
@@ -2047,6 +2581,9 @@ export type DeleteApiAuthoringCoursesByCourseIdResponse =
 export type GetApiAuthoringCoursesByCourseIdData = {
   body?: never;
   path: {
+    /**
+     * Identifier, between 1 and 128 characters.
+     */
     courseId: string;
   };
   query?: never;
@@ -2099,7 +2636,13 @@ export type GetApiAuthoringCoursesByCourseIdResponse =
 
 export type PutApiAuthoringCoursesByCourseIdData = {
   body: {
+    /**
+     * Display title, between 1 and 300 characters.
+     */
     title: string;
+    /**
+     * Identifier, between 1 and 128 characters.
+     */
     icon: string;
     subject:
       | "arts_humanities"
@@ -2116,106 +2659,259 @@ export type PutApiAuthoringCoursesByCourseIdData = {
       | "social_sciences"
       | "test_preparation"
       | "other";
+    /**
+     * Course language as a BCP 47 language tag, between 2 and 35 characters.
+     */
     language: string;
     ageRange: {
+      /**
+       * Minimum recommended age, from 0 to 120.
+       */
       minimum: number;
+      /**
+       * Maximum recommended age, from 0 to 120.
+       */
       maximum: number;
     };
+    /**
+     * Course generation seed, from 0 to 4294967295.
+     */
     seed: number;
+    /**
+     * Course units, up to 100 items.
+     */
     units: Array<{
+      /**
+       * Identifier, between 1 and 128 characters.
+       */
       id: string;
       hidden?: boolean;
+      /**
+       * Display title, between 1 and 300 characters.
+       */
       title: string;
+      /**
+       * Description, up to 5000 characters.
+       */
       description: string;
+      /**
+       * Unit order, from 0 to 10000.
+       */
       order: number;
       unlockRule: "open" | "previous_unit_completed";
+      /**
+       * Identifier, between 1 and 128 characters.
+       */
       biomeId?: string;
       map?: {
+        /**
+         * Map height, greater than 0 and at most 100000.
+         */
         height: number;
+        /**
+         * Map nodes, up to 200 items.
+         */
         nodes: Array<{
+          /**
+           * Identifier, between 1 and 128 characters.
+           */
           itemId: string;
           position: {
+            /**
+             * Map coordinate, from 0 to 100000.
+             */
             x: number;
+            /**
+             * Map coordinate, from 0 to 100000.
+             */
             y: number;
           };
         }>;
       };
+      /**
+       * Course items in the unit, up to 200 items.
+       */
       items: Array<
         | {
+            /**
+             * Identifier, between 1 and 128 characters.
+             */
             id: string;
             hidden?: boolean;
+            /**
+             * Display title, between 1 and 300 characters.
+             */
             title: string;
+            /**
+             * Description, up to 5000 characters.
+             */
             description: string;
+            /**
+             * Item order, from 0 to 10000.
+             */
             order: number;
             kind: "lesson";
+            /**
+             * Estimated lesson duration, from 1 to 10000 minutes.
+             */
             estimatedDurationMinutes: number;
+            /**
+             * Lesson content in Markdown, up to 100000 characters.
+             */
             contentMd: string;
+            /**
+             * Media attachments, up to 20 items.
+             */
             attachments?: Array<{
+              /**
+               * Identifier, between 1 and 128 characters.
+               */
               assetId: string;
               kind: "image" | "audio" | "video";
+              /**
+               * Accessible media description, between 1 and 300 characters.
+               */
               description: string;
             }>;
           }
         | {
+            /**
+             * Identifier, between 1 and 128 characters.
+             */
             id: string;
             hidden?: boolean;
+            /**
+             * Display title, between 1 and 300 characters.
+             */
             title: string;
+            /**
+             * Description, up to 5000 characters.
+             */
             description: string;
+            /**
+             * Item order, from 0 to 10000.
+             */
             order: number;
             kind: "practice";
             role: "standard" | "unit_review";
             practice: {
+              /**
+               * Identifier, between 1 and 128 characters.
+               */
               id: string;
               difficulty: "easy" | "medium" | "hard";
               questionOrder: "ordered" | "randomized";
               questionGoal?:
                 | {
                     kind: "count";
+                    /**
+                     * Question goal, from 1 to 10000 questions.
+                     */
                     count: number;
                   }
                 | {
                     kind: "percentage";
+                    /**
+                     * Percentage of selected questions, greater than 0 and at most 100.
+                     */
                     percentage: number;
                   };
               selection:
                 | {
                     kind: "fixed";
+                    /**
+                     * Question IDs, between 1 and 1000 unique values.
+                     */
                     questionIds: Array<string>;
                   }
                 | {
                     kind: "bank_sample";
+                    /**
+                     * Question-bank samples, between 1 and 100 items.
+                     */
                     banks: Array<{
+                      /**
+                       * Identifier, between 1 and 128 characters.
+                       */
                       bankId: string;
+                      /**
+                       * Number of questions to sample, from 1 to 10000.
+                       */
                       count: number;
                     }>;
                   };
               encounter?:
                 | {
                     kind: "fixed";
+                    /**
+                     * Encounter waves, between 1 and 20 items.
+                     */
                     waves: Array<{
+                      /**
+                       * Enemies in the wave, between 1 and 10 items.
+                       */
                       enemies: Array<{
+                        /**
+                         * Identifier, between 1 and 128 characters.
+                         */
                         enemyId: string;
                         role: "normal" | "boss";
+                        /**
+                         * Enemy level, from 1 to 10000.
+                         */
                         level?: number;
+                        /**
+                         * Equipment IDs, up to 3 items.
+                         */
                         equipmentIds?: Array<string>;
                       }>;
                     }>;
                   }
                 | {
                     kind: "randomized";
+                    /**
+                     * Encounter waves, between 1 and 20 items.
+                     */
                     waves: Array<{
+                      /**
+                       * Enemy groups, between 1 and 10 items.
+                       */
                       groups: Array<{
                         role: "normal" | "boss";
+                        /**
+                         * Minimum enemy count, from 1 to 10.
+                         */
                         minEnemies: number;
+                        /**
+                         * Maximum enemy count, from 1 to 10.
+                         */
                         maxEnemies: number;
                         allowDuplicates: boolean;
+                        /**
+                         * Enemy pool entries, between 1 and 100 items.
+                         */
                         pool: Array<{
+                          /**
+                           * Identifier, between 1 and 128 characters.
+                           */
                           enemyId: string;
+                          /**
+                           * Relative selection weight, greater than 0.
+                           */
                           weight: number;
                           level?: {
+                            /**
+                             * Minimum enemy level, from 1 to 10000.
+                             */
                             minimum: number;
+                            /**
+                             * Maximum enemy level, from 1 to 10000.
+                             */
                             maximum: number;
                           };
+                          /**
+                           * Equipment IDs, up to 3 items.
+                           */
                           equipmentIds?: Array<string>;
                         }>;
                       }>;
@@ -2227,6 +2923,9 @@ export type PutApiAuthoringCoursesByCourseIdData = {
     }>;
   };
   path: {
+    /**
+     * Identifier, between 1 and 128 characters.
+     */
     courseId: string;
   };
   query?: never;
@@ -2279,10 +2978,19 @@ export type PutApiAuthoringCoursesByCourseIdResponse =
 
 export type PostApiAuthoringCoursesByCourseIdUnitsByUnitIdMapPreviewData = {
   body: {
+    /**
+     * Identifier, between 1 and 128 characters.
+     */
     biomeId?: string;
     map?: {
       height: number;
+      /**
+       * Preview map nodes, up to 400 items.
+       */
       nodes: Array<{
+        /**
+         * Identifier, between 1 and 128 characters.
+         */
         itemId: string;
         position: {
           x: number;
@@ -2292,7 +3000,13 @@ export type PostApiAuthoringCoursesByCourseIdUnitsByUnitIdMapPreviewData = {
     };
   };
   path: {
+    /**
+     * Identifier, between 1 and 128 characters.
+     */
     courseId: string;
+    /**
+     * Identifier, between 1 and 128 characters.
+     */
     unitId: string;
   };
   query?: never;
@@ -2353,14 +3067,23 @@ export type PostApiAuthoringCoursesByCourseIdUnitsByUnitIdMapPreviewResponses = 
     }>;
     map: {
       mode: "default" | "custom";
+      /**
+       * Identifier, between 1 and 128 characters.
+       */
       unitId: string;
       biome: {
+        /**
+         * Identifier, between 1 and 128 characters.
+         */
         id: string | null;
         source: "generated" | "authored";
       };
       width: number;
       height: number;
       nodes: Array<{
+        /**
+         * Identifier, between 1 and 128 characters.
+         */
         itemId: string;
         position: {
           x: number;
@@ -2369,7 +3092,13 @@ export type PostApiAuthoringCoursesByCourseIdUnitsByUnitIdMapPreviewResponses = 
         source: "generated" | "authored";
       }>;
       segments: Array<{
+        /**
+         * Identifier, between 1 and 128 characters.
+         */
         fromItemId: string;
+        /**
+         * Identifier, between 1 and 128 characters.
+         */
         toItemId: string;
         start: {
           x: number;
@@ -2399,67 +3128,139 @@ export type PostApiAuthoringCoursesByCourseIdPracticesByItemIdEncounterPreviewDa
   body: {
     role: "standard" | "unit_review";
     practice: {
+      /**
+       * Identifier, between 1 and 128 characters.
+       */
       id: string;
       difficulty: "easy" | "medium" | "hard";
       questionOrder: "ordered" | "randomized";
       questionGoal?:
         | {
             kind: "count";
+            /**
+             * Question goal, from 1 to 10000 questions.
+             */
             count: number;
           }
         | {
             kind: "percentage";
+            /**
+             * Percentage of selected questions, greater than 0 and at most 100.
+             */
             percentage: number;
           };
       selection:
         | {
             kind: "fixed";
+            /**
+             * Question IDs, between 1 and 1000 unique values.
+             */
             questionIds: Array<string>;
           }
         | {
             kind: "bank_sample";
+            /**
+             * Question-bank samples, between 1 and 100 items.
+             */
             banks: Array<{
+              /**
+               * Identifier, between 1 and 128 characters.
+               */
               bankId: string;
+              /**
+               * Number of questions to sample, from 1 to 10000.
+               */
               count: number;
             }>;
           };
       encounter?:
         | {
             kind: "fixed";
+            /**
+             * Encounter waves, between 0 and 100 items.
+             */
             waves: Array<{
+              /**
+               * Enemies in the wave, between 0 and 100 items.
+               */
               enemies: Array<{
+                /**
+                 * Identifier, between 1 and 128 characters.
+                 */
                 enemyId: string;
                 role: "normal" | "boss";
+                /**
+                 * Enemy level, from 0 to 10000.
+                 */
                 level?: number;
+                /**
+                 * Equipment IDs, up to 10 items.
+                 */
                 equipmentIds?: Array<string>;
               }>;
             }>;
           }
         | {
             kind: "randomized";
+            /**
+             * Encounter waves, between 0 and 100 items.
+             */
             waves: Array<{
+              /**
+               * Enemy groups, between 0 and 100 items.
+               */
               groups: Array<{
                 role: "normal" | "boss";
+                /**
+                 * Minimum enemy count, from 0 to 100.
+                 */
                 minEnemies: number;
+                /**
+                 * Maximum enemy count, from 0 to 100.
+                 */
                 maxEnemies: number;
                 allowDuplicates: boolean;
+                /**
+                 * Enemy pool entries, between 0 and 200 items.
+                 */
                 pool: Array<{
+                  /**
+                   * Identifier, between 1 and 128 characters.
+                   */
                   enemyId: string;
                   weight: number;
                   level?: {
+                    /**
+                     * Minimum enemy level, from 0 to 10000.
+                     */
                     minimum: number;
+                    /**
+                     * Maximum enemy level, from 0 to 10000.
+                     */
                     maximum: number;
                   };
+                  /**
+                   * Equipment IDs, up to 10 items.
+                   */
                   equipmentIds?: Array<string>;
                 }>;
               }>;
             }>;
           };
     };
+    /**
+     * Preview sample seed, from 0 to 4294967295.
+     */
     sample?: number;
   };
   path: {
+    /**
+     * Identifier, between 1 and 128 characters.
+     */
     courseId: string;
+    /**
+     * Identifier, between 1 and 128 characters.
+     */
     itemId: string;
   };
   query?: never;
@@ -2531,16 +3332,28 @@ export type PostApiAuthoringCoursesByCourseIdPracticesByItemIdEncounterPreviewRe
       message: string;
     }>;
     encounter: {
+      /**
+       * Identifier, between 1 and 128 characters.
+       */
       itemId: string;
       kind: "normal" | "boss";
       difficulty: "easy" | "medium" | "hard";
       mode: "default" | "fixed" | "randomized";
       sample: number;
       plannedLevel: number;
+      /**
+       * Identifier, between 1 and 128 characters.
+       */
       sceneId: string | null;
       waves: Array<{
         enemies: Array<{
+          /**
+           * Identifier, between 1 and 128 characters.
+           */
           id: string;
+          /**
+           * Identifier, between 1 and 128 characters.
+           */
           enemyId: string;
           role: "normal" | "boss";
           level: number;
@@ -2577,6 +3390,9 @@ export type PostApiAuthoringCoursesByCourseIdPublishData = {
     [key: string]: never;
   };
   path: {
+    /**
+     * Identifier, between 1 and 128 characters.
+     */
     courseId: string;
   };
   query?: never;
@@ -2632,6 +3448,9 @@ export type PostApiAuthoringCoursesByCourseIdUnpublishData = {
     [key: string]: never;
   };
   path: {
+    /**
+     * Identifier, between 1 and 128 characters.
+     */
     courseId: string;
   };
   query?: never;
@@ -2686,7 +3505,13 @@ export type GetApiAuthoringQuestionBanksData = {
   body?: never;
   path?: never;
   query?: {
+    /**
+     * Number of items to return, defaults to 20 and must be between 1 and 50.
+     */
     limit?: string | number;
+    /**
+     * Identifier, between 1 and 128 characters.
+     */
     cursor?: string;
   };
   url: "/api/authoring/question-banks";
@@ -2741,7 +3566,13 @@ export type GetApiAuthoringQuestionBanksResponse =
 
 export type PostApiAuthoringQuestionBanksData = {
   body: {
+    /**
+     * Display title, between 1 and 300 characters.
+     */
     title: string;
+    /**
+     * Description, up to 5000 characters.
+     */
     description: string;
   };
   path?: never;
@@ -2796,6 +3627,9 @@ export type PostApiAuthoringQuestionBanksResponse =
 export type DeleteApiAuthoringQuestionBanksByBankIdData = {
   body?: never;
   path: {
+    /**
+     * Identifier, between 1 and 128 characters.
+     */
     bankId: string;
   };
   query?: never;
@@ -2841,6 +3675,9 @@ export type DeleteApiAuthoringQuestionBanksByBankIdResponses = {
    * Response for status 200
    */
   200: {
+    /**
+     * Identifier, between 1 and 128 characters.
+     */
     id: string;
   };
 };
@@ -2851,6 +3688,9 @@ export type DeleteApiAuthoringQuestionBanksByBankIdResponse =
 export type GetApiAuthoringQuestionBanksByBankIdData = {
   body?: never;
   path: {
+    /**
+     * Identifier, between 1 and 128 characters.
+     */
     bankId: string;
   };
   query?: never;
@@ -2903,10 +3743,19 @@ export type GetApiAuthoringQuestionBanksByBankIdResponse =
 
 export type PutApiAuthoringQuestionBanksByBankIdData = {
   body: {
+    /**
+     * Display title, between 1 and 300 characters.
+     */
     title: string;
+    /**
+     * Description, up to 5000 characters.
+     */
     description: string;
   };
   path: {
+    /**
+     * Identifier, between 1 and 128 characters.
+     */
     bankId: string;
   };
   query?: never;
@@ -2960,10 +3809,19 @@ export type PutApiAuthoringQuestionBanksByBankIdResponse =
 export type GetApiAuthoringQuestionBanksByBankIdQuestionsData = {
   body?: never;
   path: {
+    /**
+     * Identifier, between 1 and 128 characters.
+     */
     bankId: string;
   };
   query?: {
+    /**
+     * Number of items to return, defaults to 20 and must be between 1 and 50.
+     */
     limit?: string | number;
+    /**
+     * Identifier, between 1 and 128 characters.
+     */
     cursor?: string;
   };
   url: "/api/authoring/question-banks/{bankId}/questions";
@@ -3018,37 +3876,91 @@ export type GetApiAuthoringQuestionBanksByBankIdQuestionsResponse =
 
 export type PostApiAuthoringQuestionBanksByBankIdQuestionsData = {
   body: {
+    /**
+     * Question prompt, between 1 and 20000 characters.
+     */
     questionText: string;
     difficulty: "easy" | "medium" | "hard";
+    /**
+     * Image references, up to 20 items.
+     */
     images?: Array<{
+      /**
+       * Identifier, between 1 and 128 characters.
+       */
       assetId: string;
+      /**
+       * Image alternative text, between 1 and 300 characters.
+       */
       alternativeText: string;
     }>;
+    /**
+     * Media attachments, up to 20 items.
+     */
     attachments?: Array<{
+      /**
+       * Identifier, between 1 and 128 characters.
+       */
       assetId: string;
       kind: "image" | "audio" | "video";
+      /**
+       * Accessible media description, between 1 and 300 characters.
+       */
       description: string;
     }>;
     answer:
       | {
           kind: "choice";
           mode: "single" | "multiple";
+          /**
+           * Answer options, between 2 and 100 items.
+           */
           options: Array<{
+            /**
+             * Identifier, between 1 and 128 characters.
+             */
             id: string;
+            /**
+             * Text content, up to 20000 characters.
+             */
             value: string;
+            /**
+             * Image references, up to 20 items.
+             */
             images?: Array<{
+              /**
+               * Identifier, between 1 and 128 characters.
+               */
               assetId: string;
+              /**
+               * Image alternative text, between 1 and 300 characters.
+               */
               alternativeText: string;
             }>;
           }>;
+          /**
+           * Correct option IDs, between 1 and 100 unique values.
+           */
           correctOptionIds: Array<string>;
+          /**
+           * Number of options to display, from 2 to 100.
+           */
           displayCount: number;
         }
       | {
           kind: "text";
+          /**
+           * Correct answer, up to 20000 characters.
+           */
           correctAnswer: string;
+          /**
+           * Accepted alternative answers, up to 100 items.
+           */
           acceptedAlternatives: Array<string>;
           caseSensitive: boolean;
+          /**
+           * Maximum accepted answer length, from 1 to 10000 characters.
+           */
           maxLength: number;
           control:
             | {
@@ -3056,7 +3968,13 @@ export type PostApiAuthoringQuestionBanksByBankIdQuestionsData = {
               }
             | {
                 kind: "letter_bank";
+                /**
+                 * Letter-bank entries, between 1 and 200 items.
+                 */
                 letters: Array<string>;
+                /**
+                 * Number of letter-bank entries to display, from 1 to 200.
+                 */
                 displayCount: number;
               };
         }
@@ -3066,22 +3984,49 @@ export type PostApiAuthoringQuestionBanksByBankIdQuestionsData = {
         }
       | {
           kind: "matching";
+          /**
+           * Matching pairs, between 1 and 100 items.
+           */
           pairs: Array<{
             left:
               | string
               | {
+                  /**
+                   * Text content, up to 20000 characters.
+                   */
                   value: string;
+                  /**
+                   * Image references, up to 20 items.
+                   */
                   images: Array<{
+                    /**
+                     * Identifier, between 1 and 128 characters.
+                     */
                     assetId: string;
+                    /**
+                     * Image alternative text, between 1 and 300 characters.
+                     */
                     alternativeText: string;
                   }>;
                 };
             right:
               | string
               | {
+                  /**
+                   * Text content, up to 20000 characters.
+                   */
                   value: string;
+                  /**
+                   * Image references, up to 20 items.
+                   */
                   images: Array<{
+                    /**
+                     * Identifier, between 1 and 128 characters.
+                     */
                     assetId: string;
+                    /**
+                     * Image alternative text, between 1 and 300 characters.
+                     */
                     alternativeText: string;
                   }>;
                 };
@@ -3089,22 +4034,52 @@ export type PostApiAuthoringQuestionBanksByBankIdQuestionsData = {
         }
       | {
           kind: "ordering";
+          /**
+           * Items in the correct order, between 1 and 100 items.
+           */
           items: Array<
             | string
             | {
+                /**
+                 * Text content, up to 20000 characters.
+                 */
                 value: string;
+                /**
+                 * Image references, up to 20 items.
+                 */
                 images: Array<{
+                  /**
+                   * Identifier, between 1 and 128 characters.
+                   */
                   assetId: string;
+                  /**
+                   * Image alternative text, between 1 and 300 characters.
+                   */
                   alternativeText: string;
                 }>;
               }
           >;
+          /**
+           * Ordering distractors, up to 100 items.
+           */
           distractors: Array<
             | string
             | {
+                /**
+                 * Text content, up to 20000 characters.
+                 */
                 value: string;
+                /**
+                 * Image references, up to 20 items.
+                 */
                 images: Array<{
+                  /**
+                   * Identifier, between 1 and 128 characters.
+                   */
                   assetId: string;
+                  /**
+                   * Image alternative text, between 1 and 300 characters.
+                   */
                   alternativeText: string;
                 }>;
               }
@@ -3112,6 +4087,9 @@ export type PostApiAuthoringQuestionBanksByBankIdQuestionsData = {
         };
   };
   path: {
+    /**
+     * Identifier, between 1 and 128 characters.
+     */
     bankId: string;
   };
   query?: never;
@@ -3165,7 +4143,13 @@ export type PostApiAuthoringQuestionBanksByBankIdQuestionsResponse =
 export type DeleteApiAuthoringQuestionBanksByBankIdQuestionsByQuestionIdData = {
   body?: never;
   path: {
+    /**
+     * Identifier, between 1 and 128 characters.
+     */
     bankId: string;
+    /**
+     * Identifier, between 1 and 128 characters.
+     */
     questionId: string;
   };
   query?: never;
@@ -3211,6 +4195,9 @@ export type DeleteApiAuthoringQuestionBanksByBankIdQuestionsByQuestionIdResponse
    * Response for status 200
    */
   200: {
+    /**
+     * Identifier, between 1 and 128 characters.
+     */
     id: string;
   };
 };
@@ -3221,7 +4208,13 @@ export type DeleteApiAuthoringQuestionBanksByBankIdQuestionsByQuestionIdResponse
 export type GetApiAuthoringQuestionBanksByBankIdQuestionsByQuestionIdData = {
   body?: never;
   path: {
+    /**
+     * Identifier, between 1 and 128 characters.
+     */
     bankId: string;
+    /**
+     * Identifier, between 1 and 128 characters.
+     */
     questionId: string;
   };
   query?: never;
@@ -3274,37 +4267,91 @@ export type GetApiAuthoringQuestionBanksByBankIdQuestionsByQuestionIdResponse =
 
 export type PutApiAuthoringQuestionBanksByBankIdQuestionsByQuestionIdData = {
   body: {
+    /**
+     * Question prompt, between 1 and 20000 characters.
+     */
     questionText: string;
     difficulty: "easy" | "medium" | "hard";
+    /**
+     * Image references, up to 20 items.
+     */
     images?: Array<{
+      /**
+       * Identifier, between 1 and 128 characters.
+       */
       assetId: string;
+      /**
+       * Image alternative text, between 1 and 300 characters.
+       */
       alternativeText: string;
     }>;
+    /**
+     * Media attachments, up to 20 items.
+     */
     attachments?: Array<{
+      /**
+       * Identifier, between 1 and 128 characters.
+       */
       assetId: string;
       kind: "image" | "audio" | "video";
+      /**
+       * Accessible media description, between 1 and 300 characters.
+       */
       description: string;
     }>;
     answer:
       | {
           kind: "choice";
           mode: "single" | "multiple";
+          /**
+           * Answer options, between 2 and 100 items.
+           */
           options: Array<{
+            /**
+             * Identifier, between 1 and 128 characters.
+             */
             id: string;
+            /**
+             * Text content, up to 20000 characters.
+             */
             value: string;
+            /**
+             * Image references, up to 20 items.
+             */
             images?: Array<{
+              /**
+               * Identifier, between 1 and 128 characters.
+               */
               assetId: string;
+              /**
+               * Image alternative text, between 1 and 300 characters.
+               */
               alternativeText: string;
             }>;
           }>;
+          /**
+           * Correct option IDs, between 1 and 100 unique values.
+           */
           correctOptionIds: Array<string>;
+          /**
+           * Number of options to display, from 2 to 100.
+           */
           displayCount: number;
         }
       | {
           kind: "text";
+          /**
+           * Correct answer, up to 20000 characters.
+           */
           correctAnswer: string;
+          /**
+           * Accepted alternative answers, up to 100 items.
+           */
           acceptedAlternatives: Array<string>;
           caseSensitive: boolean;
+          /**
+           * Maximum accepted answer length, from 1 to 10000 characters.
+           */
           maxLength: number;
           control:
             | {
@@ -3312,7 +4359,13 @@ export type PutApiAuthoringQuestionBanksByBankIdQuestionsByQuestionIdData = {
               }
             | {
                 kind: "letter_bank";
+                /**
+                 * Letter-bank entries, between 1 and 200 items.
+                 */
                 letters: Array<string>;
+                /**
+                 * Number of letter-bank entries to display, from 1 to 200.
+                 */
                 displayCount: number;
               };
         }
@@ -3322,22 +4375,49 @@ export type PutApiAuthoringQuestionBanksByBankIdQuestionsByQuestionIdData = {
         }
       | {
           kind: "matching";
+          /**
+           * Matching pairs, between 1 and 100 items.
+           */
           pairs: Array<{
             left:
               | string
               | {
+                  /**
+                   * Text content, up to 20000 characters.
+                   */
                   value: string;
+                  /**
+                   * Image references, up to 20 items.
+                   */
                   images: Array<{
+                    /**
+                     * Identifier, between 1 and 128 characters.
+                     */
                     assetId: string;
+                    /**
+                     * Image alternative text, between 1 and 300 characters.
+                     */
                     alternativeText: string;
                   }>;
                 };
             right:
               | string
               | {
+                  /**
+                   * Text content, up to 20000 characters.
+                   */
                   value: string;
+                  /**
+                   * Image references, up to 20 items.
+                   */
                   images: Array<{
+                    /**
+                     * Identifier, between 1 and 128 characters.
+                     */
                     assetId: string;
+                    /**
+                     * Image alternative text, between 1 and 300 characters.
+                     */
                     alternativeText: string;
                   }>;
                 };
@@ -3345,22 +4425,52 @@ export type PutApiAuthoringQuestionBanksByBankIdQuestionsByQuestionIdData = {
         }
       | {
           kind: "ordering";
+          /**
+           * Items in the correct order, between 1 and 100 items.
+           */
           items: Array<
             | string
             | {
+                /**
+                 * Text content, up to 20000 characters.
+                 */
                 value: string;
+                /**
+                 * Image references, up to 20 items.
+                 */
                 images: Array<{
+                  /**
+                   * Identifier, between 1 and 128 characters.
+                   */
                   assetId: string;
+                  /**
+                   * Image alternative text, between 1 and 300 characters.
+                   */
                   alternativeText: string;
                 }>;
               }
           >;
+          /**
+           * Ordering distractors, up to 100 items.
+           */
           distractors: Array<
             | string
             | {
+                /**
+                 * Text content, up to 20000 characters.
+                 */
                 value: string;
+                /**
+                 * Image references, up to 20 items.
+                 */
                 images: Array<{
+                  /**
+                   * Identifier, between 1 and 128 characters.
+                   */
                   assetId: string;
+                  /**
+                   * Image alternative text, between 1 and 300 characters.
+                   */
                   alternativeText: string;
                 }>;
               }
@@ -3368,7 +4478,13 @@ export type PutApiAuthoringQuestionBanksByBankIdQuestionsByQuestionIdData = {
         };
   };
   path: {
+    /**
+     * Identifier, between 1 and 128 characters.
+     */
     bankId: string;
+    /**
+     * Identifier, between 1 and 128 characters.
+     */
     questionId: string;
   };
   query?: never;

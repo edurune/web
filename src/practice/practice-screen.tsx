@@ -139,6 +139,7 @@ export function PracticeScreen({ path }: { path: SessionPath }) {
     revision: number;
     phase: AnswerPhase;
     answer: Answer;
+    wave: number;
   } | null>(null);
   const [playing, setPlaying] = useState(false);
   const [playedRevision, setPlayedRevision] = useState(0);
@@ -194,10 +195,13 @@ export function PracticeScreen({ path }: { path: SessionPath }) {
       : [];
   const finished = phase?.kind === "finished" && !heldAnswer;
   const wave = presentation?.wave ?? session?.wave.number;
+  // The server advances its wave before the previous wave's presentation has played. Keep that
+  // wave's music until the wave_started event is actually presented.
+  const musicWave = presentation?.wave ?? heldAnswer?.wave ?? session?.wave.number;
   const total = session?.wave.total;
   const turn = session?.turn;
   useSoundLoop("loading", !session && !error);
-  useMusic(session && wave && !finished ? encounterTrack(session, wave) : null, "scene");
+  useMusic(session && musicWave && !finished ? encounterTrack(session, musicWave) : null, "scene");
   useSoundWhen("error", evaluation?.correct === false);
 
   useEffect(() => {
@@ -235,7 +239,7 @@ export function PracticeScreen({ path }: { path: SessionPath }) {
     )
       return;
     select.reset();
-    setSubmitted({ revision: session.revision, phase, answer });
+    setSubmitted({ revision: session.revision, phase, answer, wave: session.wave.number });
     submit.mutate({
       path,
       body: { revision: session.revision, submission: { questionId: phase.question.id, answer } },
