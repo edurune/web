@@ -1,4 +1,5 @@
 import posthog from "posthog-js";
+import { redactResetLinks } from "./redact-reset-links.ts";
 
 export const analyticsClient = posthog;
 
@@ -15,6 +16,8 @@ export function initializeAnalytics(apiUrl: string) {
     opt_out_capturing_by_default: import.meta.env.DEV,
     capture_pageview: "history_change",
     capture_pageleave: true,
+    before_send: (event) =>
+      event ? { ...event, properties: redactResetLinks(event.properties) } : event,
     person_profiles: "identified_only",
     autocapture: false,
     rageclick: false,

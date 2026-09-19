@@ -71,6 +71,7 @@ const authErrorMessages: Record<string, MessageDescriptor> = {
   USER_ALREADY_EXISTS: msg`An account with this email already exists. Try logging in.`,
   PASSWORD_TOO_SHORT: msg`Use at least 8 characters for your password.`,
   PASSWORD_TOO_LONG: msg`Use no more than 128 characters for your password.`,
+  INVALID_TOKEN: msg`This reset link is invalid or has expired. Request a new one.`,
   TOO_MANY_REQUESTS: msg`Too many attempts. Please wait and try again.`,
   MISSING_RESPONSE: msg`Complete verification and try again.`,
   VERIFICATION_FAILED: msg`Verification failed. Please try again.`,

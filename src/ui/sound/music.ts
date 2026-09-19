@@ -46,6 +46,8 @@ class MusicManager {
   private playback: Playback | undefined;
   private enabled = (localStorage.getItem(KEY) ?? localStorage.getItem("voyage:music")) !== "off";
   private ducked = false;
+  private fadingOut = false;
+  private pendingStinger: string | null = null;
   private requestOrder = 0;
   private readonly requests = new Map<symbol, MusicRequest>();
   private readonly fadeTimers = new WeakMap<HTMLAudioElement, number>();
@@ -61,7 +63,7 @@ class MusicManager {
     this.fadeTimers.delete(audio);
   }
 
-  private fade(audio: HTMLAudioElement, to: number, duration: number) {
+  private fade(audio: HTMLAudioElement, to: number, duration: number, done?: () => void) {
     this.cancelFade(audio);
     const from = audio.volume;
     const steps = Math.max(1, Math.round(duration / STEP_MS));
@@ -72,6 +74,7 @@ class MusicManager {
       if (step < steps) return;
       window.clearInterval(timer);
       this.fadeTimers.delete(audio);
+      done?.();
     }, STEP_MS);
     this.fadeTimers.set(audio, timer);
   }
@@ -93,6 +96,7 @@ class MusicManager {
   private stop() {
     const playback = this.playback;
     this.playback = undefined;
+    this.fadingOut = false;
     if (!playback) return;
     playback.removeListeners();
     this.cancelFade(playback.audio);
@@ -134,7 +138,7 @@ class MusicManager {
           return false;
         }
         clearAudioBlocked("music");
-        this.fade(audio, this.level(), FADE_MS);
+        if (!this.fadingOut) this.fade(audio, this.level(), FADE_MS);
         return true;
       },
       (error: unknown) => {
@@ -145,19 +149,55 @@ class MusicManager {
     );
   }
 
+  private desiredPlayback(): Pick<Playback, "src" | "kind"> | null {
+    if (this.pendingStinger) return { src: this.pendingStinger, kind: "stinger" };
+    const src = this.selectedTrack();
+    return src ? { src, kind: "loop" } : null;
+  }
+
+  private startDesired() {
+    const desired = this.desiredPlayback();
+    if (!desired) {
+      clearAudioBlocked("music");
+      return;
+    }
+    if (desired.kind === "stinger") this.pendingStinger = null;
+    void this.start(desired.src, desired.kind);
+  }
+
   private sync() {
     if (!this.enabled) {
+      this.pendingStinger = null;
       this.stop();
       return;
     }
-    if (this.playback?.kind === "stinger") return;
-    const src = this.selectedTrack();
-    if (this.playback?.kind === "loop" && this.playback.src === src) return;
-    if (src) void this.start(src, "loop");
-    else {
-      this.stop();
-      clearAudioBlocked("music");
+    if (this.playback?.kind === "stinger" && !this.pendingStinger) return;
+    const desired = this.desiredPlayback();
+    if (
+      this.playback &&
+      desired &&
+      this.playback.src === desired.src &&
+      this.playback.kind === desired.kind
+    ) {
+      if (this.fadingOut) {
+        this.fadingOut = false;
+        this.fade(this.playback.audio, this.level(), FADE_MS);
+      }
+      return;
     }
+    if (!this.playback || this.playback.audio.paused) {
+      this.stop();
+      this.startDesired();
+      return;
+    }
+    if (this.fadingOut) return;
+    this.fadingOut = true;
+    const audio = this.playback.audio;
+    this.fade(audio, 0, FADE_MS, () => {
+      if (this.playback?.audio !== audio || !this.fadingOut) return;
+      this.stop();
+      this.startDesired();
+    });
   }
 
   hold(src: string, layer: MusicLayer) {
@@ -188,14 +228,16 @@ class MusicManager {
   }
 
   playStinger(src: string) {
-    if (this.enabled) void this.start(src, "stinger");
+    if (!this.enabled) return;
+    this.pendingStinger = src;
+    this.sync();
   }
 
   setDucked(next: boolean) {
     if (this.ducked === next) return;
     this.ducked = next;
     const playback = this.playback;
-    if (!playback) return;
+    if (!playback || this.fadingOut) return;
     this.fade(playback.audio, this.level(), next ? DUCK_FADE_MS : RESTORE_FADE_MS);
   }
 
@@ -209,6 +251,7 @@ class MusicManager {
     localStorage.setItem(KEY, next ? "on" : "off");
     if (next) this.sync();
     else {
+      this.pendingStinger = null;
       clearAudioBlocked("music");
       this.stop();
     }

@@ -59,6 +59,7 @@ export function LoginScreen({
   onSignUp,
   onGuest,
   onModeChange,
+  onForgotPassword,
   style,
 }: {
   initialMode?: "login" | "signup";
@@ -70,6 +71,7 @@ export function LoginScreen({
   onSignUp: (details: SignUpDetails) => Promise<unknown>;
   onGuest: () => void;
   onModeChange: () => void;
+  onForgotPassword: () => void;
   style?: StyleXStyles;
 }) {
   const { t, i18n } = useLingui();
@@ -153,6 +155,11 @@ export function LoginScreen({
               />
             </Field>
             {error != null && <Alert tone="negative">{t(errorMessage(error))}</Alert>}
+            {!signup && (
+              <Button variant="ghost" disabled={busy} onClick={onForgotPassword}>
+                <Trans>Forgot password?</Trans>
+              </Button>
+            )}
             <CaptchaChallenge control={captcha} language={i18n.locale} />
             {captcha.failed && (
               <Alert tone="negative">

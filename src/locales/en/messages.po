@@ -256,7 +256,7 @@ msgstr "All languages"
 msgid "All rarities"
 msgstr "All rarities"
 
-#: src/user/login-screen.tsx:195
+#: src/user/login-screen.tsx:202
 msgid "Already have an account? Log in"
 msgstr "Already have an account? Log in"
 
@@ -318,9 +318,14 @@ msgstr "Back to courses"
 msgid "Back to Home"
 msgstr "Back to Home"
 
+#: src/user/password-recovery-screen.tsx:145
+#: src/user/password-recovery-screen.tsx:256
+msgid "Back to log in"
+msgstr "Back to log in"
+
 #: src/course/lesson-screen.tsx:91
 #: src/course/lesson-screen.tsx:192
-#: src/practice/practice-screen.tsx:278
+#: src/practice/practice-screen.tsx:282
 msgid "Back to map"
 msgstr "Back to map"
 
@@ -553,7 +558,7 @@ msgstr "Complete the objective before claiming its reward."
 msgid "Complete the previous activities to unlock this one."
 msgstr "Complete the previous activities to unlock this one."
 
-#: src/api/error-messages.ts:75
+#: src/api/error-messages.ts:76
 msgid "Complete verification and try again."
 msgstr "Complete verification and try again."
 
@@ -561,18 +566,22 @@ msgstr "Complete verification and try again."
 msgid "Computer science"
 msgstr "Computer science"
 
-#: src/practice/practice-screen.tsx:406
+#: src/practice/practice-screen.tsx:410
 msgid "Confirm answer"
 msgstr "Confirm answer"
 
+#: src/user/password-recovery-screen.tsx:225
+msgid "Confirm new password"
+msgstr "Confirm new password"
+
 #: src/character/appearance-screen.tsx:217
 #: src/home/home-screen.tsx:117
-#: src/practice/practice-screen.tsx:441
+#: src/practice/practice-screen.tsx:445
 #: src/user/onboarding-step.tsx:138
 msgid "Continue"
 msgstr "Continue"
 
-#: src/user/login-screen.tsx:181
+#: src/user/login-screen.tsx:188
 msgid "Continue as guest"
 msgstr "Continue as guest"
 
@@ -600,7 +609,7 @@ msgstr "Cosmetic"
 msgid "Couldn’t complete the request"
 msgstr "Couldn’t complete the request"
 
-#: src/api/error-messages.ts:93
+#: src/api/error-messages.ts:94
 msgid "Couldn’t complete the request. Check your connection and try again."
 msgstr "Couldn’t complete the request. Check your connection and try again."
 
@@ -647,11 +656,11 @@ msgstr "Course shop"
 msgid "Courses"
 msgstr "Courses"
 
-#: src/user/login-screen.tsx:169
+#: src/user/login-screen.tsx:176
 msgid "Create account"
 msgstr "Create account"
 
-#: src/user/login-screen.tsx:89
+#: src/user/login-screen.tsx:91
 msgid "Create an account"
 msgstr "Create an account"
 
@@ -659,7 +668,7 @@ msgstr "Create an account"
 msgid "Create an account to author content."
 msgstr "Create an account to author content."
 
-#: src/user/login-screen.tsx:94
+#: src/user/login-screen.tsx:96
 msgid "Create an account to keep your guest progress."
 msgstr "Create an account to keep your guest progress."
 
@@ -734,7 +743,8 @@ msgstr "Dismiss"
 msgid "Economics and finance"
 msgstr "Economics and finance"
 
-#: src/user/login-screen.tsx:130
+#: src/user/login-screen.tsx:132
+#: src/user/password-recovery-screen.tsx:109
 msgid "Email"
 msgstr "Email"
 
@@ -742,7 +752,7 @@ msgstr "Email"
 msgid "Empty"
 msgstr "Empty"
 
-#: src/practice/practice-screen.tsx:533
+#: src/practice/practice-screen.tsx:537
 msgid "End run"
 msgstr "End run"
 
@@ -757,7 +767,7 @@ msgid "Engineering"
 msgstr "Engineering"
 
 #: src/user/app-settings.tsx:51
-#: src/user/login-screen.tsx:210
+#: src/user/login-screen.tsx:217
 #: src/user/profile-settings.tsx:99
 #: src/user/user-language-step.tsx:71
 msgid "English"
@@ -775,6 +785,10 @@ msgstr "Enter the dungeon"
 #: src/play/play-screen.tsx:70
 msgid "Enter Versus"
 msgstr "Enter Versus"
+
+#: src/user/password-recovery-screen.tsx:85
+msgid "Enter your email address and we’ll send you a link to reset your password."
+msgstr "Enter your email address and we’ll send you a link to reset your password."
 
 #: src/user/birth-year-step.tsx:54
 msgid "Enter your four-digit birth year."
@@ -839,6 +853,11 @@ msgstr "Filter ({filterCount})"
 #: src/home/home-screen.tsx:176
 msgid "Find courses"
 msgstr "Find courses"
+
+#: src/user/login-screen.tsx:160
+#: src/user/password-recovery-screen.tsx:83
+msgid "Forgot password?"
+msgstr "Forgot password?"
 
 #: src/play/play-screen.tsx:83
 msgid "Game modes"
@@ -916,6 +935,10 @@ msgstr "Highest cost"
 msgid "Home"
 msgstr "Home"
 
+#: src/user/password-recovery-screen.tsx:89
+msgid "If an account exists for this email, you’ll receive a reset link. Check your inbox and spam folder."
+msgstr "If an account exists for this email, you’ll receive a reset link. Check your inbox and spam folder."
+
 #: src/ui/primitives/number-field.tsx:164
 msgid "Increase"
 msgstr "Increase"
@@ -925,7 +948,7 @@ msgid "Infinite Dungeon"
 msgstr "Infinite Dungeon"
 
 #: src/user/app-settings.tsx:47
-#: src/user/login-screen.tsx:201
+#: src/user/login-screen.tsx:208
 msgid "Interface language"
 msgstr "Interface language"
 
@@ -952,7 +975,7 @@ msgstr "Join a course to start learning."
 msgid "Joining {title}"
 msgstr "Joining {title}"
 
-#: src/practice/practice-screen.tsx:505
+#: src/practice/practice-screen.tsx:509
 msgid "Keep playing"
 msgstr "Keep playing"
 
@@ -977,7 +1000,7 @@ msgstr "Lavender"
 msgid "Learning language"
 msgstr "Learning language"
 
-#: src/practice/practice-screen.tsx:495
+#: src/practice/practice-screen.tsx:499
 msgid "Leave practice?"
 msgstr "Leave practice?"
 
@@ -1038,7 +1061,7 @@ msgstr "Loading map"
 msgid "Loading missions…"
 msgstr "Loading missions…"
 
-#: src/practice/practice-screen.tsx:354
+#: src/practice/practice-screen.tsx:358
 msgid "Loading practice"
 msgstr "Loading practice"
 
@@ -1056,8 +1079,8 @@ msgstr "Loading rewards…"
 msgid "Loadout"
 msgstr "Loadout"
 
-#: src/user/login-screen.tsx:89
-#: src/user/login-screen.tsx:169
+#: src/user/login-screen.tsx:91
+#: src/user/login-screen.tsx:176
 msgid "Log in"
 msgstr "Log in"
 
@@ -1078,7 +1101,7 @@ msgstr "Log out"
 msgid "Log out of this guest account?"
 msgstr "Log out of this guest account?"
 
-#: src/user/login-screen.tsx:96
+#: src/user/login-screen.tsx:98
 msgid "Logging in switches to that account’s progress."
 msgstr "Logging in switches to that account’s progress."
 
@@ -1106,7 +1129,7 @@ msgstr "Make it you"
 msgid "Mana"
 msgstr "Mana"
 
-#: src/practice/practice-screen.tsx:452
+#: src/practice/practice-screen.tsx:456
 #: src/realm/realm-navigation.tsx:60
 msgid "Map"
 msgstr "Map"
@@ -1166,7 +1189,7 @@ msgstr "Missions, {readyMissions} rewards ready"
 msgid "Monster"
 msgstr "Monster"
 
-#: src/practice/practice-screen.tsx:329
+#: src/practice/practice-screen.tsx:333
 msgid "More below"
 msgstr "More below"
 
@@ -1186,7 +1209,7 @@ msgstr "Music"
 msgid "My age ({learnerAge})"
 msgstr "My age ({learnerAge})"
 
-#: src/user/login-screen.tsx:118
+#: src/user/login-screen.tsx:120
 #: src/user/profile-settings.tsx:67
 msgid "Name"
 msgstr "Name"
@@ -1199,9 +1222,13 @@ msgstr "Name: A to Z"
 msgid "Name: Z to A"
 msgstr "Name: Z to A"
 
-#: src/user/login-screen.tsx:197
+#: src/user/login-screen.tsx:204
 msgid "New here? Create an account"
 msgstr "New here? Create an account"
+
+#: src/user/password-recovery-screen.tsx:205
+msgid "New password"
+msgstr "New password"
 
 #: src/course/course-search-screen.tsx:324
 msgid "No courses found"
@@ -1296,9 +1323,17 @@ msgstr "Outfits"
 msgid "Owned"
 msgstr "Owned"
 
-#: src/user/login-screen.tsx:142
+#: src/user/login-screen.tsx:144
 msgid "Password"
 msgstr "Password"
+
+#: src/user/password-recovery-screen.tsx:175
+msgid "Password updated"
+msgstr "Password updated"
+
+#: src/user/password-recovery-screen.tsx:226
+msgid "Passwords do not match."
+msgstr "Passwords do not match."
 
 #: src/character/appearance-colors.ts:9
 msgid "Peach"
@@ -1321,8 +1356,8 @@ msgid "Porcelain"
 msgstr "Porcelain"
 
 #: src/practice/practice-info-sheet.tsx:42
-#: src/practice/practice-screen.tsx:272
-#: src/practice/practice-screen.tsx:332
+#: src/practice/practice-screen.tsx:276
+#: src/practice/practice-screen.tsx:336
 #: src/realm/practice-sheet.tsx:89
 msgid "Practice"
 msgstr "Practice"
@@ -1331,12 +1366,12 @@ msgstr "Practice"
 msgid "Practice ended"
 msgstr "Practice ended"
 
-#: src/practice/practice-screen.tsx:289
+#: src/practice/practice-screen.tsx:293
 msgid "Practice info"
 msgstr "Practice info"
 
-#: src/practice/practice-screen.tsx:426
-#: src/practice/practice-screen.tsx:433
+#: src/practice/practice-screen.tsx:430
+#: src/practice/practice-screen.tsx:437
 msgid "Practice results"
 msgstr "Practice results"
 
@@ -1351,7 +1386,7 @@ msgstr "Profile"
 msgid "Progress"
 msgstr "Progress"
 
-#: src/practice/practice-screen.tsx:332
+#: src/practice/practice-screen.tsx:336
 msgid "Question"
 msgstr "Question"
 
@@ -1385,6 +1420,22 @@ msgstr "Remove outfit"
 msgid "Replay practices to earn medals and gear."
 msgstr "Replay practices to earn medals and gear."
 
+#: src/user/password-recovery-screen.tsx:252
+msgid "Request a new link"
+msgstr "Request a new link"
+
+#: src/user/password-recovery-screen.tsx:136
+msgid "Resend in {remainingSeconds}s"
+msgstr "Resend in {remainingSeconds}s"
+
+#: src/user/password-recovery-screen.tsx:138
+msgid "Resend reset link"
+msgstr "Resend reset link"
+
+#: src/user/password-recovery-screen.tsx:175
+msgid "Reset password"
+msgstr "Reset password"
+
 #: src/character/cosmetic-shop-screen.tsx:134
 msgid "Reset preview"
 msgstr "Reset preview"
@@ -1411,7 +1462,7 @@ msgstr "Rewards"
 msgid "Rose"
 msgstr "Rose"
 
-#: src/practice/practice-screen.tsx:512
+#: src/practice/practice-screen.tsx:516
 msgid "Save and leave"
 msgstr "Save and leave"
 
@@ -1445,6 +1496,10 @@ msgstr "Search courses"
 #: src/realm/skill-info-dialog.tsx:19
 msgid "Self"
 msgstr "Self"
+
+#: src/user/password-recovery-screen.tsx:140
+msgid "Send reset link"
+msgstr "Send reset link"
 
 #: src/user/app-settings.tsx:26
 #: src/user/profile-screen.tsx:184
@@ -1510,7 +1565,7 @@ msgid "Social sciences"
 msgstr "Social sciences"
 
 #: src/api/error-messages.ts:10
-#: src/api/error-messages.ts:77
+#: src/api/error-messages.ts:78
 msgid "Something went wrong. Please try again."
 msgstr "Something went wrong. Please try again."
 
@@ -1660,6 +1715,11 @@ msgstr "This practice session is no longer available."
 msgid "This request isn’t allowed. Reload the app and try again."
 msgstr "This request isn’t allowed. Reload the app and try again."
 
+#: src/api/error-messages.ts:74
+#: src/user/password-recovery-screen.tsx:183
+msgid "This reset link is invalid or has expired. Request a new one."
+msgstr "This reset link is invalid or has expired. Request a new one."
+
 #: src/api/error-messages.ts:32
 msgid "This skill is no longer available."
 msgstr "This skill is no longer available."
@@ -1676,7 +1736,7 @@ msgstr "Today"
 msgid "Today’s missions"
 msgstr "Today’s missions"
 
-#: src/api/error-messages.ts:74
+#: src/api/error-messages.ts:75
 msgid "Too many attempts. Please wait and try again."
 msgstr "Too many attempts. Please wait and try again."
 
@@ -1692,8 +1752,8 @@ msgstr "Tops"
 #: src/course/lesson-screen.tsx:140
 #: src/home/home-screen.tsx:139
 #: src/objective/missions-screen.tsx:86
-#: src/practice/practice-screen.tsx:345
-#: src/practice/practice-screen.tsx:473
+#: src/practice/practice-screen.tsx:349
+#: src/practice/practice-screen.tsx:477
 #: src/realm/course-map-screen.tsx:159
 #: src/realm/course-map-screen.tsx:274
 #: src/realm/equipment-shop-screen.tsx:126
@@ -1752,6 +1812,14 @@ msgstr "Upcoming"
 msgid "Update"
 msgstr "Update"
 
+#: src/user/password-recovery-screen.tsx:246
+msgid "Update password"
+msgstr "Update password"
+
+#: src/user/password-recovery-screen.tsx:206
+msgid "Use 8 to 128 characters."
+msgstr "Use 8 to 128 characters."
+
 #: src/api/error-messages.ts:72
 msgid "Use at least 8 characters for your password."
 msgstr "Use at least 8 characters for your password."
@@ -1764,11 +1832,12 @@ msgstr "Use no more than {limit} characters."
 msgid "Use no more than 128 characters for your password."
 msgstr "Use no more than 128 characters for your password."
 
-#: src/user/login-screen.tsx:159
+#: src/user/login-screen.tsx:166
+#: src/user/password-recovery-screen.tsx:125
 msgid "Verification couldn’t load. Reload and try again."
 msgstr "Verification couldn’t load. Reload and try again."
 
-#: src/api/error-messages.ts:76
+#: src/api/error-messages.ts:77
 msgid "Verification failed. Please try again."
 msgstr "Verification failed. Please try again."
 
@@ -1785,7 +1854,7 @@ msgid "Victory!"
 msgstr "Victory!"
 
 #: src/user/app-settings.tsx:52
-#: src/user/login-screen.tsx:219
+#: src/user/login-screen.tsx:226
 #: src/user/profile-settings.tsx:100
 #: src/user/user-language-step.tsx:74
 msgid "Vietnamese"
@@ -1815,7 +1884,7 @@ msgstr "Wave {wave}"
 msgid "Wave {wave}/{total}"
 msgstr "Wave {wave}/{total}"
 
-#: src/practice/practice-screen.tsx:414
+#: src/practice/practice-screen.tsx:418
 msgid "Wave {wave}/{total} · Turn {turn}"
 msgstr "Wave {wave}/{total} · Turn {turn}"
 
@@ -1908,7 +1977,7 @@ msgstr "Your answer is too long."
 msgid "Your balance can’t accept this reward. Please try again later."
 msgstr "Your balance can’t accept this reward. Please try again later."
 
-#: src/practice/practice-screen.tsx:496
+#: src/practice/practice-screen.tsx:500
 msgid "Your battle is saved. Come back whenever you’re ready."
 msgstr "Your battle is saved. Come back whenever you’re ready."
 
@@ -1940,6 +2009,10 @@ msgstr "Your next adventure starts here"
 #: src/character/wardrobe-screen.tsx:139
 msgid "Your outfit covers these clothes."
 msgstr "Your outfit covers these clothes."
+
+#: src/user/password-recovery-screen.tsx:179
+msgid "Your password has been changed. Log in with your new password."
+msgstr "Your password has been changed. Log in with your new password."
 
 #: src/home/home-screen.tsx:65
 msgid "Your profile"

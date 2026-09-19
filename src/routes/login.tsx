@@ -45,6 +45,7 @@ function Login() {
       guest={user?.anonymous}
       pending={login.isPending || signup.isPending}
       guestPending={guest.isPending}
+      onForgotPassword={() => void navigate({ to: "/forgot-password" })}
       error={login.error ?? signup.error ?? guest.error}
       onLogin={(credentials) => login.mutateAsync(credentials, { onSuccess })}
       onSignUp={(details) =>

@@ -10,6 +10,7 @@ const meta = {
     onSignUp: async () => {},
     onGuest: () => {},
     onModeChange: () => {},
+    onForgotPassword: () => {},
   },
 } satisfies Meta<typeof LoginScreen>;
 export default meta;

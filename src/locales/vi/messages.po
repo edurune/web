@@ -256,7 +256,7 @@ msgstr "Tất cả ngôn ngữ"
 msgid "All rarities"
 msgstr "Tất cả độ hiếm"
 
-#: src/user/login-screen.tsx:195
+#: src/user/login-screen.tsx:202
 msgid "Already have an account? Log in"
 msgstr "Đã có tài khoản? Đăng nhập"
 
@@ -318,9 +318,14 @@ msgstr "Quay lại khóa học"
 msgid "Back to Home"
 msgstr "Về trang chủ"
 
+#: src/user/password-recovery-screen.tsx:145
+#: src/user/password-recovery-screen.tsx:256
+msgid "Back to log in"
+msgstr "Quay lại đăng nhập"
+
 #: src/course/lesson-screen.tsx:91
 #: src/course/lesson-screen.tsx:192
-#: src/practice/practice-screen.tsx:278
+#: src/practice/practice-screen.tsx:282
 msgid "Back to map"
 msgstr "Về bản đồ"
 
@@ -553,7 +558,7 @@ msgstr "Hoàn thành mục tiêu trước khi nhận thưởng."
 msgid "Complete the previous activities to unlock this one."
 msgstr "Hoàn thành các bài trước để mở khóa bài này."
 
-#: src/api/error-messages.ts:75
+#: src/api/error-messages.ts:76
 msgid "Complete verification and try again."
 msgstr "Hoàn tất xác minh rồi thử lại."
 
@@ -561,18 +566,22 @@ msgstr "Hoàn tất xác minh rồi thử lại."
 msgid "Computer science"
 msgstr "Khoa học máy tính"
 
-#: src/practice/practice-screen.tsx:406
+#: src/practice/practice-screen.tsx:410
 msgid "Confirm answer"
 msgstr "Xác nhận đáp án"
 
+#: src/user/password-recovery-screen.tsx:225
+msgid "Confirm new password"
+msgstr "Xác nhận mật khẩu mới"
+
 #: src/character/appearance-screen.tsx:217
 #: src/home/home-screen.tsx:117
-#: src/practice/practice-screen.tsx:441
+#: src/practice/practice-screen.tsx:445
 #: src/user/onboarding-step.tsx:138
 msgid "Continue"
 msgstr "Tiếp tục"
 
-#: src/user/login-screen.tsx:181
+#: src/user/login-screen.tsx:188
 msgid "Continue as guest"
 msgstr "Tiếp tục với tư cách khách"
 
@@ -600,7 +609,7 @@ msgstr "Trang phục"
 msgid "Couldn’t complete the request"
 msgstr "Không thể thực hiện yêu cầu"
 
-#: src/api/error-messages.ts:93
+#: src/api/error-messages.ts:94
 msgid "Couldn’t complete the request. Check your connection and try again."
 msgstr "Không thể hoàn tất yêu cầu. Kiểm tra kết nối rồi thử lại."
 
@@ -647,11 +656,11 @@ msgstr "Cửa hàng khóa học"
 msgid "Courses"
 msgstr "Khóa học"
 
-#: src/user/login-screen.tsx:169
+#: src/user/login-screen.tsx:176
 msgid "Create account"
 msgstr "Tạo tài khoản"
 
-#: src/user/login-screen.tsx:89
+#: src/user/login-screen.tsx:91
 msgid "Create an account"
 msgstr "Tạo tài khoản"
 
@@ -659,7 +668,7 @@ msgstr "Tạo tài khoản"
 msgid "Create an account to author content."
 msgstr "Tạo tài khoản để biên soạn nội dung."
 
-#: src/user/login-screen.tsx:94
+#: src/user/login-screen.tsx:96
 msgid "Create an account to keep your guest progress."
 msgstr "Tạo tài khoản để giữ lại tiến trình học của khách."
 
@@ -734,7 +743,8 @@ msgstr "Bỏ qua"
 msgid "Economics and finance"
 msgstr "Kinh tế và tài chính"
 
-#: src/user/login-screen.tsx:130
+#: src/user/login-screen.tsx:132
+#: src/user/password-recovery-screen.tsx:109
 msgid "Email"
 msgstr "Email"
 
@@ -742,7 +752,7 @@ msgstr "Email"
 msgid "Empty"
 msgstr "Trống"
 
-#: src/practice/practice-screen.tsx:533
+#: src/practice/practice-screen.tsx:537
 msgid "End run"
 msgstr "Kết thúc lượt chơi"
 
@@ -757,7 +767,7 @@ msgid "Engineering"
 msgstr "Kỹ thuật"
 
 #: src/user/app-settings.tsx:51
-#: src/user/login-screen.tsx:210
+#: src/user/login-screen.tsx:217
 #: src/user/profile-settings.tsx:99
 #: src/user/user-language-step.tsx:71
 msgid "English"
@@ -775,6 +785,10 @@ msgstr "Vào hầm ngục"
 #: src/play/play-screen.tsx:70
 msgid "Enter Versus"
 msgstr "Vào đối đầu"
+
+#: src/user/password-recovery-screen.tsx:85
+msgid "Enter your email address and we’ll send you a link to reset your password."
+msgstr "Nhập địa chỉ email của bạn để nhận liên kết đặt lại mật khẩu."
 
 #: src/user/birth-year-step.tsx:54
 msgid "Enter your four-digit birth year."
@@ -839,6 +853,11 @@ msgstr "Bộ lọc ({filterCount})"
 #: src/home/home-screen.tsx:176
 msgid "Find courses"
 msgstr "Tìm khóa học"
+
+#: src/user/login-screen.tsx:160
+#: src/user/password-recovery-screen.tsx:83
+msgid "Forgot password?"
+msgstr "Quên mật khẩu?"
 
 #: src/play/play-screen.tsx:83
 msgid "Game modes"
@@ -916,6 +935,10 @@ msgstr "Giá cao nhất"
 msgid "Home"
 msgstr "Trang chủ"
 
+#: src/user/password-recovery-screen.tsx:89
+msgid "If an account exists for this email, you’ll receive a reset link. Check your inbox and spam folder."
+msgstr "Nếu có tài khoản dùng email này, bạn sẽ nhận được liên kết đặt lại mật khẩu. Hãy kiểm tra hộp thư đến và thư rác."
+
 #: src/ui/primitives/number-field.tsx:164
 msgid "Increase"
 msgstr "Tăng"
@@ -925,7 +948,7 @@ msgid "Infinite Dungeon"
 msgstr "Hầm ngục vô tận"
 
 #: src/user/app-settings.tsx:47
-#: src/user/login-screen.tsx:201
+#: src/user/login-screen.tsx:208
 msgid "Interface language"
 msgstr "Ngôn ngữ giao diện"
 
@@ -952,7 +975,7 @@ msgstr "Tham gia một khóa học để bắt đầu."
 msgid "Joining {title}"
 msgstr "Đang tham gia {title}"
 
-#: src/practice/practice-screen.tsx:505
+#: src/practice/practice-screen.tsx:509
 msgid "Keep playing"
 msgstr "Chơi tiếp"
 
@@ -977,7 +1000,7 @@ msgstr "Tím nhạt"
 msgid "Learning language"
 msgstr "Ngôn ngữ học tập"
 
-#: src/practice/practice-screen.tsx:495
+#: src/practice/practice-screen.tsx:499
 msgid "Leave practice?"
 msgstr "Rời bài luyện tập?"
 
@@ -1038,7 +1061,7 @@ msgstr "Đang tải bản đồ"
 msgid "Loading missions…"
 msgstr "Đang tải nhiệm vụ…"
 
-#: src/practice/practice-screen.tsx:354
+#: src/practice/practice-screen.tsx:358
 msgid "Loading practice"
 msgstr "Đang tải bài luyện tập"
 
@@ -1056,8 +1079,8 @@ msgstr "Đang tải phần thưởng…"
 msgid "Loadout"
 msgstr "Trang bị"
 
-#: src/user/login-screen.tsx:89
-#: src/user/login-screen.tsx:169
+#: src/user/login-screen.tsx:91
+#: src/user/login-screen.tsx:176
 msgid "Log in"
 msgstr "Đăng nhập"
 
@@ -1078,7 +1101,7 @@ msgstr "Đăng xuất"
 msgid "Log out of this guest account?"
 msgstr "Đăng xuất khỏi tài khoản khách?"
 
-#: src/user/login-screen.tsx:96
+#: src/user/login-screen.tsx:98
 msgid "Logging in switches to that account’s progress."
 msgstr "Khi đăng nhập, bạn sẽ chuyển sang tiến trình của tài khoản đó."
 
@@ -1106,7 +1129,7 @@ msgstr "Tạo diện mạo của bạn"
 msgid "Mana"
 msgstr "Năng lượng"
 
-#: src/practice/practice-screen.tsx:452
+#: src/practice/practice-screen.tsx:456
 #: src/realm/realm-navigation.tsx:60
 msgid "Map"
 msgstr "Bản đồ"
@@ -1166,7 +1189,7 @@ msgstr "Nhiệm vụ, {readyMissions} phần thưởng có thể nhận"
 msgid "Monster"
 msgstr "Quái vật"
 
-#: src/practice/practice-screen.tsx:329
+#: src/practice/practice-screen.tsx:333
 msgid "More below"
 msgstr "Còn nữa bên dưới"
 
@@ -1186,7 +1209,7 @@ msgstr "Nhạc nền"
 msgid "My age ({learnerAge})"
 msgstr "Tuổi của tôi ({learnerAge})"
 
-#: src/user/login-screen.tsx:118
+#: src/user/login-screen.tsx:120
 #: src/user/profile-settings.tsx:67
 msgid "Name"
 msgstr "Tên"
@@ -1199,9 +1222,13 @@ msgstr "Tên: A đến Z"
 msgid "Name: Z to A"
 msgstr "Tên: Z đến A"
 
-#: src/user/login-screen.tsx:197
+#: src/user/login-screen.tsx:204
 msgid "New here? Create an account"
 msgstr "Chưa có tài khoản? Đăng ký"
+
+#: src/user/password-recovery-screen.tsx:205
+msgid "New password"
+msgstr "Mật khẩu mới"
 
 #: src/course/course-search-screen.tsx:324
 msgid "No courses found"
@@ -1296,9 +1323,17 @@ msgstr "Trang phục"
 msgid "Owned"
 msgstr "Đã sở hữu"
 
-#: src/user/login-screen.tsx:142
+#: src/user/login-screen.tsx:144
 msgid "Password"
 msgstr "Mật khẩu"
+
+#: src/user/password-recovery-screen.tsx:175
+msgid "Password updated"
+msgstr "Đã cập nhật mật khẩu"
+
+#: src/user/password-recovery-screen.tsx:226
+msgid "Passwords do not match."
+msgstr "Mật khẩu không khớp."
 
 #: src/character/appearance-colors.ts:9
 msgid "Peach"
@@ -1321,8 +1356,8 @@ msgid "Porcelain"
 msgstr "Trắng sứ"
 
 #: src/practice/practice-info-sheet.tsx:42
-#: src/practice/practice-screen.tsx:272
-#: src/practice/practice-screen.tsx:332
+#: src/practice/practice-screen.tsx:276
+#: src/practice/practice-screen.tsx:336
 #: src/realm/practice-sheet.tsx:89
 msgid "Practice"
 msgstr "Luyện tập"
@@ -1331,12 +1366,12 @@ msgstr "Luyện tập"
 msgid "Practice ended"
 msgstr "Đã kết thúc luyện tập"
 
-#: src/practice/practice-screen.tsx:289
+#: src/practice/practice-screen.tsx:293
 msgid "Practice info"
 msgstr "Thông tin bài luyện tập"
 
-#: src/practice/practice-screen.tsx:426
-#: src/practice/practice-screen.tsx:433
+#: src/practice/practice-screen.tsx:430
+#: src/practice/practice-screen.tsx:437
 msgid "Practice results"
 msgstr "Kết quả luyện tập"
 
@@ -1351,7 +1386,7 @@ msgstr "Hồ sơ"
 msgid "Progress"
 msgstr "Tiến trình"
 
-#: src/practice/practice-screen.tsx:332
+#: src/practice/practice-screen.tsx:336
 msgid "Question"
 msgstr "Câu hỏi"
 
@@ -1385,6 +1420,22 @@ msgstr "Tháo trang phục"
 msgid "Replay practices to earn medals and gear."
 msgstr "Chơi lại bài luyện tập để nhận huy chương và trang bị."
 
+#: src/user/password-recovery-screen.tsx:252
+msgid "Request a new link"
+msgstr "Yêu cầu liên kết mới"
+
+#: src/user/password-recovery-screen.tsx:136
+msgid "Resend in {remainingSeconds}s"
+msgstr "Gửi lại sau {remainingSeconds} giây"
+
+#: src/user/password-recovery-screen.tsx:138
+msgid "Resend reset link"
+msgstr "Gửi lại liên kết đặt lại mật khẩu"
+
+#: src/user/password-recovery-screen.tsx:175
+msgid "Reset password"
+msgstr "Đặt lại mật khẩu"
+
 #: src/character/cosmetic-shop-screen.tsx:134
 msgid "Reset preview"
 msgstr "Bỏ thử đồ"
@@ -1411,7 +1462,7 @@ msgstr "Phần thưởng"
 msgid "Rose"
 msgstr "Hồng"
 
-#: src/practice/practice-screen.tsx:512
+#: src/practice/practice-screen.tsx:516
 msgid "Save and leave"
 msgstr "Lưu và rời đi"
 
@@ -1445,6 +1496,10 @@ msgstr "Tìm khóa học"
 #: src/realm/skill-info-dialog.tsx:19
 msgid "Self"
 msgstr "Bản thân"
+
+#: src/user/password-recovery-screen.tsx:140
+msgid "Send reset link"
+msgstr "Gửi liên kết đặt lại mật khẩu"
 
 #: src/user/app-settings.tsx:26
 #: src/user/profile-screen.tsx:184
@@ -1510,7 +1565,7 @@ msgid "Social sciences"
 msgstr "Khoa học xã hội"
 
 #: src/api/error-messages.ts:10
-#: src/api/error-messages.ts:77
+#: src/api/error-messages.ts:78
 msgid "Something went wrong. Please try again."
 msgstr "Đã xảy ra lỗi. Vui lòng thử lại."
 
@@ -1660,6 +1715,11 @@ msgstr "Phiên luyện tập này không còn khả dụng."
 msgid "This request isn’t allowed. Reload the app and try again."
 msgstr "Yêu cầu này không được phép. Tải lại ứng dụng rồi thử lại."
 
+#: src/api/error-messages.ts:74
+#: src/user/password-recovery-screen.tsx:183
+msgid "This reset link is invalid or has expired. Request a new one."
+msgstr "Liên kết đặt lại mật khẩu không hợp lệ hoặc đã hết hạn. Hãy yêu cầu liên kết mới."
+
 #: src/api/error-messages.ts:32
 msgid "This skill is no longer available."
 msgstr "Kỹ năng này không còn khả dụng."
@@ -1676,7 +1736,7 @@ msgstr "Hôm nay"
 msgid "Today’s missions"
 msgstr "Nhiệm vụ hôm nay"
 
-#: src/api/error-messages.ts:74
+#: src/api/error-messages.ts:75
 msgid "Too many attempts. Please wait and try again."
 msgstr "Bạn đã thử quá nhiều lần. Vui lòng chờ rồi thử lại."
 
@@ -1692,8 +1752,8 @@ msgstr "Áo"
 #: src/course/lesson-screen.tsx:140
 #: src/home/home-screen.tsx:139
 #: src/objective/missions-screen.tsx:86
-#: src/practice/practice-screen.tsx:345
-#: src/practice/practice-screen.tsx:473
+#: src/practice/practice-screen.tsx:349
+#: src/practice/practice-screen.tsx:477
 #: src/realm/course-map-screen.tsx:159
 #: src/realm/course-map-screen.tsx:274
 #: src/realm/equipment-shop-screen.tsx:126
@@ -1752,6 +1812,14 @@ msgstr "Sắp tới"
 msgid "Update"
 msgstr "Cập nhật"
 
+#: src/user/password-recovery-screen.tsx:246
+msgid "Update password"
+msgstr "Cập nhật mật khẩu"
+
+#: src/user/password-recovery-screen.tsx:206
+msgid "Use 8 to 128 characters."
+msgstr "Sử dụng từ 8 đến 128 ký tự."
+
 #: src/api/error-messages.ts:72
 msgid "Use at least 8 characters for your password."
 msgstr "Mật khẩu cần ít nhất 8 ký tự."
@@ -1764,11 +1832,12 @@ msgstr "Dùng tối đa {limit} ký tự."
 msgid "Use no more than 128 characters for your password."
 msgstr "Mật khẩu không được quá 128 ký tự."
 
-#: src/user/login-screen.tsx:159
+#: src/user/login-screen.tsx:166
+#: src/user/password-recovery-screen.tsx:125
 msgid "Verification couldn’t load. Reload and try again."
 msgstr "Không thể tải xác minh. Hãy tải lại trang và thử lại."
 
-#: src/api/error-messages.ts:76
+#: src/api/error-messages.ts:77
 msgid "Verification failed. Please try again."
 msgstr "Xác minh thất bại. Vui lòng thử lại."
 
@@ -1785,7 +1854,7 @@ msgid "Victory!"
 msgstr "Chiến thắng!"
 
 #: src/user/app-settings.tsx:52
-#: src/user/login-screen.tsx:219
+#: src/user/login-screen.tsx:226
 #: src/user/profile-settings.tsx:100
 #: src/user/user-language-step.tsx:74
 msgid "Vietnamese"
@@ -1815,7 +1884,7 @@ msgstr "Đợt {wave}"
 msgid "Wave {wave}/{total}"
 msgstr "Đợt {wave}/{total}"
 
-#: src/practice/practice-screen.tsx:414
+#: src/practice/practice-screen.tsx:418
 msgid "Wave {wave}/{total} · Turn {turn}"
 msgstr "Đợt {wave}/{total} · Lượt {turn}"
 
@@ -1908,7 +1977,7 @@ msgstr "Câu trả lời quá dài."
 msgid "Your balance can’t accept this reward. Please try again later."
 msgstr "Số dư hiện tại không thể nhận thêm phần thưởng. Vui lòng thử lại sau."
 
-#: src/practice/practice-screen.tsx:496
+#: src/practice/practice-screen.tsx:500
 msgid "Your battle is saved. Come back whenever you’re ready."
 msgstr "Trận đấu đã được lưu. Bạn có thể quay lại bất cứ lúc nào."
 
@@ -1940,6 +2009,10 @@ msgstr "Bắt đầu hành trình mới"
 #: src/character/wardrobe-screen.tsx:139
 msgid "Your outfit covers these clothes."
 msgstr "Trang phục hiện tại che các món đồ này."
+
+#: src/user/password-recovery-screen.tsx:179
+msgid "Your password has been changed. Log in with your new password."
+msgstr "Mật khẩu của bạn đã được thay đổi. Hãy đăng nhập bằng mật khẩu mới."
 
 #: src/home/home-screen.tsx:65
 msgid "Your profile"
