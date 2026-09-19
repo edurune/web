@@ -7,18 +7,20 @@ concurrency:
   group: production-web
   cancel-in-progress: false
 
-permissions:
-  contents: read
-  packages: read
+permissions: {}
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     timeout-minutes: 30
-    environment: production
+    permissions:
+      contents: read
+      packages: read
     env:
-      API_URL: ${{ vars.API_URL }}
-      TURNSTILE_SITE_KEY: ${{ vars.TURNSTILE_SITE_KEY }}
+      VITE_API_URL: ${{ vars.API_URL }}
+      VITE_TURNSTILE_SITE_KEY: ${{ vars.TURNSTILE_SITE_KEY }}
+    outputs:
+      artifact-id: ${{ steps.artifact.outputs.artifact-id }}
 
     steps:
       - name: Check out learner app
@@ -28,11 +30,11 @@ jobs:
 
       - name: Validate production configuration
         run: |
-          test -n "$API_URL" || { echo "::error::API_URL is not configured"; exit 1; }
-          test -n "$TURNSTILE_SITE_KEY" || { echo "::error::TURNSTILE_SITE_KEY is not configured"; exit 1; }
+          test -n "$VITE_API_URL" || { echo "::error::API_URL is not configured"; exit 1; }
+          test -n "$VITE_TURNSTILE_SITE_KEY" || { echo "::error::TURNSTILE_SITE_KEY is not configured"; exit 1; }
 
       - name: Set up Bun
-        uses: oven-sh/setup-bun@v2
+        uses: oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6 # v2.2.0
         with:
           bun-version: 1.4.2
 
@@ -45,14 +47,40 @@ jobs:
         run: bun run lint
 
       - name: Build
-        env:
-          VITE_API_URL: ${{ env.API_URL }}
-          VITE_TURNSTILE_SITE_KEY: ${{ env.TURNSTILE_SITE_KEY }}
         run: bun run build
 
-      - name: Deploy
-        uses: cloudflare/wrangler-action@v3
+      - name: Upload site
+        id: artifact
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
-          apiToken: ${{ secrets.CLOUDFLARE_DEPLOY_TOKEN }}
-          accountId: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
-          command: deploy
+          name: production-site
+          path: dist
+          if-no-files-found: error
+          retention-days: 1
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    environment:
+      name: production
+      url: ${{ steps.deploy.outputs.static_web_app_url }}
+
+    steps:
+      - name: Download site
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        with:
+          artifact-ids: ${{ needs.build.outputs.artifact-id }}
+          path: dist
+
+      - name: Deploy
+        id: deploy
+        uses: Azure/static-web-apps-deploy@4d27395796ac319302594769cfe812bd207490b1 # v1
+        with:
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
+          action: upload
+          app_location: dist
+          output_location: ""
+          skip_app_build: true
+          skip_api_build: true
+          production_branch: main

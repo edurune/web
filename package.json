@@ -8,8 +8,6 @@
     "codegen": "openapi-ts && oxfmt src/api/generated",
     "dev": "vite",
     "build": "tsc --noEmit && vite build",
-    "deploy:check": "bun run build && wrangler deploy --dry-run",
-    "deploy": "bun run build && wrangler deploy",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
     "lint": "oxlint",
@@ -75,8 +73,7 @@
     "vite": "8.3.0",
     "vite-plugin-babel": "1.7.3",
     "vite-plugin-pwa": "1.3.0",
-    "vite-plugin-svgr": "5.2.0",
-    "wrangler": "4.134.0"
+    "vite-plugin-svgr": "5.2.0"
   },
   "overrides": {
     "js-yaml": "4.3.2",
