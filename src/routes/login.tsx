@@ -9,7 +9,14 @@ import {
 import { LoginScreen } from "../user/login-screen.tsx";
 import { useMeQuery } from "../api/user/use-user-queries.ts";
 
+interface LoginSearch {
+  return_to?: string;
+}
+
 export const Route = createFileRoute("/login")({
+  validateSearch: (search: Record<string, unknown>): LoginSearch => ({
+    ...(typeof search.return_to === "string" && { return_to: search.return_to }),
+  }),
   loader: async ({ context }) => {
     try {
       return await context.queryClient.ensureQueryData(userSessionOptions(context.apiClient));
@@ -23,13 +30,14 @@ export const Route = createFileRoute("/login")({
 
 function Login() {
   const initialUser = Route.useLoaderData();
+  const search = Route.useSearch();
   const user = useMeQuery().data ?? initialUser;
   const navigate = Route.useNavigate();
   const login = useEmailSignInMutation();
   const signup = useEmailSignUpMutation();
   const guest = useAnonymousSignInMutation();
   const onSuccess = () => {
-    void navigate({ to: "/", replace: true });
+    void navigate({ to: search.return_to ?? "/", replace: true });
   };
   return (
     <LoginScreen

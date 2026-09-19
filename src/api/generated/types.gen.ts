@@ -80,7 +80,10 @@ export type AuthoredCourse = {
   id: string;
   userId: string;
   published: boolean;
+  hasUnpublishedChanges: boolean;
   featured: boolean;
+  publishedUnitIds: Array<string>;
+  publishedItemIds: Array<string>;
   definition: {
     title: string;
     icon: string;
@@ -107,6 +110,7 @@ export type AuthoredCourse = {
     seed: number;
     units: Array<{
       id: string;
+      hidden?: boolean;
       title: string;
       description: string;
       order: number;
@@ -125,6 +129,7 @@ export type AuthoredCourse = {
       items: Array<
         | {
             id: string;
+            hidden?: boolean;
             title: string;
             description: string;
             order: number;
@@ -139,6 +144,7 @@ export type AuthoredCourse = {
           }
         | {
             id: string;
+            hidden?: boolean;
             title: string;
             description: string;
             order: number;
@@ -2513,6 +2519,7 @@ export type GetApiAuthoringCoursesResponses = {
       id: string;
       userId: string;
       published: boolean;
+      hasUnpublishedChanges: boolean;
       featured: boolean;
       title: string;
     }>;
@@ -2550,6 +2557,7 @@ export type PostApiAuthoringCoursesData = {
     seed: string | number;
     units: Array<{
       id: string;
+      hidden?: boolean;
       title: string;
       description: string;
       order: string | number;
@@ -2568,6 +2576,7 @@ export type PostApiAuthoringCoursesData = {
       items: Array<
         | {
             id: string;
+            hidden?: boolean;
             title: string;
             description: string;
             order: string | number;
@@ -2582,6 +2591,7 @@ export type PostApiAuthoringCoursesData = {
           }
         | {
             id: string;
+            hidden?: boolean;
             title: string;
             description: string;
             order: string | number;
@@ -2833,6 +2843,7 @@ export type PutApiAuthoringCoursesByCourseIdData = {
     seed: string | number;
     units: Array<{
       id: string;
+      hidden?: boolean;
       title: string;
       description: string;
       order: string | number;
@@ -2851,6 +2862,7 @@ export type PutApiAuthoringCoursesByCourseIdData = {
       items: Array<
         | {
             id: string;
+            hidden?: boolean;
             title: string;
             description: string;
             order: string | number;
@@ -2865,6 +2877,7 @@ export type PutApiAuthoringCoursesByCourseIdData = {
           }
         | {
             id: string;
+            hidden?: boolean;
             title: string;
             description: string;
             order: string | number;

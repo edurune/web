@@ -18,7 +18,7 @@ import { useMusic } from "../ui/sound/use-music.ts";
 const MENU_MUSIC_PATHS = new Set(["/", "/search", "/me", "/wardrobe", "/missions", "/rewards"]);
 
 export const Route = createFileRoute("/_app")({
-  beforeLoad: async ({ context }) => {
+  beforeLoad: async ({ context, location }) => {
     try {
       const user = await context.queryClient.ensureQueryData(userSessionOptions(context.apiClient));
       const profile = await context.queryClient.ensureQueryData(
@@ -27,7 +27,8 @@ export const Route = createFileRoute("/_app")({
       if (!profile.appearanceChosen || user.birthYear === null)
         throw redirect({ to: "/onboarding", replace: true });
     } catch (error) {
-      if (isUnauthenticated(error)) throw redirect({ to: "/login" });
+      if (isUnauthenticated(error))
+        throw redirect({ to: "/login", search: { return_to: location.href } });
       throw error;
     }
   },

@@ -1017,7 +1017,7 @@ export const postApiAuthoringQuestionBanksMutation = (
 };
 
 /**
- * Delete your bank and its source questions; published courses keep their copies
+ * Delete your question bank and its questions
  */
 export const deleteApiAuthoringQuestionBanksByBankIdMutation = (
   options?: Partial<Options<DeleteApiAuthoringQuestionBanksByBankIdData>>,
@@ -1206,7 +1206,7 @@ export const postApiAuthoringQuestionBanksByBankIdQuestionsMutation = (
 };
 
 /**
- * Delete your source question; published courses keep their copies
+ * Delete your question
  */
 export const deleteApiAuthoringQuestionBanksByBankIdQuestionsByQuestionIdMutation = (
   options?: Partial<Options<DeleteApiAuthoringQuestionBanksByBankIdQuestionsByQuestionIdData>>,

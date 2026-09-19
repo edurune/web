@@ -568,7 +568,7 @@ export const postApiAuthoringQuestionBanks = <ThrowOnError extends boolean = fal
   });
 
 /**
- * Delete your bank and its source questions; published courses keep their copies
+ * Delete your question bank and its questions
  */
 export const deleteApiAuthoringQuestionBanksByBankId = <ThrowOnError extends boolean = false>(
   options: Options<DeleteApiAuthoringQuestionBanksByBankIdData, ThrowOnError>,
@@ -664,7 +664,7 @@ export const postApiAuthoringQuestionBanksByBankIdQuestions = <
   });
 
 /**
- * Delete your source question; published courses keep their copies
+ * Delete your question
  */
 export const deleteApiAuthoringQuestionBanksByBankIdQuestionsByQuestionId = <
   ThrowOnError extends boolean = false,

@@ -10,7 +10,7 @@ import { PwaNotices } from "../pwa/pwa-notices.tsx";
 import { AppShell } from "../ui/app-shell.tsx";
 
 export const Route = createFileRoute("/onboarding")({
-  beforeLoad: async ({ context }) => {
+  beforeLoad: async ({ context, location }) => {
     try {
       const user = await context.queryClient.ensureQueryData(userSessionOptions(context.apiClient));
       const profile = await context.queryClient.ensureQueryData(
@@ -19,7 +19,12 @@ export const Route = createFileRoute("/onboarding")({
       if (profile.appearanceChosen && user.birthYear !== null)
         throw redirect({ to: "/", replace: true });
     } catch (error) {
-      if (isUnauthenticated(error)) throw redirect({ to: "/login", replace: true });
+      if (isUnauthenticated(error))
+        throw redirect({
+          to: "/login",
+          search: { return_to: location.href },
+          replace: true,
+        });
       throw error;
     }
   },
