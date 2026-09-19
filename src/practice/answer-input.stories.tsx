@@ -1,6 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
+import { QueryClient } from "@tanstack/react-query";
 import { useState } from "react";
 import { expect, fn, waitFor } from "storybook/test";
+import audioUrl from "uisfx/sounds/organic/streaming.mp3?url";
+import { ApiProvider } from "../api/api-provider.tsx";
+import { createApiClient } from "../api/client.ts";
 import { AnswerInput, type AnswerInputProps } from "./answer-input.tsx";
 import type { Question } from "./session.ts";
 
@@ -24,6 +28,25 @@ const meta = {
   component: AnswerInput,
   tags: ["autodocs"],
   args: { question: choice, answer: null, disabled: false, onChange: fn() },
+  decorators: [
+    function WithApi(Story) {
+      const [api] = useState(() => {
+        const client = {
+          ...createApiClient("https://storybook.invalid"),
+          buildUrl: () => audioUrl,
+        };
+        const queryClient = new QueryClient({
+          defaultOptions: { queries: { enabled: false, staleTime: Infinity } },
+        });
+        return { client, queryClient };
+      });
+      return (
+        <ApiProvider {...api}>
+          <Story />
+        </ApiProvider>
+      );
+    },
+  ],
   render: (args) => (
     <AnswerInteraction
       {...args}
@@ -49,6 +72,21 @@ function AnswerInteraction(props: AnswerInputProps) {
 }
 
 export const SingleChoice: Story = {};
+export const AudioPrompt: Story = {
+  args: {
+    question: {
+      ...choice,
+      questionText: "Listen to the clip. Which phrase do you hear?",
+      attachments: [
+        {
+          assetId: "spoken-greeting",
+          kind: "audio",
+          description: "Spoken greeting",
+        },
+      ],
+    },
+  },
+};
 export const MultipleChoice: Story = {
   args: {
     question: {

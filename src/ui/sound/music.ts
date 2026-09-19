@@ -9,6 +9,9 @@ const KEY = "music";
 const FADE_MS = 800;
 const STEP_MS = 40;
 const LEVEL = 0.32;
+const DUCKED_LEVEL = 0.08;
+const DUCK_FADE_MS = 160;
+const RESTORE_FADE_MS = 400;
 
 export type MusicLayer = "background" | "scene";
 
@@ -20,20 +23,37 @@ const layerPriority: Record<MusicLayer, number> = {
 let playing: HTMLAudioElement | undefined;
 let track: string | null = null;
 let enabled = (localStorage.getItem(KEY) ?? localStorage.getItem("voyage:music")) !== "off";
+let ducked = false;
 let requestOrder = 0;
 const requests = new Map<symbol, { src: string; layer: MusicLayer; order: number }>();
+const stingers = new Set<HTMLAudioElement>();
+const fadeTimers = new WeakMap<HTMLAudioElement, number>();
 
-function fade(audio: HTMLAudioElement, to: number, done?: () => void) {
+function level() {
+  return ducked ? DUCKED_LEVEL : LEVEL;
+}
+
+function cancelFade(audio: HTMLAudioElement) {
+  const timer = fadeTimers.get(audio);
+  if (timer === undefined) return;
+  window.clearInterval(timer);
+  fadeTimers.delete(audio);
+}
+
+function fade(audio: HTMLAudioElement, to: number, duration = FADE_MS, done?: () => void) {
+  cancelFade(audio);
   const from = audio.volume;
-  const steps = Math.round(FADE_MS / STEP_MS);
+  const steps = Math.max(1, Math.round(duration / STEP_MS));
   let step = 0;
   const timer = window.setInterval(() => {
     step += 1;
     audio.volume = from + (to - from) * Math.min(1, step / steps);
     if (step < steps) return;
     window.clearInterval(timer);
+    fadeTimers.delete(audio);
     done?.();
   }, STEP_MS);
+  fadeTimers.set(audio, timer);
 }
 
 function playbackWasBlocked(error: unknown) {
@@ -53,7 +73,7 @@ function start(src: string): Promise<boolean> {
   return audio.play().then(
     () => {
       clearAudioBlocked("music");
-      fade(audio, LEVEL);
+      fade(audio, level());
       return true;
     },
     (error: unknown) => {
@@ -67,7 +87,7 @@ function start(src: string): Promise<boolean> {
 function stop() {
   const audio = playing;
   playing = undefined;
-  if (audio) fade(audio, 0, () => audio.pause());
+  if (audio) fade(audio, 0, FADE_MS, () => audio.pause());
 }
 
 function playMusic(src: string | null) {
@@ -135,13 +155,30 @@ export function startMusic() {
 export function playStinger(src: string) {
   if (!enabled) return;
   const audio = new Audio(src);
-  audio.volume = LEVEL;
+  const forget = () => {
+    cancelFade(audio);
+    stingers.delete(audio);
+  };
+  audio.addEventListener("ended", forget, { once: true });
+  audio.addEventListener("error", forget, { once: true });
+  audio.volume = level();
+  stingers.add(audio);
   audio.play().then(
     () => clearAudioBlocked("music"),
     (error: unknown) => {
+      forget();
       if (playbackWasBlocked(error)) markAudioBlocked("music");
     },
   );
+}
+
+export function setMusicDucked(next: boolean) {
+  if (ducked === next) return;
+  ducked = next;
+  const duration = next ? DUCK_FADE_MS : RESTORE_FADE_MS;
+  const target = level();
+  if (playing) fade(playing, target, duration);
+  for (const stinger of stingers) fade(stinger, target, duration);
 }
 
 export function isMusicEnabled() {
