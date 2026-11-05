@@ -1,5 +1,8 @@
 ![EduRune](https://raw.githubusercontent.com/edurune/game/refs/heads/main/art/exports/social-card-1200x630.png)
 
+> Edurune production is retired. Deployment workflows and local production
+> credentials have been removed. The source is retained for local development.
+
 EduRune is a learning game with courses, lesson maps, and turn-based battles. Learners answer questions to fight enemies and earn XP, coins, gear, and cosmetics.
 
 ## Development
